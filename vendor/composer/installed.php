@@ -3,7 +3,7 @@
         'name' => 'rb-onestopmart/ecommerce',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'b6763980338efea24f14eff68c2f66dda500d77d',
+        'reference' => '894ff3e7e43f9951c1e0409e19bccb0925a907e7',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -833,7 +833,7 @@
         'rb-onestopmart/ecommerce' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'b6763980338efea24f14eff68c2f66dda500d77d',
+            'reference' => '894ff3e7e43f9951c1e0409e19bccb0925a907e7',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
