@@ -28,7 +28,7 @@ const Header = () => {
     const cartItemCount = cartItems?.reduce((total, item) => total + item.quantity, 0) || 0;
 
     return (
-        <header className="glass sticky top-0 z-50">
+        <header className="glass-over-galaxy sticky top-0 z-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     {/* Logo */}
@@ -127,7 +127,7 @@ const Header = () => {
 
                 {/* Mobile Navigation */}
                 {isMenuOpen && (
-                    <div className="md:hidden glass-card rounded-lg mt-2 p-4">
+                    <div className="md:hidden glass-over-galaxy rounded-lg mt-2 p-4">
                         <nav className="flex flex-col space-y-4">
                             <Link 
                                 to="/" 

@@ -16,22 +16,58 @@ import AdminProducts from './Pages/Admin/AdminProducts';
 import AdminOrders from './Pages/Admin/AdminOrders';
 import AdminInventory from './Pages/Admin/AdminInventory';
 import LoadingSpinner from './UI/LoadingSpinner';
+import Galaxy from './UI/Galaxy';
 import TestComponent from './TestComponent';
 
 function App() {
     const { user, loading } = useAuth();
 
     if (loading) {
-        return (
-            <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
-                <LoadingSpinner />
-            </div>
-        );
+            return (
+                <div className="min-h-screen relative flex items-center justify-center bg-black">
+                    <Galaxy 
+                        density={1}
+                        starSpeed={0.5}
+                        glowIntensity={0.3}
+                        twinkleIntensity={0.3}
+                        hueShift={140}
+                        speed={1.0}
+                        mouseInteraction={true}
+                        mouseRepulsion={true}
+                        repulsionStrength={2}
+                        rotationSpeed={0.1}
+                        saturation={0.0}
+                        autoCenterRepulsion={0}
+                        transparent={false}
+                        className="absolute inset-0"
+                    />
+                    <div className="relative z-10">
+                        <LoadingSpinner />
+                    </div>
+                </div>
+            );
     }
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
-            <Routes>
+        <div className="min-h-screen relative bg-black">
+            <Galaxy 
+                density={1}
+                starSpeed={0.5}
+                glowIntensity={0.3}
+                twinkleIntensity={0.3}
+                hueShift={140}
+                speed={1.0}
+                mouseInteraction={true}
+                mouseRepulsion={true}
+                repulsionStrength={2}
+                rotationSpeed={0.1}
+                saturation={0.0}
+                autoCenterRepulsion={0}
+                transparent={false}
+                className="absolute inset-0"
+            />
+            <div className="relative z-10">
+                <Routes>
                 {/* Public routes */}
                 <Route path="/login" element={!user ? <LoginPage /> : <Navigate to={user.isAdmin() ? "/admin" : "/"} />} />
                 <Route path="/register" element={!user ? <RegisterPage /> : <Navigate to={user.isAdmin() ? "/admin" : "/"} />} />
@@ -53,7 +89,8 @@ function App() {
                 
                 {/* Catch all route */}
                 <Route path="*" element={<Navigate to="/" />} />
-            </Routes>
+                </Routes>
+            </div>
         </div>
     );
 }

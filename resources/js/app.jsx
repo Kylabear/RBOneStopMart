@@ -17,28 +17,28 @@ const queryClient = new QueryClient({
     },
 });
 
-ReactDOM.createRoot(document.getElementById('app')).render(
-    <React.StrictMode>
-        <QueryClientProvider client={queryClient}>
-            <AuthProvider>
-                <CartProvider>
-                    <BrowserRouter>
-                        <App />
-                        <Toaster 
-                            position="top-right"
-                            toastOptions={{
-                                duration: 4000,
-                                style: {
-                                    background: 'rgba(255, 255, 255, 0.1)',
-                                    backdropFilter: 'blur(10px)',
-                                    border: '1px solid rgba(255, 255, 255, 0.2)',
-                                    color: '#fff',
-                                },
-                            }}
-                        />
-                    </BrowserRouter>
-                </CartProvider>
-            </AuthProvider>
-        </QueryClientProvider>
-    </React.StrictMode>
-);
+        ReactDOM.createRoot(document.getElementById('app')).render(
+            <React.StrictMode>
+                <QueryClientProvider client={queryClient}>
+                    <AuthProvider>
+                        <CartProvider>
+                            <BrowserRouter>
+                                <App />
+                                <Toaster 
+                                    position="top-right"
+                                    toastOptions={{
+                                        duration: 4000,
+                                        style: {
+                                            background: 'rgba(255, 255, 255, 0.25)',
+                                            backdropFilter: 'blur(12px)',
+                                            border: '1px solid rgba(255, 255, 255, 0.3)',
+                                            color: '#ec4899',
+                                        },
+                                    }}
+                                />
+                            </BrowserRouter>
+                        </CartProvider>
+                    </AuthProvider>
+                </QueryClientProvider>
+            </React.StrictMode>
+        );
