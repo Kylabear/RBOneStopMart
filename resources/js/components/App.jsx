@@ -27,15 +27,15 @@ function App() {
                 <div className="min-h-screen relative flex items-center justify-center bg-black">
                     <Galaxy 
                         density={1}
-                        starSpeed={0.5}
+                        starSpeed={0.1}
                         glowIntensity={0.3}
                         twinkleIntensity={0.3}
                         hueShift={140}
-                        speed={1.0}
+                        speed={0.3}
                         mouseInteraction={true}
                         mouseRepulsion={true}
                         repulsionStrength={2}
-                        rotationSpeed={0.1}
+                        rotationSpeed={0.02}
                         saturation={0.0}
                         autoCenterRepulsion={0}
                         transparent={false}
@@ -52,15 +52,15 @@ function App() {
         <div className="min-h-screen relative bg-black">
             <Galaxy 
                 density={1}
-                starSpeed={0.5}
+                starSpeed={0.1}
                 glowIntensity={0.3}
                 twinkleIntensity={0.3}
                 hueShift={140}
-                speed={1.0}
+                speed={0.3}
                 mouseInteraction={true}
                 mouseRepulsion={true}
                 repulsionStrength={2}
-                rotationSpeed={0.1}
+                rotationSpeed={0.02}
                 saturation={0.0}
                 autoCenterRepulsion={0}
                 transparent={false}

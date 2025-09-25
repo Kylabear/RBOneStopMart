@@ -4,35 +4,35 @@
 
 /* Custom glassmorphism styles with pastel theme */
 .glass {
-    background: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .glass-dark {
-    background: rgba(236, 72, 153, 0.2);
+    background: rgba(236, 72, 153, 0.1);
     backdrop-filter: blur(15px);
-    border: 1px solid rgba(236, 72, 153, 0.3);
+    border: 1px solid rgba(236, 72, 153, 0.15);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .glass-card {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
 }
 
 .glass-button {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     transition: all 0.3s ease;
 }
 
 .glass-button:hover {
-    background: rgba(236, 72, 153, 0.2);
+    background: rgba(236, 72, 153, 0.15);
     transform: translateY(-2px);
     box-shadow: 0 10px 25px rgba(236, 72, 153, 0.2);
 }
@@ -123,9 +123,9 @@
 
 /* Enhanced glassmorphism for galaxy background */
 .glass-over-galaxy {
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 

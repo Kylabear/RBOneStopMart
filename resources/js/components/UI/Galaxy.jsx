@@ -295,6 +295,7 @@ export default function Galaxy({
     gl.canvas.style.height = '100%';
     gl.canvas.style.pointerEvents = 'auto';
     gl.canvas.style.zIndex = '1';
+    gl.canvas.style.cursor = 'crosshair';
     
     ctn.appendChild(gl.canvas);
 
@@ -304,6 +305,9 @@ export default function Galaxy({
       const y = 1.0 - (e.clientY - rect.top) / rect.height;
       targetMousePos.current = { x, y };
       targetMouseActive.current = 1.0;
+      
+      // Debug mouse interaction
+      console.log('Galaxy mouse move:', { x, y, active: targetMouseActive.current });
     }
 
     function handleMouseLeave() {

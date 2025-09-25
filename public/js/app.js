@@ -61522,15 +61522,15 @@ function App() {
       className: "min-h-screen relative flex items-center justify-center bg-black",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_20__.jsx)(_UI_Galaxy__WEBPACK_IMPORTED_MODULE_18__["default"], {
         density: 1,
-        starSpeed: 0.5,
+        starSpeed: 0.1,
         glowIntensity: 0.3,
         twinkleIntensity: 0.3,
         hueShift: 140,
-        speed: 1.0,
+        speed: 0.3,
         mouseInteraction: true,
         mouseRepulsion: true,
         repulsionStrength: 2,
-        rotationSpeed: 0.1,
+        rotationSpeed: 0.02,
         saturation: 0.0,
         autoCenterRepulsion: 0,
         transparent: false,
@@ -61545,15 +61545,15 @@ function App() {
     className: "min-h-screen relative bg-black",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_20__.jsx)(_UI_Galaxy__WEBPACK_IMPORTED_MODULE_18__["default"], {
       density: 1,
-      starSpeed: 0.5,
+      starSpeed: 0.1,
       glowIntensity: 0.3,
       twinkleIntensity: 0.3,
       hueShift: 140,
-      speed: 1.0,
+      speed: 0.3,
       mouseInteraction: true,
       mouseRepulsion: true,
       repulsionStrength: 2,
-      rotationSpeed: 0.1,
+      rotationSpeed: 0.02,
       saturation: 0.0,
       autoCenterRepulsion: 0,
       transparent: false,
@@ -66137,6 +66137,7 @@ function Galaxy(_ref) {
     gl.canvas.style.height = '100%';
     gl.canvas.style.pointerEvents = 'auto';
     gl.canvas.style.zIndex = '1';
+    gl.canvas.style.cursor = 'crosshair';
     ctn.appendChild(gl.canvas);
     function handleMouseMove(e) {
       var rect = ctn.getBoundingClientRect();
@@ -66147,6 +66148,13 @@ function Galaxy(_ref) {
         y: y
       };
       targetMouseActive.current = 1.0;
+
+      // Debug mouse interaction
+      console.log('Galaxy mouse move:', {
+        x: x,
+        y: y,
+        active: targetMouseActive.current
+      });
     }
     function handleMouseLeave() {
       targetMouseActive.current = 0.0;
