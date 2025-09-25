@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../../hooks/useCart';
 import { useQuery } from 'react-query';
-import axios from 'axios';
+import axios from '../../config/axios';
 import { useAuth } from '../../hooks/useAuth';
 import { 
     TruckIcon, 

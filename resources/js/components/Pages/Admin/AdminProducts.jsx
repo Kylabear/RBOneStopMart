@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from 'react-query';
-import axios from 'axios';
+import axios from '../../../config/axios';
 import { 
     PlusIcon, 
     PencilIcon, 

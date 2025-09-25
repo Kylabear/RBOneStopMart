@@ -1,5 +1,5 @@
 import React, { useState, useEffect, createContext, useContext } from 'react';
-import axios from 'axios';
+import axios from '../config/axios';
 import toast from 'react-hot-toast';
 
 const CartContext = createContext();
@@ -24,9 +24,10 @@ export const CartProvider = ({ children }) => {
         try {
             setLoading(true);
             const response = await axios.get('/api/cart');
-            setCartItems(response.data);
+            setCartItems(response.data.items || []);
         } catch (error) {
             console.error('Failed to fetch cart items:', error);
+            // If user is not authenticated, set empty array
             setCartItems([]);
         } finally {
             setLoading(false);
@@ -35,8 +36,9 @@ export const CartProvider = ({ children }) => {
 
     const addToCart = async (productId, quantity = 1) => {
         try {
-            const response = await axios.post('/api/cart', { product_id: productId, quantity });
-            setCartItems(response.data);
+            await axios.post('/api/cart', { product_id: productId, quantity });
+            // Refresh cart items after adding
+            await fetchCartItems();
             toast.success('Product added to cart!');
         } catch (error) {
             console.error('Failed to add to cart:', error);
@@ -46,8 +48,9 @@ export const CartProvider = ({ children }) => {
 
     const updateCartItemQuantity = async (cartItemId, quantity) => {
         try {
-            const response = await axios.put(`/api/cart/${cartItemId}`, { quantity });
-            setCartItems(response.data);
+            await axios.put(`/api/cart/${cartItemId}`, { quantity });
+            // Refresh cart items after updating
+            await fetchCartItems();
             toast.success('Cart updated!');
         } catch (error) {
             console.error('Failed to update cart item:', error);

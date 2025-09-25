@@ -17,7 +17,6 @@ import AdminOrders from './Pages/Admin/AdminOrders';
 import AdminInventory from './Pages/Admin/AdminInventory';
 import LoadingSpinner from './UI/LoadingSpinner';
 import Galaxy from './UI/Galaxy';
-import TestComponent from './TestComponent';
 
 function App() {
     const { user, loading } = useAuth();
@@ -26,16 +25,16 @@ function App() {
             return (
                 <div className="min-h-screen relative flex items-center justify-center bg-black">
                     <Galaxy 
-                        density={1}
-                        starSpeed={0.1}
-                        glowIntensity={0.3}
-                        twinkleIntensity={0.3}
+                        density={0.5}
+                        starSpeed={0.05}
+                        glowIntensity={0.2}
+                        twinkleIntensity={0.2}
                         hueShift={140}
-                        speed={0.3}
-                        mouseInteraction={true}
-                        mouseRepulsion={true}
-                        repulsionStrength={2}
-                        rotationSpeed={0.02}
+                        speed={0.1}
+                        mouseInteraction={false}
+                        mouseRepulsion={false}
+                        repulsionStrength={1}
+                        rotationSpeed={0.01}
                         saturation={0.0}
                         autoCenterRepulsion={0}
                         transparent={false}
@@ -51,41 +50,41 @@ function App() {
     return (
         <div className="min-h-screen relative bg-black">
             <Galaxy 
-                density={1}
-                starSpeed={0.1}
-                glowIntensity={0.3}
-                twinkleIntensity={0.3}
+                density={0.5}
+                starSpeed={0.05}
+                glowIntensity={0.2}
+                twinkleIntensity={0.2}
                 hueShift={140}
-                speed={0.3}
-                mouseInteraction={true}
-                mouseRepulsion={true}
-                repulsionStrength={2}
-                rotationSpeed={0.02}
+                speed={0.1}
+                mouseInteraction={false}
+                mouseRepulsion={false}
+                repulsionStrength={1}
+                rotationSpeed={0.01}
                 saturation={0.0}
                 autoCenterRepulsion={0}
                 transparent={false}
                 className="absolute inset-0"
             />
-            <div className="relative z-10">
-                <Routes>
+                    <div className="relative z-10">
+                        <Routes>
                 {/* Public routes */}
-                <Route path="/login" element={!user ? <LoginPage /> : <Navigate to={user.isAdmin() ? "/admin" : "/"} />} />
-                <Route path="/register" element={!user ? <RegisterPage /> : <Navigate to={user.isAdmin() ? "/admin" : "/"} />} />
+                <Route path="/login" element={!user ? <LoginPage /> : <Navigate to={user.role === 'admin' ? "/products" : "/"} />} />
+                <Route path="/register" element={!user ? <RegisterPage /> : <Navigate to={user.role === 'admin' ? "/products" : "/"} />} />
                 
                 {/* Protected customer routes */}
                 <Route path="/" element={<Layout><HomePage /></Layout>} />
                 <Route path="/products" element={<Layout><ProductsPage /></Layout>} />
                 <Route path="/products/:id" element={<Layout><ProductDetailPage /></Layout>} />
-                <Route path="/cart" element={user && !user.isAdmin() ? <Layout><CartPage /></Layout> : <Navigate to="/login" />} />
-                <Route path="/checkout" element={user && !user.isAdmin() ? <Layout><CheckoutPage /></Layout> : <Navigate to="/login" />} />
-                <Route path="/orders" element={user && !user.isAdmin() ? <Layout><OrdersPage /></Layout> : <Navigate to="/login" />} />
-                <Route path="/orders/:id" element={user && !user.isAdmin() ? <Layout><OrderDetailPage /></Layout> : <Navigate to="/login" />} />
+                <Route path="/cart" element={user && user.role !== 'admin' ? <Layout><CartPage /></Layout> : <Navigate to="/login" />} />
+                <Route path="/checkout" element={user && user.role !== 'admin' ? <Layout><CheckoutPage /></Layout> : <Navigate to="/login" />} />
+                <Route path="/orders" element={user && user.role !== 'admin' ? <Layout><OrdersPage /></Layout> : <Navigate to="/login" />} />
+                <Route path="/orders/:id" element={user && user.role !== 'admin' ? <Layout><OrderDetailPage /></Layout> : <Navigate to="/login" />} />
                 
                 {/* Admin routes */}
-                <Route path="/admin" element={user && user.isAdmin() ? <AdminDashboard /> : <Navigate to="/login" />} />
-                <Route path="/admin/products" element={user && user.isAdmin() ? <AdminProducts /> : <Navigate to="/login" />} />
-                <Route path="/admin/orders" element={user && user.isAdmin() ? <AdminOrders /> : <Navigate to="/login" />} />
-                <Route path="/admin/inventory" element={user && user.isAdmin() ? <AdminInventory /> : <Navigate to="/login" />} />
+                <Route path="/admin" element={user && user.role === 'admin' ? <AdminDashboard /> : <Navigate to="/login" />} />
+                <Route path="/admin/products" element={user && user.role === 'admin' ? <AdminProducts /> : <Navigate to="/login" />} />
+                <Route path="/admin/orders" element={user && user.role === 'admin' ? <AdminOrders /> : <Navigate to="/login" />} />
+                <Route path="/admin/inventory" element={user && user.role === 'admin' ? <AdminInventory /> : <Navigate to="/login" />} />
                 
                 {/* Catch all route */}
                 <Route path="*" element={<Navigate to="/" />} />

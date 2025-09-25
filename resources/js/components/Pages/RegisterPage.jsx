@@ -35,8 +35,8 @@ const RegisterPage = () => {
             const result = await register(formData);
             
             if (result.success) {
-                toast.success('Registration successful!');
-                navigate('/');
+                toast.success('Registration successful! Please login to continue.');
+                navigate('/login');
             } else {
                 toast.error(result.message);
             }

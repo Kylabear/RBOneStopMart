@@ -1,5 +1,5 @@
 import React, { useState, useEffect, createContext, useContext } from 'react';
-import axios from 'axios';
+import axios from '../config/axios';
 
 const AuthContext = createContext();
 
@@ -36,17 +36,40 @@ export const AuthProvider = ({ children }) => {
     }, []);
 
     const login = async (email, password) => {
-        const response = await axios.post('/api/login', { email, password });
-        localStorage.setItem('token', response.data.token);
-        axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`;
-        setUser(response.data.user);
+        try {
+            console.log('Attempting login with:', { email, password });
+            const response = await axios.post('/api/login', { email, password });
+            console.log('Login response:', response.data);
+            localStorage.setItem('token', response.data.token);
+            axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`;
+            setUser(response.data.user);
+            return { success: true };
+        } catch (error) {
+            console.error('Login error:', error);
+            console.error('Error response:', error.response?.data);
+            if (error.response?.data?.errors) {
+                console.error('Validation errors:', error.response.data.errors);
+                const firstError = Object.values(error.response.data.errors)[0][0];
+                return { success: false, message: firstError };
+            }
+            return { success: false, message: error.response?.data?.message || 'Login failed' };
+        }
     };
 
-    const register = async (name, email, password, password_confirmation) => {
-        const response = await axios.post('/api/register', { name, email, password, password_confirmation });
-        localStorage.setItem('token', response.data.token);
-        axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`;
-        setUser(response.data.user);
+    const register = async (formData) => {
+        try {
+            const response = await axios.post('/api/register', formData);
+            localStorage.setItem('token', response.data.token);
+            axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`;
+            setUser(response.data.user);
+            return { success: true };
+        } catch (error) {
+            if (error.response?.data?.errors) {
+                const firstError = Object.values(error.response.data.errors)[0][0];
+                return { success: false, message: firstError };
+            }
+            return { success: false, message: error.response?.data?.message || 'Registration failed' };
+        }
     };
 
     const logout = async () => {

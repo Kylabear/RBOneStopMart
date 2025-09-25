@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useQuery } from 'react-query';
 import { useSearchParams } from 'react-router-dom';
-import axios from 'axios';
+import axios from '../../config/axios';
 import { MagnifyingGlassIcon, FunnelIcon } from '@heroicons/react/24/outline';
 import LoadingSpinner from '../UI/LoadingSpinner';
 import ProductCard from '../UI/ProductCard';

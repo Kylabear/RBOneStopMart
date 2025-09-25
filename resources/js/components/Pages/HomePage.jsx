@@ -1,19 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useQuery } from 'react-query';
-import axios from 'axios';
+import axios from '../../config/axios';
+import { useAuth } from '../../hooks/useAuth';
 import { 
     ShoppingCartIcon, 
     TruckIcon, 
-    CreditCardIcon,
-    PhoneIcon,
-    EnvelopeIcon,
-    ChatBubbleLeftRightIcon
+    CreditCardIcon
 } from '@heroicons/react/24/outline';
 import LoadingSpinner from '../UI/LoadingSpinner';
 import ProductCard from '../UI/ProductCard';
+import toast from 'react-hot-toast';
 
 const HomePage = () => {
+    const { user } = useAuth();
+    const navigate = useNavigate();
+    
     const { data: featuredProducts, isLoading: productsLoading } = useQuery(
         'featured-products',
         () => axios.get('/api/products/featured').then(res => res.data)
@@ -23,6 +25,33 @@ const HomePage = () => {
         'categories',
         () => axios.get('/api/categories').then(res => res.data)
     );
+
+    const handleShopNow = () => {
+        if (!user) {
+            toast.error('Please login to browse our products');
+            navigate('/login');
+            return;
+        }
+        navigate('/products');
+    };
+
+    const handleViewAllProducts = () => {
+        if (!user) {
+            toast.error('Please login to view all products');
+            navigate('/login');
+            return;
+        }
+        navigate('/products');
+    };
+
+    const handleCategoryClick = (categorySlug) => {
+        if (!user) {
+            toast.error('Please login to browse products by category');
+            navigate('/login');
+            return;
+        }
+        navigate(`/products?category=${categorySlug}`);
+    };
 
     return (
         <div className="min-h-screen">
@@ -38,42 +67,25 @@ const HomePage = () => {
                             Your one-stop destination for Grocery, Dry Goods, and Farm Supply needs. 
                             Shop with convenience and get your orders delivered or pick them up.
                         </p>
-                        
-                        {/* Contact Information */}
-                        <div className="glass-card rounded-2xl p-8 mb-12 max-w-4xl mx-auto">
-                            <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div className="flex items-center space-x-3">
-                                    <PhoneIcon className="w-6 h-6 text-blue-400" />
-                                    <span className="text-white">09123968514</span>
-                                </div>
-                                <div className="flex items-center space-x-3">
-                                    <EnvelopeIcon className="w-6 h-6 text-blue-400" />
-                                    <span className="text-white">R&BOneStopMart@gmail.com</span>
-                                </div>
-                                <div className="flex items-center space-x-3">
-                                    <ChatBubbleLeftRightIcon className="w-6 h-6 text-blue-400" />
-                                    <span className="text-white">+639686654565 (WhatsApp)</span>
-                                </div>
-                                <div className="flex items-center space-x-3">
-                                    <span className="text-white">Facebook: Brenda Bangachon</span>
-                                </div>
-                            </div>
-                        </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Link 
-                                to="/products" 
+                            <button 
+                                onClick={handleShopNow}
                                 className="glass-button px-8 py-4 rounded-xl text-white font-semibold hover:scale-105 transition-transform"
                             >
                                 Shop Now
-                            </Link>
-                            <Link 
-                                to="/register" 
-                                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-colors"
+                            </button>
+                            <button
+                                className="glass-button px-8 py-4 rounded-xl text-white font-semibold hover:scale-105 transition-transform"
+                                onClick={() => {
+                                    const footer = document.querySelector('footer');
+                                    if (footer) {
+                                        footer.scrollIntoView({ behavior: 'smooth' });
+                                    }
+                                }}
                             >
-                                Create Account
-                            </Link>
+                                Contact
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -120,10 +132,10 @@ const HomePage = () => {
                     ) : (
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {categories?.map((category) => (
-                                <Link 
+                                <button 
                                     key={category.id} 
-                                    to={`/products?category=${category.slug}`}
-                                    className="glass-card rounded-2xl p-8 text-center hover:scale-105 transition-transform group"
+                                    onClick={() => handleCategoryClick(category.slug)}
+                                    className="glass-card rounded-2xl p-8 text-center hover:scale-105 transition-transform group w-full"
                                 >
                                     <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
                                         <span className="text-2xl font-bold text-white">
@@ -137,7 +149,7 @@ const HomePage = () => {
                                     <div className="text-sm text-blue-400">
                                         {category.products_count} products
                                     </div>
-                                </Link>
+                                </button>
                             ))}
                         </div>
                     )}
@@ -160,12 +172,12 @@ const HomePage = () => {
                         </div>
                     )}
                     <div className="text-center mt-8">
-                        <Link 
-                            to="/products" 
+                        <button 
+                            onClick={handleViewAllProducts}
                             className="glass-button px-8 py-4 rounded-xl text-white font-semibold hover:scale-105 transition-transform"
                         >
                             View All Products
-                        </Link>
+                        </button>
                     </div>
                 </div>
             </section>

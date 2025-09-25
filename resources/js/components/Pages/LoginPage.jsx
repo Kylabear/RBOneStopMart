@@ -31,7 +31,8 @@ const LoginPage = () => {
             
             if (result.success) {
                 toast.success('Login successful!');
-                navigate('/');
+                // Let the App.jsx routing handle the redirect
+                window.location.reload();
             } else {
                 toast.error(result.message);
             }

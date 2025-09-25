@@ -48,7 +48,7 @@ const Header = () => {
                         <Link to="/products" className="text-white hover:text-blue-300 transition-colors">
                             Products
                         </Link>
-                        {user && !user.isAdmin() && (
+                        {user && user.role !== 'admin' && (
                             <>
                                 <Link to="/cart" className="relative flex items-center space-x-1 text-white hover:text-blue-300 transition-colors">
                                     <ShoppingCartIcon className="w-5 h-5" />
@@ -75,7 +75,7 @@ const Header = () => {
                                     <UserIcon className="w-5 h-5 text-white" />
                                     <span className="text-white">{user.name}</span>
                                 </div>
-                                {user.isAdmin() && (
+                                {user.role === 'admin' && (
                                     <Link 
                                         to="/admin" 
                                         className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
@@ -144,7 +144,7 @@ const Header = () => {
                             >
                                 Products
                             </Link>
-                            {user && !user.isAdmin() && (
+                            {user && user.role !== 'admin' && (
                                 <>
                                     <Link 
                                         to="/cart" 
@@ -169,7 +169,7 @@ const Header = () => {
                                         <UserIcon className="w-4 h-4 text-white" />
                                         <span className="text-white">{user.name}</span>
                                     </div>
-                                    {user.isAdmin() && (
+                                    {user.role === 'admin' && (
                                         <Link 
                                             to="/admin" 
                                             className="block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors mb-2"

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useQuery } from 'react-query';
-import axios from 'axios';
+import axios from '../../config/axios';
 import { useCart } from '../../hooks/useCart';
+import { useAuth } from '../../hooks/useAuth';
 import { 
     ArrowLeftIcon, 
     ShoppingCartIcon, 
@@ -19,6 +20,7 @@ const ProductDetailPage = () => {
     const { id } = useParams();
     const navigate = useNavigate();
     const { addToCart } = useCart();
+    const { user } = useAuth();
     const [quantity, setQuantity] = useState(1);
     const [isFavorite, setIsFavorite] = useState(false);
 
@@ -28,10 +30,20 @@ const ProductDetailPage = () => {
     );
 
     const handleAddToCart = () => {
+        if (!user) {
+            toast.error('Please login to add items to cart');
+            navigate('/login');
+            return;
+        }
         addToCart(product.id, quantity);
     };
 
     const handleBuyNow = () => {
+        if (!user) {
+            toast.error('Please login to proceed with purchase');
+            navigate('/login');
+            return;
+        }
         addToCart(product.id, quantity);
         navigate('/cart');
     };

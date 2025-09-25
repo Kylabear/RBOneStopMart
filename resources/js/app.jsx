@@ -25,14 +25,38 @@ const queryClient = new QueryClient({
                             <BrowserRouter>
                                 <App />
                                 <Toaster 
-                                    position="top-right"
+                                    position="top-center"
                                     toastOptions={{
                                         duration: 4000,
                                         style: {
-                                            background: 'rgba(255, 255, 255, 0.25)',
-                                            backdropFilter: 'blur(12px)',
-                                            border: '1px solid rgba(255, 255, 255, 0.3)',
-                                            color: '#ec4899',
+                                            background: 'rgba(0, 0, 0, 0.95)',
+                                            backdropFilter: 'blur(20px)',
+                                            border: '2px solid rgba(236, 72, 153, 0.4)',
+                                            color: '#ffffff',
+                                            borderRadius: '20px',
+                                            padding: '20px 32px',
+                                            fontSize: '18px',
+                                            fontWeight: '600',
+                                            boxShadow: '0 12px 40px rgba(0, 0, 0, 0.5)',
+                                            maxWidth: '450px',
+                                            textAlign: 'center',
+                                            zIndex: 99999,
+                                        },
+                                        success: {
+                                            style: {
+                                                background: 'rgba(34, 197, 94, 0.95)',
+                                                border: '2px solid rgba(34, 197, 94, 0.6)',
+                                                color: '#ffffff',
+                                                boxShadow: '0 12px 40px rgba(34, 197, 94, 0.3)',
+                                            },
+                                        },
+                                        error: {
+                                            style: {
+                                                background: 'rgba(239, 68, 68, 0.95)',
+                                                border: '2px solid rgba(239, 68, 68, 0.6)',
+                                                color: '#ffffff',
+                                                boxShadow: '0 12px 40px rgba(239, 68, 68, 0.3)',
+                                            },
                                         },
                                     }}
                                 />

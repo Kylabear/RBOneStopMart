@@ -1,15 +1,25 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useCart } from '../../hooks/useCart';
+import { useAuth } from '../../hooks/useAuth';
 import { ShoppingCartIcon, EyeIcon } from '@heroicons/react/24/outline';
 import toast from 'react-hot-toast';
 
 const ProductCard = ({ product }) => {
     const { addToCart } = useCart();
+    const { user } = useAuth();
+    const navigate = useNavigate();
 
     const handleAddToCart = (e) => {
         e.preventDefault();
         e.stopPropagation();
+        
+        if (!user) {
+            toast.error('Please login to add items to cart');
+            navigate('/login');
+            return;
+        }
+        
         addToCart(product.id, 1);
     };
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useQuery } from 'react-query';
-import axios from 'axios';
+import axios from '../../config/axios';
 import { 
     ArrowLeftIcon, 
     TruckIcon, 
