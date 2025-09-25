@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
-        <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' localhost:5173;">
+        <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' http://localhost:5173 http://localhost:5174 ws://localhost:5174; connect-src 'self' http://localhost:5173 http://localhost:5174 ws://localhost:5174;">
 
         <title><?php echo e(config('app.name', 'R&B One Stop Mart')); ?></title>
 
@@ -13,7 +13,8 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
         <!-- Scripts -->
-        <?php echo app('Illuminate\Foundation\Vite')(['resources/css/app.css', 'resources/js/app.jsx']); ?>
+        <link rel="stylesheet" href="<?php echo e(mix('css/app.css')); ?>">
+        <script src="<?php echo e(mix('js/app.js')); ?>" defer></script>
     </head>
     <body class="font-sans antialiased">
         <div id="app"></div>
