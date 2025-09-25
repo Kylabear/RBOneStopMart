@@ -1,9 +1,8 @@
 import React from 'react';
-import { 
-    PhoneIcon, 
-    EnvelopeIcon, 
-    ChatBubbleLeftRightIcon,
-    FacebookIcon
+import {
+    PhoneIcon,
+    EnvelopeIcon,
+    ChatBubbleLeftRightIcon
 } from '@heroicons/react/24/outline';
 
 const Footer = () => {
@@ -19,7 +18,7 @@ const Footer = () => {
                         </p>
                         <div className="flex space-x-4">
                             <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                                <FacebookIcon className="w-6 h-6" />
+                                <span className="w-6 h-6 text-blue-500 font-bold">f</span>
                             </a>
                         </div>
                     </div>
@@ -41,7 +40,7 @@ const Footer = () => {
                                 <span className="text-gray-300">+639686654565 (WhatsApp)</span>
                             </div>
                             <div className="flex items-center space-x-3">
-                                <FacebookIcon className="w-5 h-5 text-blue-400" />
+                                <span className="w-5 h-5 text-blue-400 font-bold">f</span>
                                 <span className="text-gray-300">Brenda Bangachon</span>
                             </div>
                         </div>

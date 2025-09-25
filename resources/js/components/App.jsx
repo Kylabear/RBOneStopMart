@@ -16,6 +16,7 @@ import AdminProducts from './Pages/Admin/AdminProducts';
 import AdminOrders from './Pages/Admin/AdminOrders';
 import AdminInventory from './Pages/Admin/AdminInventory';
 import LoadingSpinner from './UI/LoadingSpinner';
+import TestComponent from './TestComponent';
 
 function App() {
     const { user, loading } = useAuth();

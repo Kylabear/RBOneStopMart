@@ -159,7 +159,6 @@ const AdminDashboard = () => {
                                             <div className="text-white font-medium">{product.name}</div>
                                             <div className="text-gray-400 text-sm">{product.category?.name}</div>
                                         </div>
-                                        </div>
                                         <div className="text-right">
                                             <div className="text-red-400 font-semibold">
                                                 {product.stock_quantity} left

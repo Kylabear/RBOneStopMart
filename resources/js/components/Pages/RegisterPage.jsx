@@ -13,8 +13,6 @@ const RegisterPage = () => {
         password_confirmation: '',
         phone: '',
         address: '',
-        whatsapp: '',
-        facebook: '',
     });
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -179,35 +177,6 @@ const RegisterPage = () => {
                             </div>
                         </div>
 
-                        <div>
-                            <label htmlFor="whatsapp" className="block text-sm font-medium text-white mb-2">
-                                WhatsApp Number (Optional)
-                            </label>
-                            <input
-                                id="whatsapp"
-                                name="whatsapp"
-                                type="tel"
-                                value={formData.whatsapp}
-                                onChange={handleChange}
-                                className="w-full px-4 py-3 glass rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                                placeholder="Enter your WhatsApp number"
-                            />
-                        </div>
-
-                        <div>
-                            <label htmlFor="facebook" className="block text-sm font-medium text-white mb-2">
-                                Facebook Profile (Optional)
-                            </label>
-                            <input
-                                id="facebook"
-                                name="facebook"
-                                type="text"
-                                value={formData.facebook}
-                                onChange={handleChange}
-                                className="w-full px-4 py-3 glass rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                                placeholder="Enter your Facebook profile name"
-                            />
-                        </div>
 
                         <button
                             type="submit"
