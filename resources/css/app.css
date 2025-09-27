@@ -2,39 +2,60 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-/* Custom glassmorphism styles with pastel theme */
-.glass {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+/* Custom background color */
+body {
+    background-color: #CCFFCC;
 }
 
-.glass-dark {
-    background: rgba(236, 72, 153, 0.1);
+/* Text colors for light background */
+.text-white {
+    color: #ffffff !important; /* White text */
+}
+
+.text-gray-300 {
+    color: #374151 !important; /* Darker gray for better contrast */
+}
+
+.text-gray-400 {
+    color: #4b5563 !important; /* Medium gray for better contrast */
+}
+
+/* Update glassmorphism for light background */
+.glass {
+    background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(15px);
-    border: 1px solid rgba(236, 72, 153, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .glass-card {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
 }
 
 .glass-button {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     transition: all 0.3s ease;
+    color: #1f2937 !important;
 }
 
 .glass-button:hover {
-    background: rgba(236, 72, 153, 0.15);
+    background: rgba(59, 130, 246, 0.2);
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(236, 72, 153, 0.2);
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+    color: #1f2937 !important;
+}
+
+/* Gradient text for light background */
+.gradient-text {
+    background: linear-gradient(135deg, #1e40af, #3b82f6, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 /* Custom scrollbar */
@@ -100,34 +121,6 @@
     box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.4);
 }
 
-/* Text visibility over galaxy background */
-.text-over-galaxy {
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    color: #ffffff;
-}
-
-.text-over-galaxy h1,
-.text-over-galaxy h2,
-.text-over-galaxy h3,
-.text-over-galaxy h4,
-.text-over-galaxy h5,
-.text-over-galaxy h6 {
-    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.7);
-    color: #ffffff;
-}
-
-.text-over-galaxy p {
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
-    color: #f8fafc;
-}
-
-/* Enhanced glassmorphism for galaxy background */
-.glass-over-galaxy {
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-}
 
         /* Custom Toast Styles - Center Container */
         [data-sonner-toaster] {

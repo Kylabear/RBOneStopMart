@@ -48,13 +48,13 @@ const LoginPage = () => {
             <div className="max-w-md w-full">
                 <div className="glass-card rounded-2xl p-8">
                     <div className="text-center mb-8">
-                        <h2 className="text-3xl font-bold text-white mb-2">Welcome Back</h2>
-                        <p className="text-gray-300">Sign in to your account</p>
+                        <h2 className="text-3xl font-bold text-black mb-2">Welcome Back</h2>
+                        <p className="text-gray-700">Sign in to your account</p>
                     </div>
 
                     <form onSubmit={handleSubmit} className="space-y-6">
                         <div>
-                            <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
+                            <label htmlFor="email" className="block text-sm font-medium text-black mb-2">
                                 Email Address
                             </label>
                             <input
@@ -70,7 +70,7 @@ const LoginPage = () => {
                         </div>
 
                         <div>
-                            <label htmlFor="password" className="block text-sm font-medium text-white mb-2">
+                            <label htmlFor="password" className="block text-sm font-medium text-black mb-2">
                                 Password
                             </label>
                             <div className="relative">
@@ -115,9 +115,9 @@ const LoginPage = () => {
                     </form>
 
                     <div className="mt-6 text-center">
-                        <p className="text-gray-300">
+                        <p className="text-gray-700">
                             Don't have an account?{' '}
-                            <Link to="/register" className="text-blue-400 hover:text-blue-300 font-semibold">
+                            <Link to="/register" className="text-blue-600 hover:text-blue-500 font-semibold">
                                 Sign up here
                             </Link>
                         </p>

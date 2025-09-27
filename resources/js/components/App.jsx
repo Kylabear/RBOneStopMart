@@ -16,30 +16,13 @@ import AdminProducts from './Pages/Admin/AdminProducts';
 import AdminOrders from './Pages/Admin/AdminOrders';
 import AdminInventory from './Pages/Admin/AdminInventory';
 import LoadingSpinner from './UI/LoadingSpinner';
-import Galaxy from './UI/Galaxy';
 
 function App() {
     const { user, loading } = useAuth();
 
     if (loading) {
             return (
-                <div className="min-h-screen relative flex items-center justify-center bg-black">
-                    <Galaxy 
-                        density={0.5}
-                        starSpeed={0.05}
-                        glowIntensity={0.2}
-                        twinkleIntensity={0.2}
-                        hueShift={140}
-                        speed={0.1}
-                        mouseInteraction={false}
-                        mouseRepulsion={false}
-                        repulsionStrength={1}
-                        rotationSpeed={0.01}
-                        saturation={0.0}
-                        autoCenterRepulsion={0}
-                        transparent={false}
-                        className="absolute inset-0"
-                    />
+                <div className="min-h-screen relative flex items-center justify-center">
                     <div className="relative z-10">
                         <LoadingSpinner />
                     </div>
@@ -48,23 +31,7 @@ function App() {
     }
 
     return (
-        <div className="min-h-screen relative bg-black">
-            <Galaxy 
-                density={0.5}
-                starSpeed={0.05}
-                glowIntensity={0.2}
-                twinkleIntensity={0.2}
-                hueShift={140}
-                speed={0.1}
-                mouseInteraction={false}
-                mouseRepulsion={false}
-                repulsionStrength={1}
-                rotationSpeed={0.01}
-                saturation={0.0}
-                autoCenterRepulsion={0}
-                transparent={false}
-                className="absolute inset-0"
-            />
+        <div className="min-h-screen relative">
                     <div className="relative z-10">
                         <Routes>
                 {/* Public routes */}

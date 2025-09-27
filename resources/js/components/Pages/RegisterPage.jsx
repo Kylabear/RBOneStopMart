@@ -52,13 +52,13 @@ const RegisterPage = () => {
             <div className="max-w-md w-full">
                 <div className="glass-card rounded-2xl p-8">
                     <div className="text-center mb-8">
-                        <h2 className="text-3xl font-bold text-white mb-2">Create Account</h2>
-                        <p className="text-gray-300">Join R&B One Stop Mart today</p>
+                        <h2 className="text-3xl font-bold text-black mb-2">Create Account</h2>
+                        <p className="text-gray-700">Join R&B One Stop Mart Now!</p>
                     </div>
 
                     <form onSubmit={handleSubmit} className="space-y-6">
                         <div>
-                            <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
+                            <label htmlFor="name" className="block text-sm font-medium text-black mb-2">
                                 Full Name
                             </label>
                             <input
@@ -74,7 +74,7 @@ const RegisterPage = () => {
                         </div>
 
                         <div>
-                            <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
+                            <label htmlFor="email" className="block text-sm font-medium text-black mb-2">
                                 Email Address
                             </label>
                             <input
@@ -90,7 +90,7 @@ const RegisterPage = () => {
                         </div>
 
                         <div>
-                            <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
+                            <label htmlFor="phone" className="block text-sm font-medium text-black mb-2">
                                 Phone Number
                             </label>
                             <input
@@ -105,7 +105,7 @@ const RegisterPage = () => {
                         </div>
 
                         <div>
-                            <label htmlFor="address" className="block text-sm font-medium text-white mb-2">
+                            <label htmlFor="address" className="block text-sm font-medium text-black mb-2">
                                 Address
                             </label>
                             <textarea
@@ -120,7 +120,7 @@ const RegisterPage = () => {
                         </div>
 
                         <div>
-                            <label htmlFor="password" className="block text-sm font-medium text-white mb-2">
+                            <label htmlFor="password" className="block text-sm font-medium text-black mb-2">
                                 Password
                             </label>
                             <div className="relative">
@@ -149,7 +149,7 @@ const RegisterPage = () => {
                         </div>
 
                         <div>
-                            <label htmlFor="password_confirmation" className="block text-sm font-medium text-white mb-2">
+                            <label htmlFor="password_confirmation" className="block text-sm font-medium text-black mb-2">
                                 Confirm Password
                             </label>
                             <div className="relative">
@@ -195,9 +195,9 @@ const RegisterPage = () => {
                     </form>
 
                     <div className="mt-6 text-center">
-                        <p className="text-gray-300">
+                        <p className="text-gray-700">
                             Already have an account?{' '}
-                            <Link to="/login" className="text-blue-400 hover:text-blue-300 font-semibold">
+                            <Link to="/login" className="text-blue-600 hover:text-blue-500 font-semibold">
                                 Sign in here
                             </Link>
                         </p>
