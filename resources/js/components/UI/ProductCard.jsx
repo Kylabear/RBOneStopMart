@@ -42,7 +42,7 @@ const ProductCard = ({ product }) => {
                         />
                     ) : (
                         <div className="w-full h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                            <span className="text-4xl font-bold text-white">
+                            <span className="text-4xl font-bold text-black">
                                 {product.name.charAt(0)}
                             </span>
                         </div>
@@ -50,10 +50,10 @@ const ProductCard = ({ product }) => {
                     <div className="absolute top-2 right-2">
                         <span className={`px-2 py-1 rounded-full text-xs font-semibold ${
                             product.stock_quantity > 10 
-                                ? 'bg-green-500 text-white' 
+                                ? 'bg-green-500 text-black' 
                                 : product.stock_quantity > 0 
-                                    ? 'bg-yellow-500 text-white' 
-                                    : 'bg-red-500 text-white'
+                                    ? 'bg-yellow-500 text-black' 
+                                    : 'bg-red-500 text-black'
                         }`}>
                             {product.stock_quantity > 0 ? 'In Stock' : 'Out of Stock'}
                         </span>
@@ -67,21 +67,21 @@ const ProductCard = ({ product }) => {
                         </span>
                     </div>
                     
-                    <h3 className="text-lg font-semibold text-white mb-2 line-clamp-2">
+                    <h3 className="text-lg font-semibold text-black mb-2 line-clamp-2">
                         {product.name}
                     </h3>
                     
-                    <p className="text-gray-300 text-sm mb-4 line-clamp-2">
+                    <p className="text-gray-700 text-sm mb-4 line-clamp-2">
                         {product.description}
                     </p>
                     
                     <div className="flex items-center justify-between">
                         <div>
-                            <span className="text-2xl font-bold text-white">
+                            <span className="text-2xl font-bold text-black">
                                 {formatPrice(product.price)}
                             </span>
                             {product.unit && (
-                                <span className="text-sm text-gray-400 ml-1">/{product.unit}</span>
+                                <span className="text-sm text-gray-600 ml-1">/{product.unit}</span>
                             )}
                         </div>
                         
@@ -91,7 +91,7 @@ const ProductCard = ({ product }) => {
                                 className="p-2 glass-button rounded-lg hover:scale-110 transition-transform"
                                 title="View Details"
                             >
-                                <EyeIcon className="w-4 h-4 text-white" />
+                                <EyeIcon className="w-4 h-4 text-black" />
                             </Link>
                             
                             {product.stock_quantity > 0 && (
@@ -100,7 +100,7 @@ const ProductCard = ({ product }) => {
                                     className="p-2 bg-blue-600 hover:bg-blue-700 rounded-lg hover:scale-110 transition-transform"
                                     title="Add to Cart"
                                 >
-                                    <ShoppingCartIcon className="w-4 h-4 text-white" />
+                                    <ShoppingCartIcon className="w-4 h-4 text-black" />
                                 </button>
                             )}
                         </div>

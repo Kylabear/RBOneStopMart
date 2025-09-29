@@ -134,14 +134,14 @@ const HomePage = () => {
                                     className="glass-card rounded-2xl p-4 sm:p-6 md:p-8 text-center hover:scale-105 transition-transform group w-full"
                                 >
                                     <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                                        <span className="text-2xl font-bold text-white">
+                                        <span className="text-2xl font-bold text-black">
                                             {category.name.charAt(0)}
                                         </span>
                                     </div>
-                                    <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-300 transition-colors">
+                                    <h3 className="text-xl font-semibold text-black mb-2 group-hover:text-blue-300 transition-colors">
                                         {category.name}
                                     </h3>
-                                    <p className="text-gray-300 mb-4">{category.description}</p>
+                                    <p className="text-gray-700 mb-4">{category.description}</p>
                                     <div className="text-sm text-blue-400">
                                         {category.products_count} products
                                     </div>
@@ -159,22 +159,22 @@ const HomePage = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                         <div className="glass-card rounded-2xl p-8 text-center">
                             <ShoppingCartIcon className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-                            <h3 className="text-xl font-semibold text-white mb-4">Easy Shopping</h3>
-                            <p className="text-gray-300">
+                            <h3 className="text-xl font-semibold text-black mb-4">Easy Shopping</h3>
+                            <p className="text-gray-700">
                                 Browse our wide selection of products with an intuitive shopping experience.
                             </p>
                         </div>
                         <div className="glass-card rounded-2xl p-8 text-center">
                             <TruckIcon className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-                            <h3 className="text-xl font-semibold text-white mb-4">Delivery & Pickup</h3>
-                            <p className="text-gray-300">
+                            <h3 className="text-xl font-semibold text-black mb-4">Delivery & Pickup</h3>
+                            <p className="text-gray-700">
                                 Choose between delivery or pickup options for your convenience.
                             </p>
                         </div>
                         <div className="glass-card rounded-2xl p-8 text-center">
                             <CreditCardIcon className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-                            <h3 className="text-xl font-semibold text-white mb-4">Multiple Payment</h3>
-                            <p className="text-gray-300">
+                            <h3 className="text-xl font-semibold text-black mb-4">Multiple Payment</h3>
+                            <p className="text-gray-700">
                                 Pay with COD, GCash, or PayMaya - whatever works best for you.
                             </p>
                         </div>
@@ -183,7 +183,7 @@ const HomePage = () => {
             </section>
 
             {/* About Us Section */}
-            <section id="about" className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+            <section id="about" className="py-16 px-4 sm:px-6 lg:px-8 about-section">
                 <div className="max-w-7xl mx-auto">
                     <h2 className="text-3xl font-bold text-black text-center mb-12">About Us</h2>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -208,7 +208,7 @@ const HomePage = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-8 text-white">
+                        <div className="mission-vision-section rounded-2xl p-8 text-black">
                             <h4 className="text-xl font-bold mb-4">Our Mission</h4>
                             <p className="mb-6">
                                 To provide our community with high-quality groceries, dry goods, and farm supplies while maintaining 

@@ -27,7 +27,7 @@ const PromotionalCarousel = ({ slides = [], autoPlay = true, interval = 5000 }) 
     if (!slides || slides.length === 0) {
         return (
             <div className="relative h-96 bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center">
-                <div className="text-center text-white">
+                <div className="text-center text-black">
                     <h2 className="text-4xl font-bold mb-4">Welcome to R&B One Stop Mart</h2>
                     <p className="text-xl mb-8">Your one-stop destination for all your needs</p>
                     <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -79,12 +79,12 @@ const PromotionalCarousel = ({ slides = [], autoPlay = true, interval = 5000 }) 
                             <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                                 <div className="text-center">
                                     {/* Bold Headline */}
-                                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-tight tracking-tight">
+                                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-black mb-6 leading-tight tracking-tight">
                                         {slide.title}
                                     </h1>
                                     
                                     {/* Short Descriptive Paragraph */}
-                                    <p className="text-xl md:text-2xl lg:text-3xl text-white mb-8 max-w-4xl mx-auto leading-relaxed font-light">
+                                    <p className="text-xl md:text-2xl lg:text-3xl text-black mb-8 max-w-4xl mx-auto leading-relaxed font-light">
                                         {slide.subtitle}
                                     </p>
                                     
@@ -119,14 +119,14 @@ const PromotionalCarousel = ({ slides = [], autoPlay = true, interval = 5000 }) 
                 <>
                     <button
                         onClick={prevSlide}
-                        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
+                        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-black p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
                         aria-label="Previous slide"
                     >
                         <ChevronLeftIcon className="w-6 h-6" />
                     </button>
                     <button
                         onClick={nextSlide}
-                        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
+                        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-black p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
                         aria-label="Next slide"
                     >
                         <ChevronRightIcon className="w-6 h-6" />

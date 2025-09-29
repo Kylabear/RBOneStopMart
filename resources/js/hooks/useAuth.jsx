@@ -38,12 +38,16 @@ export const AuthProvider = ({ children }) => {
     const login = async (email, password) => {
         try {
             console.log('Attempting login with:', { email, password });
+            
+            // Fetch CSRF cookie first
+            await axios.get('/sanctum/csrf-cookie');
+            
             const response = await axios.post('/api/login', { email, password });
             console.log('Login response:', response.data);
             localStorage.setItem('token', response.data.token);
             axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`;
             setUser(response.data.user);
-            return { success: true };
+            return { success: true, user: response.data.user };
         } catch (error) {
             console.error('Login error:', error);
             console.error('Error response:', error.response?.data);
@@ -58,11 +62,14 @@ export const AuthProvider = ({ children }) => {
 
     const register = async (formData) => {
         try {
+            // Fetch CSRF cookie first
+            await axios.get('/sanctum/csrf-cookie');
+            
             const response = await axios.post('/api/register', formData);
             localStorage.setItem('token', response.data.token);
             axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`;
             setUser(response.data.user);
-            return { success: true };
+            return { success: true, user: response.data.user };
         } catch (error) {
             if (error.response?.data?.errors) {
                 const firstError = Object.values(error.response.data.errors)[0][0];
@@ -73,10 +80,16 @@ export const AuthProvider = ({ children }) => {
     };
 
     const logout = async () => {
-        await axios.post('/api/logout');
-        localStorage.removeItem('token');
-        delete axios.defaults.headers.common['Authorization'];
-        setUser(null);
+        try {
+            await axios.post('/api/logout');
+        } catch (error) {
+            console.error('Logout error:', error);
+            // Continue with logout even if API call fails
+        } finally {
+            localStorage.removeItem('token');
+            delete axios.defaults.headers.common['Authorization'];
+            setUser(null);
+        }
     };
 
     const value = {

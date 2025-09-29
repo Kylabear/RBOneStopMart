@@ -4,7 +4,19 @@
 
 /* Custom background color */
 body {
-    background-color: #CCFFCC;
+    background: linear-gradient(135deg, #f0fdf4 0%, #dbeafe 50%, #faf5ff 100%);
+    min-height: 100vh;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ensure admin pages have gradient background */
+.admin-page {
+    background: linear-gradient(135deg, #f0fdf4 0%, #dbeafe 50%, #faf5ff 100%) !important;
+    min-height: 100vh;
 }
 
 /* Text colors for light background */
@@ -29,10 +41,10 @@ body {
 }
 
 .glass-card {
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
 }
 
 .glass-button {
@@ -75,6 +87,16 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.5);
+}
+
+/* About Us section background */
+.about-section {
+    background-color: #CCFFCC !important;
+}
+
+/* Mission Vision section background */
+.mission-vision-section {
+    background-color: #CCFFCC !important;
 }
 
 /* Loading animation */

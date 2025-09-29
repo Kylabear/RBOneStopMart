@@ -67,11 +67,11 @@ const ProductDetailPage = () => {
         return (
             <div className="min-h-screen flex items-center justify-center">
                 <div className="glass-card rounded-2xl p-8 text-center">
-                    <h2 className="text-2xl font-bold text-white mb-4">Product Not Found</h2>
-                    <p className="text-gray-300 mb-6">The product you're looking for doesn't exist.</p>
+                    <h2 className="text-2xl font-bold text-black mb-4">Product Not Found</h2>
+                    <p className="text-gray-700 mb-6">The product you're looking for doesn't exist.</p>
                     <button
                         onClick={() => navigate('/products')}
-                        className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                        className="bg-blue-600 hover:bg-blue-700 text-black px-6 py-3 rounded-lg font-semibold transition-colors"
                     >
                         Back to Products
                     </button>
@@ -86,7 +86,7 @@ const ProductDetailPage = () => {
                 {/* Back Button */}
                 <button
                     onClick={() => navigate(-1)}
-                    className="flex items-center space-x-2 text-white hover:text-blue-300 transition-colors mb-8"
+                    className="flex items-center space-x-2 text-black hover:text-blue-300 transition-colors mb-8"
                 >
                     <ArrowLeftIcon className="w-5 h-5" />
                     <span>Back</span>
@@ -104,7 +104,7 @@ const ProductDetailPage = () => {
                                 />
                             ) : (
                                 <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                                    <span className="text-8xl font-bold text-white">
+                                    <span className="text-8xl font-bold text-black">
                                         {product.name.charAt(0)}
                                     </span>
                                 </div>
@@ -135,24 +135,24 @@ const ProductDetailPage = () => {
                                     {product.category?.name}
                                 </span>
                                 {!product.category?.allows_delivery && (
-                                    <span className="inline-block bg-yellow-500 text-white text-xs px-2 py-1 rounded-full">
+                                    <span className="inline-block bg-yellow-500 text-black text-xs px-2 py-1 rounded-full">
                                         Pickup Only
                                     </span>
                                 )}
                             </div>
                             
-                            <h1 className="text-3xl font-bold text-white mb-4">{product.name}</h1>
+                            <h1 className="text-3xl font-bold text-black mb-4">{product.name}</h1>
                             
                             <div className="flex items-center space-x-4 mb-6">
-                                <div className="text-3xl font-bold text-white">
+                                <div className="text-3xl font-bold text-black">
                                     {formatPrice(product.price)}
                                 </div>
                                 {product.unit && (
-                                    <span className="text-gray-400">/{product.unit}</span>
+                                    <span className="text-gray-600">/{product.unit}</span>
                                 )}
                             </div>
 
-                            <p className="text-gray-300 text-lg leading-relaxed">
+                            <p className="text-gray-700 text-lg leading-relaxed">
                                 {product.description}
                             </p>
                         </div>
@@ -161,10 +161,10 @@ const ProductDetailPage = () => {
                         <div className="flex items-center space-x-4">
                             <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
                                 product.stock_quantity > 10 
-                                    ? 'bg-green-500 text-white' 
+                                    ? 'bg-green-500 text-black' 
                                     : product.stock_quantity > 0 
-                                        ? 'bg-yellow-500 text-white' 
-                                        : 'bg-red-500 text-white'
+                                        ? 'bg-yellow-500 text-black' 
+                                        : 'bg-red-500 text-black'
                             }`}>
                                 {product.stock_quantity > 0 ? 'In Stock' : 'Out of Stock'}
                             </span>
@@ -179,7 +179,7 @@ const ProductDetailPage = () => {
                         {/* Quantity Selector */}
                         {product.stock_quantity > 0 && (
                             <div className="flex items-center space-x-4">
-                                <label className="text-white font-medium">Quantity:</label>
+                                <label className="text-black font-medium">Quantity:</label>
                                 <div className="flex items-center space-x-3">
                                     <button
                                         onClick={() => setQuantity(Math.max(1, quantity - 1))}
@@ -187,7 +187,7 @@ const ProductDetailPage = () => {
                                     >
                                         -
                                     </button>
-                                    <span className="text-white font-semibold min-w-[2rem] text-center">
+                                    <span className="text-black font-semibold min-w-[2rem] text-center">
                                         {quantity}
                                     </span>
                                     <button
@@ -206,7 +206,7 @@ const ProductDetailPage = () => {
                                 <>
                                     <button
                                         onClick={handleAddToCart}
-                                        className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2"
+                                        className="flex-1 bg-blue-600 hover:bg-blue-700 text-black py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2"
                                     >
                                         <ShoppingCartIcon className="w-5 h-5" />
                                         <span>Add to Cart</span>
@@ -214,7 +214,7 @@ const ProductDetailPage = () => {
                                     
                                     <button
                                         onClick={handleBuyNow}
-                                        className="flex-1 glass-button text-white py-3 px-6 rounded-lg font-semibold transition-colors"
+                                        className="flex-1 glass-button text-black py-3 px-6 rounded-lg font-semibold transition-colors"
                                     >
                                         Buy Now
                                     </button>
@@ -222,7 +222,7 @@ const ProductDetailPage = () => {
                             ) : (
                                 <button
                                     disabled
-                                    className="w-full bg-gray-500 text-white py-3 px-6 rounded-lg font-semibold cursor-not-allowed"
+                                    className="w-full bg-gray-500 text-black py-3 px-6 rounded-lg font-semibold cursor-not-allowed"
                                 >
                                     Out of Stock
                                 </button>
@@ -235,28 +235,28 @@ const ProductDetailPage = () => {
                                 {isFavorite ? (
                                     <HeartIconSolid className="w-6 h-6 text-red-500" />
                                 ) : (
-                                    <HeartIcon className="w-6 h-6 text-white" />
+                                    <HeartIcon className="w-6 h-6 text-black" />
                                 )}
                             </button>
                         </div>
 
                         {/* Delivery Information */}
                         <div className="glass-card rounded-2xl p-6">
-                            <h3 className="text-lg font-semibold text-white mb-4">Delivery Information</h3>
+                            <h3 className="text-lg font-semibold text-black mb-4">Delivery Information</h3>
                             <div className="space-y-3">
                                 {product.category?.allows_delivery ? (
                                     <div className="flex items-center space-x-3">
                                         <TruckIcon className="w-5 h-5 text-green-400" />
-                                        <span className="text-white">Available for delivery</span>
+                                        <span className="text-black">Available for delivery</span>
                                     </div>
                                 ) : (
                                     <div className="flex items-center space-x-3">
                                         <BuildingStorefrontIcon className="w-5 h-5 text-yellow-400" />
-                                        <span className="text-white">Pickup only</span>
+                                        <span className="text-black">Pickup only</span>
                                     </div>
                                 )}
                                 
-                                <div className="text-sm text-gray-400">
+                                <div className="text-sm text-gray-600">
                                     {product.category?.allows_delivery 
                                         ? 'This item can be delivered to your address or picked up at our store.'
                                         : 'This item is only available for pickup at our store location.'

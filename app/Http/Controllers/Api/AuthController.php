@@ -116,4 +116,40 @@ class AuthController extends Controller
     {
         return response()->json($request->user());
     }
+
+    /**
+     * Update user profile
+     */
+    public function updateProfile(Request $request)
+    {
+        try {
+            $request->validate([
+                'name' => 'required|string|max:255',
+                'phone' => 'nullable|string|max:20',
+                'address' => 'nullable|string',
+            ]);
+
+            $user = $request->user();
+            $user->update([
+                'name' => $request->name,
+                'phone' => $request->phone,
+                'address' => $request->address,
+            ]);
+
+            return response()->json([
+                'user' => $user,
+                'message' => 'Profile updated successfully'
+            ]);
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            return response()->json([
+                'message' => 'Validation failed',
+                'errors' => $e->errors()
+            ], 422);
+        } catch (\Exception $e) {
+            return response()->json([
+                'message' => 'Profile update failed',
+                'error' => $e->getMessage()
+            ], 500);
+        }
+    }
 }

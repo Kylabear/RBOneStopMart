@@ -61,7 +61,7 @@ const ProductCarousel = ({ products, isLoading }) => {
 
     if (!products || products.length === 0) {
         return (
-            <div className="text-center text-white py-8">
+            <div className="text-center text-black py-8">
                 <p>No featured products available</p>
             </div>
         );
@@ -102,14 +102,14 @@ const ProductCarousel = ({ products, isLoading }) => {
                         className="absolute left-2 top-1/2 transform -translate-y-1/2 glass-button rounded-full p-2 hover:scale-110 transition-transform z-10"
                         aria-label="Previous products"
                     >
-                        <ChevronLeftIcon className="w-6 h-6 text-white" />
+                        <ChevronLeftIcon className="w-6 h-6 text-black" />
                     </button>
                     <button
                         onClick={nextSlide}
                         className="absolute right-2 top-1/2 transform -translate-y-1/2 glass-button rounded-full p-2 hover:scale-110 transition-transform z-10"
                         aria-label="Next products"
                     >
-                        <ChevronRightIcon className="w-6 h-6 text-white" />
+                        <ChevronRightIcon className="w-6 h-6 text-black" />
                     </button>
                 </>
             )}

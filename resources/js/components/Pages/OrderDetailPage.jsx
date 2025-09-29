@@ -47,7 +47,7 @@ const OrderDetailPage = () => {
             case 'ready': return 'text-green-400';
             case 'delivered': return 'text-green-500';
             case 'cancelled': return 'text-red-400';
-            default: return 'text-gray-400';
+            default: return 'text-gray-600';
         }
     };
 
@@ -63,11 +63,11 @@ const OrderDetailPage = () => {
         return (
             <div className="min-h-screen flex items-center justify-center">
                 <div className="glass-card rounded-2xl p-8 text-center">
-                    <h2 className="text-2xl font-bold text-white mb-4">Order Not Found</h2>
-                    <p className="text-gray-300 mb-6">The order you're looking for doesn't exist.</p>
+                    <h2 className="text-2xl font-bold text-black mb-4">Order Not Found</h2>
+                    <p className="text-gray-700 mb-6">The order you're looking for doesn't exist.</p>
                     <button
                         onClick={() => navigate('/orders')}
-                        className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                        className="bg-blue-600 hover:bg-blue-700 text-black px-6 py-3 rounded-lg font-semibold transition-colors"
                     >
                         Back to Orders
                     </button>
@@ -82,7 +82,7 @@ const OrderDetailPage = () => {
                 {/* Back Button */}
                 <button
                     onClick={() => navigate('/orders')}
-                    className="flex items-center space-x-2 text-white hover:text-blue-300 transition-colors mb-8"
+                    className="flex items-center space-x-2 text-black hover:text-blue-300 transition-colors mb-8"
                 >
                     <ArrowLeftIcon className="w-5 h-5" />
                     <span>Back to Orders</span>
@@ -93,10 +93,10 @@ const OrderDetailPage = () => {
                     <div className="glass-card rounded-2xl p-6">
                         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
                             <div>
-                                <h1 className="text-2xl font-bold text-white mb-2">
+                                <h1 className="text-2xl font-bold text-black mb-2">
                                     Order #{order.order_number}
                                 </h1>
-                                <p className="text-gray-400">
+                                <p className="text-gray-600">
                                     Placed on {formatDate(order.created_at)}
                                 </p>
                             </div>
@@ -115,10 +115,10 @@ const OrderDetailPage = () => {
                                     <BuildingStorefrontIcon className="w-6 h-6 text-green-400" />
                                 )}
                                 <div>
-                                    <div className="text-white font-medium">
+                                    <div className="text-black font-medium">
                                         {order.delivery_method === 'delivery' ? 'Delivery' : 'Pickup'}
                                     </div>
-                                    <div className="text-gray-400 text-sm">
+                                    <div className="text-gray-600 text-sm">
                                         {order.delivery_method === 'delivery' ? 'To your address' : 'At store location'}
                                     </div>
                                 </div>
@@ -127,20 +127,20 @@ const OrderDetailPage = () => {
                             <div className="flex items-center space-x-3">
                                 <CreditCardIcon className="w-6 h-6 text-purple-400" />
                                 <div>
-                                    <div className="text-white font-medium">
+                                    <div className="text-black font-medium">
                                         {order.payment_method.toUpperCase()}
                                     </div>
-                                    <div className="text-gray-400 text-sm">Payment method</div>
+                                    <div className="text-gray-600 text-sm">Payment method</div>
                                 </div>
                             </div>
 
                             <div className="flex items-center space-x-3">
                                 <CalendarIcon className="w-6 h-6 text-orange-400" />
                                 <div>
-                                    <div className="text-white font-medium">
+                                    <div className="text-black font-medium">
                                         {order.delivery_date ? formatDate(order.delivery_date) : 'Not scheduled'}
                                     </div>
-                                    <div className="text-gray-400 text-sm">Delivery date</div>
+                                    <div className="text-gray-600 text-sm">Delivery date</div>
                                 </div>
                             </div>
                         </div>
@@ -148,7 +148,7 @@ const OrderDetailPage = () => {
 
                     {/* Order Items */}
                     <div className="glass-card rounded-2xl p-6">
-                        <h2 className="text-xl font-semibold text-white mb-6">Order Items</h2>
+                        <h2 className="text-xl font-semibold text-black mb-6">Order Items</h2>
                         <div className="space-y-4">
                             {order.order_items?.map((item) => (
                                 <div key={item.id} className="flex items-center space-x-4 p-4 glass rounded-lg">
@@ -161,7 +161,7 @@ const OrderDetailPage = () => {
                                             />
                                         ) : (
                                             <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                                                <span className="text-xl font-bold text-white">
+                                                <span className="text-xl font-bold text-black">
                                                     {item.product?.name?.charAt(0) || '?'}
                                                 </span>
                                             </div>
@@ -169,16 +169,16 @@ const OrderDetailPage = () => {
                                     </div>
                                     
                                     <div className="flex-1">
-                                        <h3 className="text-white font-medium">{item.product?.name}</h3>
-                                        <p className="text-gray-400 text-sm">{item.product?.category?.name}</p>
-                                        <p className="text-gray-400 text-sm">Quantity: {item.quantity}</p>
+                                        <h3 className="text-black font-medium">{item.product?.name}</h3>
+                                        <p className="text-gray-600 text-sm">{item.product?.category?.name}</p>
+                                        <p className="text-gray-600 text-sm">Quantity: {item.quantity}</p>
                                     </div>
                                     
                                     <div className="text-right">
-                                        <div className="text-white font-semibold">
+                                        <div className="text-black font-semibold">
                                             {formatPrice(item.total_price)}
                                         </div>
-                                        <div className="text-gray-400 text-sm">
+                                        <div className="text-gray-600 text-sm">
                                             {formatPrice(item.unit_price)} each
                                         </div>
                                     </div>
@@ -189,18 +189,18 @@ const OrderDetailPage = () => {
 
                     {/* Order Summary */}
                     <div className="glass-card rounded-2xl p-6">
-                        <h2 className="text-xl font-semibold text-white mb-6">Order Summary</h2>
+                        <h2 className="text-xl font-semibold text-black mb-6">Order Summary</h2>
                         <div className="space-y-4">
-                            <div className="flex justify-between text-gray-300">
+                            <div className="flex justify-between text-gray-700">
                                 <span>Subtotal</span>
                                 <span>{formatPrice(order.total_amount)}</span>
                             </div>
-                            <div className="flex justify-between text-gray-300">
+                            <div className="flex justify-between text-gray-700">
                                 <span>Delivery Fee</span>
                                 <span>Free</span>
                             </div>
                             <div className="border-t border-white/20 pt-4">
-                                <div className="flex justify-between text-xl font-bold text-white">
+                                <div className="flex justify-between text-xl font-bold text-black">
                                     <span>Total</span>
                                     <span>{formatPrice(order.total_amount)}</span>
                                 </div>
@@ -211,28 +211,28 @@ const OrderDetailPage = () => {
                     {/* Delivery Address */}
                     {order.delivery_address && (
                         <div className="glass-card rounded-2xl p-6">
-                            <h2 className="text-xl font-semibold text-white mb-4 flex items-center">
+                            <h2 className="text-xl font-semibold text-black mb-4 flex items-center">
                                 <MapPinIcon className="w-6 h-6 mr-2" />
                                 Delivery Address
                             </h2>
-                            <p className="text-gray-300">{order.delivery_address}</p>
+                            <p className="text-gray-700">{order.delivery_address}</p>
                         </div>
                     )}
 
                     {/* Contact Information */}
                     <div className="glass-card rounded-2xl p-6">
-                        <h2 className="text-xl font-semibold text-white mb-4 flex items-center">
+                        <h2 className="text-xl font-semibold text-black mb-4 flex items-center">
                             <PhoneIcon className="w-6 h-6 mr-2" />
                             Contact Information
                         </h2>
                         <div className="space-y-2">
-                            <p className="text-gray-300">
+                            <p className="text-gray-700">
                                 <span className="font-medium">Phone:</span> {order.contact_phone}
                             </p>
                             {order.notes && (
                                 <div>
-                                    <p className="font-medium text-white mb-1">Notes:</p>
-                                    <p className="text-gray-300">{order.notes}</p>
+                                    <p className="font-medium text-black mb-1">Notes:</p>
+                                    <p className="text-gray-700">{order.notes}</p>
                                 </div>
                             )}
                         </div>

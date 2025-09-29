@@ -70,28 +70,28 @@ const ProductsPage = () => {
         <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 <div className="mb-8">
-                    <h1 className="text-3xl font-bold text-white mb-4">Our Products</h1>
-                    <p className="text-gray-300">Discover our wide range of products</p>
+                    <h1 className="text-3xl font-bold text-black mb-4">Our Products</h1>
+                    <p className="text-gray-700">Discover our wide range of products</p>
                 </div>
 
                 {/* Search and Filters */}
                 <div className="glass-card rounded-2xl p-6 mb-8">
                     <form onSubmit={handleSearch} className="flex flex-col md:flex-row gap-4">
                         <div className="flex-1 relative">
-                            <MagnifyingGlassIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                            <MagnifyingGlassIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-600" />
                             <input
                                 type="text"
                                 value={search}
                                 onChange={(e) => setSearch(e.target.value)}
                                 placeholder="Search products..."
-                                className="w-full pl-10 pr-4 py-3 glass rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                                className="w-full pl-10 pr-4 py-3 glass rounded-lg text-black placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
                             />
                         </div>
                         
                         <button
                             type="button"
                             onClick={() => setShowFilters(!showFilters)}
-                            className="md:hidden flex items-center justify-center px-4 py-3 glass rounded-lg text-white hover:bg-white/10 transition-colors"
+                            className="md:hidden flex items-center justify-center px-4 py-3 glass rounded-lg text-black hover:bg-white/10 transition-colors"
                         >
                             <FunnelIcon className="w-5 h-5 mr-2" />
                             Filters
@@ -110,11 +110,11 @@ const ProductsPage = () => {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                             {/* Category Filter */}
                             <div>
-                                <label className="block text-sm font-medium text-white mb-2">Category</label>
+                                <label className="block text-sm font-medium text-black mb-2">Category</label>
                                 <select
                                     value={category}
                                     onChange={(e) => handleCategoryChange(e.target.value)}
-                                    className="w-full px-4 py-3 glass rounded-lg text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                                    className="w-full px-4 py-3 glass rounded-lg text-black focus:ring-2 focus:ring-blue-500 focus:outline-none"
                                 >
                                     <option value="">All Categories</option>
                                     {categories?.map((cat) => (
@@ -127,11 +127,11 @@ const ProductsPage = () => {
 
                             {/* Sort By */}
                             <div>
-                                <label className="block text-sm font-medium text-white mb-2">Sort By</label>
+                                <label className="block text-sm font-medium text-black mb-2">Sort By</label>
                                 <select
                                     value={sortBy}
                                     onChange={(e) => handleSortChange(e.target.value, sortOrder)}
-                                    className="w-full px-4 py-3 glass rounded-lg text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                                    className="w-full px-4 py-3 glass rounded-lg text-black focus:ring-2 focus:ring-blue-500 focus:outline-none"
                                 >
                                     <option value="created_at">Newest First</option>
                                     <option value="name">Name A-Z</option>
@@ -141,11 +141,11 @@ const ProductsPage = () => {
 
                             {/* Sort Order */}
                             <div>
-                                <label className="block text-sm font-medium text-white mb-2">Order</label>
+                                <label className="block text-sm font-medium text-black mb-2">Order</label>
                                 <select
                                     value={sortOrder}
                                     onChange={(e) => handleSortChange(sortBy, e.target.value)}
-                                    className="w-full px-4 py-3 glass rounded-lg text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                                    className="w-full px-4 py-3 glass rounded-lg text-black focus:ring-2 focus:ring-blue-500 focus:outline-none"
                                 >
                                     <option value="desc">Descending</option>
                                     <option value="asc">Ascending</option>
@@ -165,7 +165,7 @@ const ProductsPage = () => {
                         {products?.data?.length > 0 ? (
                             <>
                                 <div className="mb-6">
-                                    <p className="text-gray-300">
+                                    <p className="text-gray-700">
                                         Showing {products.data.length} of {products.total} products
                                     </p>
                                 </div>
@@ -205,7 +205,7 @@ const ProductsPage = () => {
                             <div className="text-center py-12">
                                 <div className="glass-card rounded-2xl p-8 max-w-md mx-auto">
                                     <h3 className="text-xl font-semibold text-white mb-4">No Products Found</h3>
-                                    <p className="text-gray-300 mb-6">
+                                    <p className="text-gray-700 mb-6">
                                         Try adjusting your search criteria or browse all products.
                                     </p>
                                     <button

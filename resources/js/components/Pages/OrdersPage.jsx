@@ -39,7 +39,7 @@ const OrdersPage = () => {
             case 'ready': return 'text-green-400 bg-green-500/20';
             case 'delivered': return 'text-green-500 bg-green-500/20';
             case 'cancelled': return 'text-red-400 bg-red-500/20';
-            default: return 'text-gray-400 bg-gray-500/20';
+            default: return 'text-gray-600 bg-gray-500/20';
         }
     };
 
@@ -55,8 +55,8 @@ const OrdersPage = () => {
         <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 <div className="mb-8">
-                    <h1 className="text-3xl font-bold text-white mb-4">My Orders</h1>
-                    <p className="text-gray-300">Track and manage your orders</p>
+                    <h1 className="text-3xl font-bold text-black mb-4">My Orders</h1>
+                    <p className="text-gray-700">Track and manage your orders</p>
                 </div>
 
                 {orders?.data?.length > 0 ? (
@@ -65,10 +65,10 @@ const OrdersPage = () => {
                             <div key={order.id} className="glass-card rounded-2xl p-6">
                                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
                                     <div>
-                                        <h3 className="text-xl font-semibold text-white mb-2">
+                                        <h3 className="text-xl font-semibold text-black mb-2">
                                             Order #{order.order_number}
                                         </h3>
-                                        <p className="text-gray-400">
+                                        <p className="text-gray-600">
                                             Placed on {formatDate(order.created_at)}
                                         </p>
                                     </div>
@@ -94,10 +94,10 @@ const OrdersPage = () => {
                                             <BuildingStorefrontIcon className="w-5 h-5 text-green-400" />
                                         )}
                                         <div>
-                                            <div className="text-white font-medium">
+                                            <div className="text-black font-medium">
                                                 {order.delivery_method === 'delivery' ? 'Delivery' : 'Pickup'}
                                             </div>
-                                            <div className="text-gray-400 text-sm">
+                                            <div className="text-gray-600 text-sm">
                                                 {order.delivery_method === 'delivery' ? 'To your address' : 'At store location'}
                                             </div>
                                         </div>
@@ -106,18 +106,18 @@ const OrdersPage = () => {
                                     <div className="flex items-center space-x-3">
                                         <CalendarIcon className="w-5 h-5 text-purple-400" />
                                         <div>
-                                            <div className="text-white font-medium">
+                                            <div className="text-black font-medium">
                                                 {order.delivery_date ? formatDate(order.delivery_date) : 'Not scheduled'}
                                             </div>
-                                            <div className="text-gray-400 text-sm">Delivery date</div>
+                                            <div className="text-gray-600 text-sm">Delivery date</div>
                                         </div>
                                     </div>
 
                                     <div className="text-right">
-                                        <div className="text-2xl font-bold text-white">
+                                        <div className="text-2xl font-bold text-black">
                                             {formatPrice(order.total_amount)}
                                         </div>
-                                        <div className="text-gray-400 text-sm">
+                                        <div className="text-gray-600 text-sm">
                                             {order.order_items?.length || 0} item(s)
                                         </div>
                                     </div>
@@ -125,20 +125,20 @@ const OrdersPage = () => {
 
                                 {/* Order Items Preview */}
                                 <div className="border-t border-white/20 pt-4">
-                                    <h4 className="text-white font-medium mb-3">Items:</h4>
+                                    <h4 className="text-black font-medium mb-3">Items:</h4>
                                     <div className="space-y-2">
                                         {order.order_items?.slice(0, 3).map((item) => (
                                             <div key={item.id} className="flex items-center justify-between text-sm">
-                                                <span className="text-gray-300">
+                                                <span className="text-gray-700">
                                                     {item.product?.name} × {item.quantity}
                                                 </span>
-                                                <span className="text-white">
+                                                <span className="text-black">
                                                     {formatPrice(item.total_price)}
                                                 </span>
                                             </div>
                                         ))}
                                         {order.order_items?.length > 3 && (
-                                            <div className="text-gray-400 text-sm">
+                                            <div className="text-gray-600 text-sm">
                                                 +{order.order_items.length - 3} more item(s)
                                             </div>
                                         )}
@@ -150,13 +150,13 @@ const OrdersPage = () => {
                 ) : (
                     <div className="text-center py-12">
                         <div className="glass-card rounded-2xl p-8 max-w-md mx-auto">
-                            <h2 className="text-2xl font-bold text-white mb-4">No Orders Yet</h2>
-                            <p className="text-gray-300 mb-6">
+                            <h2 className="text-2xl font-bold text-black mb-4">No Orders Yet</h2>
+                            <p className="text-gray-700 mb-6">
                                 You haven't placed any orders yet. Start shopping to see your orders here.
                             </p>
                             <Link 
                                 to="/products" 
-                                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                                className="bg-blue-600 hover:bg-blue-700 text-black px-6 py-3 rounded-lg font-semibold transition-colors"
                             >
                                 Start Shopping
                             </Link>

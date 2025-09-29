@@ -25,7 +25,7 @@ const CheckoutPage = () => {
         delivery_address: user?.address || '',
         contact_phone: user?.phone || '',
         notes: '',
-        delivery_date: '',
+        delivery_date: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString().slice(0, 16), // Tomorrow's date
     });
 
     const hasDryGoods = cartItems?.some(item => item.product.category.slug === 'dry-goods');
@@ -45,7 +45,7 @@ const CheckoutPage = () => {
         try {
             const orderData = {
                 ...formData,
-                delivery_address: formData.delivery_method === 'delivery' ? formData.delivery_address : null,
+                delivery_address: formData.delivery_method === 'delivery' ? formData.delivery_address : '',
                 delivery_date: formData.delivery_date ? new Date(formData.delivery_date).toISOString() : null,
             };
 
@@ -77,8 +77,8 @@ const CheckoutPage = () => {
         <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 <div className="mb-8">
-                    <h1 className="text-3xl font-bold text-white mb-4">Checkout</h1>
-                    <p className="text-gray-300">Complete your order</p>
+                    <h1 className="text-3xl font-bold text-black mb-4">Checkout</h1>
+                    <p className="text-gray-700">Complete your order</p>
                 </div>
 
                 <form onSubmit={handleSubmit} className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -86,7 +86,7 @@ const CheckoutPage = () => {
                     <div className="lg:col-span-2 space-y-6">
                         {/* Delivery Method */}
                         <div className="glass-card rounded-2xl p-6">
-                            <h2 className="text-xl font-semibold text-white mb-4 flex items-center">
+                            <h2 className="text-xl font-semibold text-black mb-4 flex items-center">
                                 <TruckIcon className="w-6 h-6 mr-2" />
                                 Delivery Method
                             </h2>
@@ -101,10 +101,10 @@ const CheckoutPage = () => {
                                         onChange={handleChange}
                                         className="w-4 h-4 text-blue-600"
                                     />
-                                    <BuildingStorefrontIcon className="w-5 h-5 text-white" />
+                                    <BuildingStorefrontIcon className="w-5 h-5 text-black" />
                                     <div>
-                                        <div className="text-white font-medium">Pickup</div>
-                                        <div className="text-gray-400 text-sm">Pick up your order at our store</div>
+                                        <div className="text-black font-medium">Pickup</div>
+                                        <div className="text-gray-600 text-sm">Pick up your order at our store</div>
                                     </div>
                                 </label>
 
@@ -118,10 +118,10 @@ const CheckoutPage = () => {
                                             onChange={handleChange}
                                             className="w-4 h-4 text-blue-600"
                                         />
-                                        <TruckIcon className="w-5 h-5 text-white" />
+                                        <TruckIcon className="w-5 h-5 text-black" />
                                         <div>
-                                            <div className="text-white font-medium">Delivery</div>
-                                            <div className="text-gray-400 text-sm">Get your order delivered to your address</div>
+                                            <div className="text-black font-medium">Delivery</div>
+                                            <div className="text-gray-600 text-sm">Get your order delivered to your address</div>
                                         </div>
                                     </label>
                                 )}
@@ -139,7 +139,7 @@ const CheckoutPage = () => {
                             {/* Delivery Address */}
                             {formData.delivery_method === 'delivery' && (
                                 <div className="mt-6">
-                                    <label className="block text-sm font-medium text-white mb-2">
+                                    <label className="block text-sm font-medium text-black mb-2">
                                         Delivery Address
                                     </label>
                                     <textarea
@@ -148,7 +148,7 @@ const CheckoutPage = () => {
                                         onChange={handleChange}
                                         required
                                         rows="3"
-                                        className="w-full px-4 py-3 glass rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                                        className="w-full px-4 py-3 glass rounded-lg text-black placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
                                         placeholder="Enter your delivery address"
                                     />
                                 </div>
@@ -156,8 +156,8 @@ const CheckoutPage = () => {
 
                             {/* Delivery Date */}
                             <div className="mt-6">
-                                <label className="block text-sm font-medium text-white mb-2">
-                                    Preferred Delivery/Pickup Date
+                                <label className="block text-sm font-medium text-black mb-2">
+                                    Preferred Delivery/Pickup Date & Time
                                 </label>
                                 <input
                                     type="datetime-local"
@@ -165,20 +165,24 @@ const CheckoutPage = () => {
                                     value={formData.delivery_date}
                                     onChange={handleChange}
                                     min={new Date().toISOString().slice(0, 16)}
-                                    className="w-full px-4 py-3 glass rounded-lg text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                                    className="w-full px-4 py-3 glass rounded-lg text-black focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                                    required
                                 />
+                                <p className="text-sm text-gray-600 mt-1">
+                                    Select your preferred date and time for delivery or pickup
+                                </p>
                             </div>
                         </div>
 
                         {/* Contact Information */}
                         <div className="glass-card rounded-2xl p-6">
-                            <h2 className="text-xl font-semibold text-white mb-4 flex items-center">
+                            <h2 className="text-xl font-semibold text-black mb-4 flex items-center">
                                 <PhoneIcon className="w-6 h-6 mr-2" />
                                 Contact Information
                             </h2>
                             
                             <div>
-                                <label className="block text-sm font-medium text-white mb-2">
+                                <label className="block text-sm font-medium text-black mb-2">
                                     Contact Phone
                                 </label>
                                 <input
@@ -187,7 +191,7 @@ const CheckoutPage = () => {
                                     value={formData.contact_phone}
                                     onChange={handleChange}
                                     required
-                                    className="w-full px-4 py-3 glass rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                                    className="w-full px-4 py-3 glass rounded-lg text-black placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
                                     placeholder="Enter your phone number"
                                 />
                             </div>
@@ -195,7 +199,7 @@ const CheckoutPage = () => {
 
                         {/* Payment Method */}
                         <div className="glass-card rounded-2xl p-6">
-                            <h2 className="text-xl font-semibold text-white mb-4 flex items-center">
+                            <h2 className="text-xl font-semibold text-black mb-4 flex items-center">
                                 <CreditCardIcon className="w-6 h-6 mr-2" />
                                 Payment Method
                             </h2>
@@ -211,8 +215,8 @@ const CheckoutPage = () => {
                                         className="w-4 h-4 text-blue-600"
                                     />
                                     <div>
-                                        <div className="text-white font-medium">Cash on Delivery (COD)</div>
-                                        <div className="text-gray-400 text-sm">Pay when you receive your order</div>
+                                        <div className="text-black font-medium">Cash on Delivery (COD)</div>
+                                        <div className="text-gray-600 text-sm">Pay when you receive your order</div>
                                     </div>
                                 </label>
 
@@ -226,8 +230,8 @@ const CheckoutPage = () => {
                                         className="w-4 h-4 text-blue-600"
                                     />
                                     <div>
-                                        <div className="text-white font-medium">GCash</div>
-                                        <div className="text-gray-400 text-sm">Pay via GCash mobile payment</div>
+                                        <div className="text-black font-medium">GCash</div>
+                                        <div className="text-gray-600 text-sm">Pay via GCash mobile payment</div>
                                     </div>
                                 </label>
 
@@ -241,8 +245,8 @@ const CheckoutPage = () => {
                                         className="w-4 h-4 text-blue-600"
                                     />
                                     <div>
-                                        <div className="text-white font-medium">PayMaya</div>
-                                        <div className="text-gray-400 text-sm">Pay via PayMaya mobile payment</div>
+                                        <div className="text-black font-medium">PayMaya</div>
+                                        <div className="text-gray-600 text-sm">Pay via PayMaya mobile payment</div>
                                     </div>
                                 </label>
                             </div>
@@ -250,13 +254,13 @@ const CheckoutPage = () => {
 
                         {/* Order Notes */}
                         <div className="glass-card rounded-2xl p-6">
-                            <h2 className="text-xl font-semibold text-white mb-4">Order Notes</h2>
+                            <h2 className="text-xl font-semibold text-black mb-4">Order Notes</h2>
                             <textarea
                                 name="notes"
                                 value={formData.notes}
                                 onChange={handleChange}
                                 rows="4"
-                                className="w-full px-4 py-3 glass rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                                className="w-full px-4 py-3 glass rounded-lg text-black placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
                                 placeholder="Any special instructions for your order..."
                             />
                         </div>
@@ -265,35 +269,35 @@ const CheckoutPage = () => {
                     {/* Order Summary */}
                     <div className="lg:col-span-1">
                         <div className="glass-card rounded-2xl p-6 sticky top-4">
-                            <h2 className="text-xl font-bold text-white mb-6">Order Summary</h2>
+                            <h2 className="text-xl font-bold text-black mb-6">Order Summary</h2>
                             
                             <div className="space-y-4 mb-6">
                                 {cartItems.map((item) => (
                                     <div key={item.id} className="flex justify-between items-center">
                                         <div className="flex-1">
-                                            <div className="text-white font-medium text-sm">
+                                            <div className="text-black font-medium text-sm">
                                                 {item.product.name}
                                             </div>
-                                            <div className="text-gray-400 text-xs">
+                                            <div className="text-gray-600 text-xs">
                                                 {item.quantity} × {formatPrice(item.product.price)}
                                             </div>
                                         </div>
-                                        <div className="text-white font-semibold">
+                                        <div className="text-black font-semibold">
                                             {formatPrice(item.quantity * item.product.price)}
                                         </div>
                                     </div>
                                 ))}
                                 
                                 <div className="border-t border-white/20 pt-4">
-                                    <div className="flex justify-between text-gray-300 mb-2">
+                                    <div className="flex justify-between text-gray-700 mb-2">
                                         <span>Subtotal</span>
                                         <span>{formatPrice(getCartTotal())}</span>
                                     </div>
-                                    <div className="flex justify-between text-gray-300 mb-2">
+                                    <div className="flex justify-between text-gray-700 mb-2">
                                         <span>Delivery Fee</span>
                                         <span>Free</span>
                                     </div>
-                                    <div className="flex justify-between text-lg font-bold text-white">
+                                    <div className="flex justify-between text-lg font-bold text-black">
                                         <span>Total</span>
                                         <span>{formatPrice(getCartTotal())}</span>
                                     </div>
@@ -303,7 +307,7 @@ const CheckoutPage = () => {
                             <button
                                 type="submit"
                                 disabled={loading}
-                                className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white py-3 px-4 rounded-lg font-semibold transition-colors flex items-center justify-center"
+                                className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-black py-3 px-4 rounded-lg font-semibold transition-colors flex items-center justify-center"
                             >
                                 {loading ? (
                                     <>

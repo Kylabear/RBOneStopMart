@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
+import { useCart } from '../../hooks/useCart';
 import { 
     MagnifyingGlassIcon, 
     HeartIcon, 
@@ -12,6 +13,7 @@ import {
 
 const Header = () => {
     const { user, logout } = useAuth();
+    const { getCartItemCount } = useCart();
     const navigate = useNavigate();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
@@ -23,9 +25,24 @@ const Header = () => {
         }
     };
 
-    const handleLogout = () => {
-        logout();
+    const handleLogout = async () => {
+        await logout();
         navigate('/');
+    };
+
+    const handleScrollToSection = (e, href) => {
+        e.preventDefault();
+        if (href.startsWith('#')) {
+            const element = document.querySelector(href);
+            if (element) {
+                element.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        } else {
+            navigate(href);
+        }
     };
 
     const navigationLinks = [
@@ -54,13 +71,14 @@ const Header = () => {
                         {/* Desktop Navigation */}
                         <nav className="hidden md:flex space-x-8">
                             {navigationLinks.map((link) => (
-                                <Link
+                                <a
                                     key={link.name}
-                                    to={link.href}
-                                    className="text-gray-800 hover:text-blue-600 font-medium transition-colors duration-200"
+                                    href={link.href}
+                                    onClick={(e) => handleScrollToSection(e, link.href)}
+                                    className="text-gray-800 hover:text-blue-600 font-medium transition-colors duration-200 cursor-pointer"
                                 >
                                     {link.name}
-                                </Link>
+                                </a>
                             ))}
                         </nav>
 
@@ -77,7 +95,7 @@ const Header = () => {
                                     />
                                     <button
                                         type="submit"
-                                        className="absolute right-2 top-1/2 transform -translate-y-1/2 p-1 text-gray-400 hover:text-gray-600"
+                                        className="absolute right-2 top-1/2 transform -translate-y-1/2 p-1 text-gray-600 hover:text-gray-600"
                                     >
                                         <MagnifyingGlassIcon className="w-5 h-5" />
                                     </button>
@@ -87,19 +105,24 @@ const Header = () => {
 
                         {/* Right Side Icons */}
                         <div className="flex items-center space-x-4">
-                            {/* Wishlist */}
-                            <button className="p-2 text-gray-800 hover:text-red-500 transition-colors">
-                                <HeartIcon className="w-6 h-6" />
-                            </button>
+                            {/* Only show wishlist and cart when user is logged in */}
+                            {user && (
+                                <>
+                                    {/* Wishlist */}
+                                    <button className="p-2 text-gray-800 hover:text-red-500 transition-colors">
+                                        <HeartIcon className="w-6 h-6" />
+                                    </button>
 
-                            {/* Cart */}
-                            <Link to="/cart" className="p-2 text-gray-800 hover:text-blue-600 transition-colors relative">
-                                <ShoppingCartIcon className="w-6 h-6" />
-                                {/* Cart Badge */}
-                                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                                    0
-                                </span>
-                            </Link>
+                                    {/* Cart */}
+                                    <Link to="/cart" className="p-2 text-gray-800 hover:text-blue-600 transition-colors relative">
+                                        <ShoppingCartIcon className="w-6 h-6" />
+                                        {/* Cart Badge */}
+                                        <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                                            {getCartItemCount()}
+                                        </span>
+                                    </Link>
+                                </>
+                            )}
 
                             {/* User Account */}
                             {user ? (
@@ -112,6 +135,9 @@ const Header = () => {
                                             <p className="text-sm font-medium text-gray-900">{user.name}</p>
                                             <p className="text-xs text-gray-500">{user.email}</p>
                                         </div>
+                                        <Link to="/profile" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                            My Profile
+                                        </Link>
                                         <Link to="/orders" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                             My Orders
                                         </Link>
@@ -152,14 +178,17 @@ const Header = () => {
                             {/* Mobile Navigation */}
                             <nav className="space-y-2">
                                 {navigationLinks.map((link) => (
-                                    <Link
+                                    <a
                                         key={link.name}
-                                        to={link.href}
-                                        className="block px-4 py-2 text-gray-800 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors"
-                                        onClick={() => setIsMobileMenuOpen(false)}
+                                        href={link.href}
+                                        onClick={(e) => {
+                                            handleScrollToSection(e, link.href);
+                                            setIsMobileMenuOpen(false);
+                                        }}
+                                        className="block px-4 py-2 text-gray-800 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors cursor-pointer"
                                     >
                                         {link.name}
-                                    </Link>
+                                    </a>
                                 ))}
                             </nav>
 
@@ -176,7 +205,7 @@ const Header = () => {
                                         />
                                         <button
                                             type="submit"
-                                            className="absolute right-2 top-1/2 transform -translate-y-1/2 p-1 text-gray-400 hover:text-gray-600"
+                                            className="absolute right-2 top-1/2 transform -translate-y-1/2 p-1 text-gray-600 hover:text-gray-600"
                                         >
                                             <MagnifyingGlassIcon className="w-5 h-5" />
                                         </button>

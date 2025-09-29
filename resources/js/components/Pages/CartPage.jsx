@@ -40,13 +40,13 @@ const CartPage = () => {
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center py-12">
                         <div className="glass-card rounded-2xl p-8 max-w-md mx-auto">
-                            <h2 className="text-2xl font-bold text-white mb-4">Your Cart is Empty</h2>
-                            <p className="text-gray-300 mb-6">
+                            <h2 className="text-2xl font-bold text-black mb-4">Your Cart is Empty</h2>
+                            <p className="text-gray-700 mb-6">
                                 Add some products to your cart to get started.
                             </p>
                             <Link 
                                 to="/products" 
-                                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                                className="bg-blue-600 hover:bg-blue-700 text-black px-6 py-3 rounded-lg font-semibold transition-colors"
                             >
                                 Continue Shopping
                             </Link>
@@ -61,8 +61,8 @@ const CartPage = () => {
         <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 <div className="mb-8">
-                    <h1 className="text-3xl font-bold text-white mb-4">Shopping Cart</h1>
-                    <p className="text-gray-300">{cartItems.length} item(s) in your cart</p>
+                    <h1 className="text-3xl font-bold text-black mb-4">Shopping Cart</h1>
+                    <p className="text-gray-700">{cartItems.length} item(s) in your cart</p>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -82,7 +82,7 @@ const CartPage = () => {
                                                 />
                                             ) : (
                                                 <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                                                    <span className="text-2xl font-bold text-white">
+                                                    <span className="text-2xl font-bold text-black">
                                                         {item.product.name.charAt(0)}
                                                     </span>
                                                 </div>
@@ -93,14 +93,14 @@ const CartPage = () => {
                                         <div className="flex-1">
                                             <div className="flex justify-between items-start mb-2">
                                                 <div>
-                                                    <h3 className="text-lg font-semibold text-white mb-1">
+                                                    <h3 className="text-lg font-semibold text-black mb-1">
                                                         {item.product.name}
                                                     </h3>
                                                     <p className="text-sm text-blue-400">
                                                         {item.product.category.name}
                                                     </p>
                                                     {!item.product.category.allows_delivery && (
-                                                        <span className="inline-block bg-yellow-500 text-white text-xs px-2 py-1 rounded-full mt-1">
+                                                        <span className="inline-block bg-yellow-500 text-black text-xs px-2 py-1 rounded-full mt-1">
                                                             Pickup Only
                                                         </span>
                                                     )}
@@ -119,23 +119,23 @@ const CartPage = () => {
                                                         onClick={() => handleQuantityChange(item.id, item.quantity - 1)}
                                                         className="p-1 glass rounded-lg hover:bg-white/10 transition-colors"
                                                     >
-                                                        <MinusIcon className="w-4 h-4 text-white" />
+                                                        <MinusIcon className="w-4 h-4 text-black" />
                                                     </button>
-                                                    <span className="text-white font-semibold min-w-[2rem] text-center">
+                                                    <span className="text-black font-semibold min-w-[2rem] text-center">
                                                         {item.quantity}
                                                     </span>
                                                     <button
                                                         onClick={() => handleQuantityChange(item.id, item.quantity + 1)}
                                                         className="p-1 glass rounded-lg hover:bg-white/10 transition-colors"
                                                     >
-                                                        <PlusIcon className="w-4 h-4 text-white" />
+                                                        <PlusIcon className="w-4 h-4 text-black" />
                                                     </button>
                                                 </div>
                                                 <div className="text-right">
-                                                    <div className="text-lg font-bold text-white">
+                                                    <div className="text-lg font-bold text-black">
                                                         {formatPrice(item.quantity * item.product.price)}
                                                     </div>
-                                                    <div className="text-sm text-gray-400">
+                                                    <div className="text-sm text-gray-600">
                                                         {formatPrice(item.product.price)} each
                                                     </div>
                                                 </div>
@@ -150,19 +150,19 @@ const CartPage = () => {
                     {/* Order Summary */}
                     <div className="lg:col-span-1">
                         <div className="glass-card rounded-2xl p-6 sticky top-4">
-                            <h2 className="text-xl font-bold text-white mb-6">Order Summary</h2>
+                            <h2 className="text-xl font-bold text-black mb-6">Order Summary</h2>
                             
                             <div className="space-y-4 mb-6">
-                                <div className="flex justify-between text-gray-300">
+                                <div className="flex justify-between text-gray-700">
                                     <span>Subtotal</span>
                                     <span>{formatPrice(getCartTotal())}</span>
                                 </div>
-                                <div className="flex justify-between text-gray-300">
+                                <div className="flex justify-between text-gray-700">
                                     <span>Delivery Fee</span>
                                     <span>Free</span>
                                 </div>
                                 <div className="border-t border-white/20 pt-4">
-                                    <div className="flex justify-between text-lg font-bold text-white">
+                                    <div className="flex justify-between text-lg font-bold text-black">
                                         <span>Total</span>
                                         <span>{formatPrice(getCartTotal())}</span>
                                     </div>
@@ -181,14 +181,14 @@ const CartPage = () => {
 
                             <Link 
                                 to="/checkout" 
-                                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-semibold transition-colors text-center block"
+                                className="w-full bg-blue-600 hover:bg-blue-700 text-black py-3 px-4 rounded-lg font-semibold transition-colors text-center block"
                             >
                                 Proceed to Checkout
                             </Link>
 
                             <Link 
                                 to="/products" 
-                                className="w-full glass-button text-white py-3 px-4 rounded-lg font-semibold transition-colors text-center block mt-3"
+                                className="w-full glass-button text-black py-3 px-4 rounded-lg font-semibold transition-colors text-center block mt-3"
                             >
                                 Continue Shopping
                             </Link>

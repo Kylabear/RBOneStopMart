@@ -106,6 +106,47 @@ const ForwardRef = /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(A
 
 /***/ }),
 
+/***/ "./node_modules/@heroicons/react/24/outline/esm/ArrowTrendingUpIcon.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/@heroicons/react/24/outline/esm/ArrowTrendingUpIcon.js ***!
+  \*****************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+function ArrowTrendingUpIcon({
+  title,
+  titleId,
+  ...props
+}, svgRef) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", Object.assign({
+    xmlns: "http://www.w3.org/2000/svg",
+    fill: "none",
+    viewBox: "0 0 24 24",
+    strokeWidth: 1.5,
+    stroke: "currentColor",
+    "aria-hidden": "true",
+    "data-slot": "icon",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", {
+    id: titleId
+  }, title) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    d: "M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941"
+  }));
+}
+const ForwardRef = /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(ArrowTrendingUpIcon);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ForwardRef);
+
+/***/ }),
+
 /***/ "./node_modules/@heroicons/react/24/outline/esm/Bars3Icon.js":
 /*!*******************************************************************!*\
   !*** ./node_modules/@heroicons/react/24/outline/esm/Bars3Icon.js ***!
@@ -225,6 +266,47 @@ function CalendarIcon({
   }));
 }
 const ForwardRef = /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(CalendarIcon);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ForwardRef);
+
+/***/ }),
+
+/***/ "./node_modules/@heroicons/react/24/outline/esm/ChartBarIcon.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@heroicons/react/24/outline/esm/ChartBarIcon.js ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+function ChartBarIcon({
+  title,
+  titleId,
+  ...props
+}, svgRef) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", Object.assign({
+    xmlns: "http://www.w3.org/2000/svg",
+    fill: "none",
+    viewBox: "0 0 24 24",
+    strokeWidth: 1.5,
+    stroke: "currentColor",
+    "aria-hidden": "true",
+    "data-slot": "icon",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", {
+    id: titleId
+  }, title) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    d: "M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z"
+  }));
+}
+const ForwardRef = /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(ChartBarIcon);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ForwardRef);
 
 /***/ }),
@@ -434,10 +516,10 @@ const ForwardRef = /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(C
 
 /***/ }),
 
-/***/ "./node_modules/@heroicons/react/24/outline/esm/ClockIcon.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/@heroicons/react/24/outline/esm/ClockIcon.js ***!
-  \*******************************************************************/
+/***/ "./node_modules/@heroicons/react/24/outline/esm/ClipboardDocumentListIcon.js":
+/*!***********************************************************************************!*\
+  !*** ./node_modules/@heroicons/react/24/outline/esm/ClipboardDocumentListIcon.js ***!
+  \***********************************************************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -447,7 +529,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
-function ClockIcon({
+function ClipboardDocumentListIcon({
   title,
   titleId,
   ...props
@@ -467,10 +549,10 @@ function ClockIcon({
   }, title) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
     strokeLinecap: "round",
     strokeLinejoin: "round",
-    d: "M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+    d: "M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z"
   }));
 }
-const ForwardRef = /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(ClockIcon);
+const ForwardRef = /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(ClipboardDocumentListIcon);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ForwardRef);
 
 /***/ }),
@@ -512,6 +594,47 @@ function CreditCardIcon({
   }));
 }
 const ForwardRef = /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(CreditCardIcon);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ForwardRef);
+
+/***/ }),
+
+/***/ "./node_modules/@heroicons/react/24/outline/esm/CubeIcon.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@heroicons/react/24/outline/esm/CubeIcon.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+function CubeIcon({
+  title,
+  titleId,
+  ...props
+}, svgRef) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", Object.assign({
+    xmlns: "http://www.w3.org/2000/svg",
+    fill: "none",
+    viewBox: "0 0 24 24",
+    strokeWidth: 1.5,
+    stroke: "currentColor",
+    "aria-hidden": "true",
+    "data-slot": "icon",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", {
+    id: titleId
+  }, title) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    d: "m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"
+  }));
+}
+const ForwardRef = /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(CubeIcon);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ForwardRef);
 
 /***/ }),
@@ -1098,6 +1221,51 @@ const ForwardRef = /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(S
 
 /***/ }),
 
+/***/ "./node_modules/@heroicons/react/24/outline/esm/TagIcon.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/@heroicons/react/24/outline/esm/TagIcon.js ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+function TagIcon({
+  title,
+  titleId,
+  ...props
+}, svgRef) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", Object.assign({
+    xmlns: "http://www.w3.org/2000/svg",
+    fill: "none",
+    viewBox: "0 0 24 24",
+    strokeWidth: 1.5,
+    stroke: "currentColor",
+    "aria-hidden": "true",
+    "data-slot": "icon",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", {
+    id: titleId
+  }, title) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    d: "M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    d: "M6 6h.008v.008H6V6Z"
+  }));
+}
+const ForwardRef = /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(TagIcon);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ForwardRef);
+
+/***/ }),
+
 /***/ "./node_modules/@heroicons/react/24/outline/esm/TrashIcon.js":
 /*!*******************************************************************!*\
   !*** ./node_modules/@heroicons/react/24/outline/esm/TrashIcon.js ***!
@@ -1258,6 +1426,47 @@ function UserIcon({
   }));
 }
 const ForwardRef = /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(UserIcon);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ForwardRef);
+
+/***/ }),
+
+/***/ "./node_modules/@heroicons/react/24/outline/esm/UsersIcon.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@heroicons/react/24/outline/esm/UsersIcon.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+function UsersIcon({
+  title,
+  titleId,
+  ...props
+}, svgRef) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", Object.assign({
+    xmlns: "http://www.w3.org/2000/svg",
+    fill: "none",
+    viewBox: "0 0 24 24",
+    strokeWidth: 1.5,
+    stroke: "currentColor",
+    "aria-hidden": "true",
+    "data-slot": "icon",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", {
+    id: titleId
+  }, title) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    d: "M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"
+  }));
+}
+const ForwardRef = /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(UsersIcon);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ForwardRef);
 
 /***/ }),
@@ -56427,12 +56636,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Pages_CheckoutPage__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Pages/CheckoutPage */ "./resources/js/components/Pages/CheckoutPage.jsx");
 /* harmony import */ var _Pages_OrdersPage__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./Pages/OrdersPage */ "./resources/js/components/Pages/OrdersPage.jsx");
 /* harmony import */ var _Pages_OrderDetailPage__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./Pages/OrderDetailPage */ "./resources/js/components/Pages/OrderDetailPage.jsx");
-/* harmony import */ var _Pages_Admin_AdminDashboard__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./Pages/Admin/AdminDashboard */ "./resources/js/components/Pages/Admin/AdminDashboard.jsx");
-/* harmony import */ var _Pages_Admin_AdminProducts__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./Pages/Admin/AdminProducts */ "./resources/js/components/Pages/Admin/AdminProducts.jsx");
-/* harmony import */ var _Pages_Admin_AdminOrders__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./Pages/Admin/AdminOrders */ "./resources/js/components/Pages/Admin/AdminOrders.jsx");
-/* harmony import */ var _Pages_Admin_AdminInventory__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./Pages/Admin/AdminInventory */ "./resources/js/components/Pages/Admin/AdminInventory.jsx");
-/* harmony import */ var _UI_LoadingSpinner__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./UI/LoadingSpinner */ "./resources/js/components/UI/LoadingSpinner.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Pages_ProfilePage__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./Pages/ProfilePage */ "./resources/js/components/Pages/ProfilePage.jsx");
+/* harmony import */ var _Pages_Admin_AdminDashboard__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./Pages/Admin/AdminDashboard */ "./resources/js/components/Pages/Admin/AdminDashboard.jsx");
+/* harmony import */ var _Pages_Admin_AdminProducts__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./Pages/Admin/AdminProducts */ "./resources/js/components/Pages/Admin/AdminProducts.jsx");
+/* harmony import */ var _Pages_Admin_AdminOrders__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./Pages/Admin/AdminOrders */ "./resources/js/components/Pages/Admin/AdminOrders.jsx");
+/* harmony import */ var _Pages_Admin_AdminInventory__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./Pages/Admin/AdminInventory */ "./resources/js/components/Pages/Admin/AdminInventory.jsx");
+/* harmony import */ var _UI_LoadingSpinner__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./UI/LoadingSpinner */ "./resources/js/components/UI/LoadingSpinner.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
@@ -56457,95 +56668,113 @@ function App() {
     user = _useAuth.user,
     loading = _useAuth.loading;
   if (loading) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("div", {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)("div", {
       className: "min-h-screen relative flex items-center justify-center",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)("div", {
         className: "relative z-10",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_UI_LoadingSpinner__WEBPACK_IMPORTED_MODULE_17__["default"], {})
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(_UI_LoadingSpinner__WEBPACK_IMPORTED_MODULE_18__["default"], {})
       })
     });
   }
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("div", {
-    className: "min-h-screen relative",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)("div", {
+    className: "min-h-screen relative bg-gradient-to-br from-green-50 via-blue-50 to-purple-50",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)("div", {
       className: "relative z-10",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Routes, {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Routes, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
           path: "/login",
-          element: !user ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_Pages_LoginPage__WEBPACK_IMPORTED_MODULE_5__["default"], {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Navigate, {
-            to: user.role === 'admin' ? "/products" : "/"
+          element: !user ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(_Pages_LoginPage__WEBPACK_IMPORTED_MODULE_5__["default"], {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Navigate, {
+            to: user.role === 'admin' ? "/admin/dashboard" : "/"
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
           path: "/register",
-          element: !user ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_Pages_RegisterPage__WEBPACK_IMPORTED_MODULE_6__["default"], {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Navigate, {
-            to: user.role === 'admin' ? "/products" : "/"
+          element: !user ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(_Pages_RegisterPage__WEBPACK_IMPORTED_MODULE_6__["default"], {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Navigate, {
+            to: user.role === 'admin' ? "/admin/dashboard" : "/"
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
           path: "/",
-          element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_Layout_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_Pages_HomePage__WEBPACK_IMPORTED_MODULE_4__["default"], {})
+          element: user && user.role === 'admin' ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Navigate, {
+            to: "/admin/dashboard"
+          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(_Layout_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(_Pages_HomePage__WEBPACK_IMPORTED_MODULE_4__["default"], {})
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
           path: "/products",
-          element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_Layout_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_Pages_ProductsPage__WEBPACK_IMPORTED_MODULE_7__["default"], {})
+          element: user && user.role === 'admin' ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Navigate, {
+            to: "/admin/dashboard"
+          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(_Layout_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(_Pages_ProductsPage__WEBPACK_IMPORTED_MODULE_7__["default"], {})
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
           path: "/products/:id",
-          element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_Layout_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_Pages_ProductDetailPage__WEBPACK_IMPORTED_MODULE_8__["default"], {})
+          element: user && user.role === 'admin' ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Navigate, {
+            to: "/admin/dashboard"
+          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(_Layout_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(_Pages_ProductDetailPage__WEBPACK_IMPORTED_MODULE_8__["default"], {})
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
           path: "/cart",
-          element: user && user.role !== 'admin' ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_Layout_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_Pages_CartPage__WEBPACK_IMPORTED_MODULE_9__["default"], {})
-          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Navigate, {
+          element: user && user.role !== 'admin' ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(_Layout_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(_Pages_CartPage__WEBPACK_IMPORTED_MODULE_9__["default"], {})
+          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Navigate, {
             to: "/login"
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
           path: "/checkout",
-          element: user && user.role !== 'admin' ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_Layout_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_Pages_CheckoutPage__WEBPACK_IMPORTED_MODULE_10__["default"], {})
-          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Navigate, {
+          element: user && user.role !== 'admin' ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(_Layout_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(_Pages_CheckoutPage__WEBPACK_IMPORTED_MODULE_10__["default"], {})
+          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Navigate, {
             to: "/login"
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
           path: "/orders",
-          element: user && user.role !== 'admin' ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_Layout_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_Pages_OrdersPage__WEBPACK_IMPORTED_MODULE_11__["default"], {})
-          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Navigate, {
+          element: user && user.role !== 'admin' ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(_Layout_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(_Pages_OrdersPage__WEBPACK_IMPORTED_MODULE_11__["default"], {})
+          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Navigate, {
             to: "/login"
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
           path: "/orders/:id",
-          element: user && user.role !== 'admin' ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_Layout_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_Pages_OrderDetailPage__WEBPACK_IMPORTED_MODULE_12__["default"], {})
-          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Navigate, {
+          element: user && user.role !== 'admin' ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(_Layout_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(_Pages_OrderDetailPage__WEBPACK_IMPORTED_MODULE_12__["default"], {})
+          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Navigate, {
             to: "/login"
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
+          path: "/profile",
+          element: user ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(_Layout_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(_Pages_ProfilePage__WEBPACK_IMPORTED_MODULE_13__["default"], {})
+          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Navigate, {
+            to: "/login"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
           path: "/admin",
-          element: user && user.role === 'admin' ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_Pages_Admin_AdminDashboard__WEBPACK_IMPORTED_MODULE_13__["default"], {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Navigate, {
+          element: user && user.role === 'admin' ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(_Pages_Admin_AdminDashboard__WEBPACK_IMPORTED_MODULE_14__["default"], {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Navigate, {
             to: "/login"
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
+          path: "/admin/dashboard",
+          element: user && user.role === 'admin' ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(_Pages_Admin_AdminDashboard__WEBPACK_IMPORTED_MODULE_14__["default"], {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Navigate, {
+            to: "/login"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
           path: "/admin/products",
-          element: user && user.role === 'admin' ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_Pages_Admin_AdminProducts__WEBPACK_IMPORTED_MODULE_14__["default"], {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Navigate, {
+          element: user && user.role === 'admin' ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(_Pages_Admin_AdminProducts__WEBPACK_IMPORTED_MODULE_15__["default"], {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Navigate, {
             to: "/login"
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
           path: "/admin/orders",
-          element: user && user.role === 'admin' ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_Pages_Admin_AdminOrders__WEBPACK_IMPORTED_MODULE_15__["default"], {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Navigate, {
+          element: user && user.role === 'admin' ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(_Pages_Admin_AdminOrders__WEBPACK_IMPORTED_MODULE_16__["default"], {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Navigate, {
             to: "/login"
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
           path: "/admin/inventory",
-          element: user && user.role === 'admin' ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_Pages_Admin_AdminInventory__WEBPACK_IMPORTED_MODULE_16__["default"], {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Navigate, {
+          element: user && user.role === 'admin' ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(_Pages_Admin_AdminInventory__WEBPACK_IMPORTED_MODULE_17__["default"], {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Navigate, {
             to: "/login"
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Route, {
           path: "*",
-          element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Navigate, {
+          element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_19__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Navigate, {
             to: "/"
           })
         })]
@@ -56709,13 +56938,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
 /* harmony import */ var _hooks_useAuth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../hooks/useAuth */ "./resources/js/hooks/useAuth.jsx");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/Bars3Icon.js");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/HeartIcon.js");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/MagnifyingGlassIcon.js");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/ShoppingCartIcon.js");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/UserIcon.js");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/XMarkIcon.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _hooks_useCart__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../hooks/useCart */ "./resources/js/hooks/useCart.jsx");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/Bars3Icon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/HeartIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/MagnifyingGlassIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/ShoppingCartIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/UserIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/XMarkIcon.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
+function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); } r ? i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n : (o("next", 0), o("throw", 1), o("return", 2)); }, _regeneratorDefine2(e, r, n, t); }
+function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
+function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
 function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
@@ -56727,10 +56961,13 @@ function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
 
+
 var Header = function Header() {
   var _useAuth = (0,_hooks_useAuth__WEBPACK_IMPORTED_MODULE_3__.useAuth)(),
     user = _useAuth.user,
     logout = _useAuth.logout;
+  var _useCart = (0,_hooks_useCart__WEBPACK_IMPORTED_MODULE_4__.useCart)(),
+    getCartItemCount = _useCart.getCartItemCount;
   var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_1__.useNavigate)();
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
     _useState2 = _slicedToArray(_useState, 2),
@@ -56746,9 +56983,37 @@ var Header = function Header() {
       navigate("/products?search=".concat(encodeURIComponent(searchQuery.trim())));
     }
   };
-  var handleLogout = function handleLogout() {
-    logout();
-    navigate('/');
+  var handleLogout = /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee() {
+      return _regenerator().w(function (_context) {
+        while (1) switch (_context.n) {
+          case 0:
+            _context.n = 1;
+            return logout();
+          case 1:
+            navigate('/');
+          case 2:
+            return _context.a(2);
+        }
+      }, _callee);
+    }));
+    return function handleLogout() {
+      return _ref.apply(this, arguments);
+    };
+  }();
+  var handleScrollToSection = function handleScrollToSection(e, href) {
+    e.preventDefault();
+    if (href.startsWith('#')) {
+      var element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    } else {
+      navigate(href);
+    }
   };
   var navigationLinks = [{
     name: 'Home',
@@ -56760,41 +57025,44 @@ var Header = function Header() {
     name: 'About',
     href: '#about'
   }];
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.Fragment, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("header", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("header", {
       className: "bg-[#CCFFCC] shadow-lg sticky top-0 z-50",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
         className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
           className: "flex justify-between items-center h-16",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
             className: "flex-shrink-0 flex items-center",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
               to: "/",
               className: "flex items-center space-x-3 p-2",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("img", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("img", {
                 src: "/RBLOGO.png",
                 alt: "R&B One Stop Mart Logo",
                 className: "h-10 sm:h-12 md:h-14 w-auto drop-shadow-lg hover:drop-shadow-2xl transition-all duration-300 filter brightness-110"
               })
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("nav", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("nav", {
             className: "hidden md:flex space-x-8",
             children: navigationLinks.map(function (link) {
-              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
-                to: link.href,
-                className: "text-gray-800 hover:text-blue-600 font-medium transition-colors duration-200",
+              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("a", {
+                href: link.href,
+                onClick: function onClick(e) {
+                  return handleScrollToSection(e, link.href);
+                },
+                className: "text-gray-800 hover:text-blue-600 font-medium transition-colors duration-200 cursor-pointer",
                 children: link.name
               }, link.name);
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
             className: "hidden md:flex flex-1 max-w-lg mx-8",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("form", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("form", {
               onSubmit: handleSearch,
               className: "w-full",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
                 className: "relative",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("input", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("input", {
                   type: "text",
                   placeholder: "What are you looking for?",
                   value: searchQuery,
@@ -56802,96 +57070,103 @@ var Header = function Header() {
                     return setSearchQuery(e.target.value);
                   },
                   className: "w-full pl-4 pr-12 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("button", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("button", {
                   type: "submit",
-                  className: "absolute right-2 top-1/2 transform -translate-y-1/2 p-1 text-gray-400 hover:text-gray-600",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__["default"], {
+                  className: "absolute right-2 top-1/2 transform -translate-y-1/2 p-1 text-gray-600 hover:text-gray-600",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_7__["default"], {
                     className: "w-5 h-5"
                   })
                 })]
               })
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
             className: "flex items-center space-x-4",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("button", {
-              className: "p-2 text-gray-800 hover:text-red-500 transition-colors",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__["default"], {
-                className: "w-6 h-6"
-              })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
-              to: "/cart",
-              className: "p-2 text-gray-800 hover:text-blue-600 transition-colors relative",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_7__["default"], {
-                className: "w-6 h-6"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("span", {
-                className: "absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center",
-                children: "0"
-              })]
-            }), user ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-              className: "relative group",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("button", {
-                className: "p-2 text-gray-800 hover:text-blue-600 transition-colors",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_8__["default"], {
+            children: [user && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.Fragment, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("button", {
+                className: "p-2 text-gray-800 hover:text-red-500 transition-colors",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__["default"], {
                   className: "w-6 h-6"
                 })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+                to: "/cart",
+                className: "p-2 text-gray-800 hover:text-blue-600 transition-colors relative",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_8__["default"], {
+                  className: "w-6 h-6"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("span", {
+                  className: "absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center",
+                  children: getCartItemCount()
+                })]
+              })]
+            }), user ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
+              className: "relative group",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("button", {
+                className: "p-2 text-gray-800 hover:text-blue-600 transition-colors",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_9__["default"], {
+                  className: "w-6 h-6"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
                 className: "absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
                   className: "px-4 py-2 border-b",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("p", {
                     className: "text-sm font-medium text-gray-900",
                     children: user.name
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("p", {
                     className: "text-xs text-gray-500",
                     children: user.email
                   })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+                  to: "/profile",
+                  className: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100",
+                  children: "My Profile"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
                   to: "/orders",
                   className: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100",
                   children: "My Orders"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("button", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("button", {
                   onClick: handleLogout,
                   className: "block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100",
                   children: "Sign Out"
                 })]
               })]
-            }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+            }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
               to: "/login",
               className: "bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium",
               children: "Sign Up"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("button", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("button", {
               onClick: function onClick() {
                 return setIsMobileMenuOpen(!isMobileMenuOpen);
               },
               className: "md:hidden p-2 text-gray-800 hover:text-blue-600 transition-colors",
-              children: isMobileMenuOpen ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_9__["default"], {
+              children: isMobileMenuOpen ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_10__["default"], {
                 className: "w-6 h-6"
-              }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_4__["default"], {
+              }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__["default"], {
                 className: "w-6 h-6"
               })
             })]
           })]
-        }), isMobileMenuOpen && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+        }), isMobileMenuOpen && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
           className: "md:hidden border-t border-gray-200 py-4",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("nav", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("nav", {
             className: "space-y-2",
             children: navigationLinks.map(function (link) {
-              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
-                to: link.href,
-                className: "block px-4 py-2 text-gray-800 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors",
-                onClick: function onClick() {
-                  return setIsMobileMenuOpen(false);
+              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("a", {
+                href: link.href,
+                onClick: function onClick(e) {
+                  handleScrollToSection(e, link.href);
+                  setIsMobileMenuOpen(false);
                 },
+                className: "block px-4 py-2 text-gray-800 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors cursor-pointer",
                 children: link.name
               }, link.name);
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
             className: "mt-4 px-4",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("form", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("form", {
               onSubmit: handleSearch,
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
                 className: "relative",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("input", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("input", {
                   type: "text",
                   placeholder: "What are you looking for?",
                   value: searchQuery,
@@ -56899,10 +57174,10 @@ var Header = function Header() {
                     return setSearchQuery(e.target.value);
                   },
                   className: "w-full pl-4 pr-12 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("button", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("button", {
                   type: "submit",
-                  className: "absolute right-2 top-1/2 transform -translate-y-1/2 p-1 text-gray-400 hover:text-gray-600",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__["default"], {
+                  className: "absolute right-2 top-1/2 transform -translate-y-1/2 p-1 text-gray-600 hover:text-gray-600",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_7__["default"], {
                     className: "w-5 h-5"
                   })
                 })]
@@ -56966,15 +57241,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_query__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-query */ "./node_modules/react-query/es/index.js");
-/* harmony import */ var _config_axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../config/axios */ "./resources/js/config/axios.js");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/CheckCircleIcon.js");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/ClockIcon.js");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/CurrencyDollarIcon.js");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/ExclamationTriangleIcon.js");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/ShoppingCartIcon.js");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/UserGroupIcon.js");
-/* harmony import */ var _UI_LoadingSpinner__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../UI/LoadingSpinner */ "./resources/js/components/UI/LoadingSpinner.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
+/* harmony import */ var _config_axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../config/axios */ "./resources/js/config/axios.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/ArrowTrendingUpIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/ChartBarIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/ClipboardDocumentListIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/CubeIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/CurrencyDollarIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/ExclamationTriangleIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/ShoppingCartIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/TagIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/UserGroupIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/UsersIcon.js");
+/* harmony import */ var _UI_LoadingSpinner__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../UI/LoadingSpinner */ "./resources/js/components/UI/LoadingSpinner.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+
 
 
 
@@ -56982,22 +57269,28 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var AdminDashboard = function AdminDashboard() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('overview'),
+    _useState2 = _slicedToArray(_useState, 2),
+    activeTab = _useState2[0],
+    setActiveTab = _useState2[1];
   var _useQuery = (0,react_query__WEBPACK_IMPORTED_MODULE_1__.useQuery)('admin-dashboard', function () {
-      return _config_axios__WEBPACK_IMPORTED_MODULE_2__["default"].get('/api/admin/dashboard').then(function (res) {
+      return _config_axios__WEBPACK_IMPORTED_MODULE_3__["default"].get('/api/admin/dashboard').then(function (res) {
         return res.data;
       });
     }),
     dashboardData = _useQuery.data,
     isLoading = _useQuery.isLoading;
   if (isLoading) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("div", {
       className: "min-h-screen flex items-center justify-center",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_UI_LoadingSpinner__WEBPACK_IMPORTED_MODULE_9__["default"], {})
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_UI_LoadingSpinner__WEBPACK_IMPORTED_MODULE_14__["default"], {})
     });
   }
   var stats = (dashboardData === null || dashboardData === void 0 ? void 0 : dashboardData.stats) || {};
   var recentOrders = (dashboardData === null || dashboardData === void 0 ? void 0 : dashboardData.recent_orders) || [];
   var lowStockProducts = (dashboardData === null || dashboardData === void 0 ? void 0 : dashboardData.low_stock_products) || [];
+  var fastMovingProducts = (dashboardData === null || dashboardData === void 0 ? void 0 : dashboardData.fast_moving_products) || [];
+  var categoryAnalytics = (dashboardData === null || dashboardData === void 0 ? void 0 : dashboardData.category_analytics) || {};
   var formatPrice = function formatPrice(price) {
     return new Intl.NumberFormat('en-PH', {
       style: 'currency',
@@ -57019,199 +57312,506 @@ var AdminDashboard = function AdminDashboard() {
       case 'cancelled':
         return 'text-red-400';
       default:
-        return 'text-gray-400';
+        return 'text-gray-600';
     }
   };
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
-    className: "min-h-screen py-8 px-4 sm:px-6 lg:px-8",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-      className: "max-w-7xl mx-auto",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+  var tabs = [{
+    id: 'overview',
+    name: 'Overview',
+    icon: _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__["default"]
+  }, {
+    id: 'analytics',
+    name: 'Analytics',
+    icon: _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_4__["default"]
+  }, {
+    id: 'users',
+    name: 'User Management',
+    icon: _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_13__["default"]
+  }, {
+    id: 'inventory',
+    name: 'Inventory',
+    icon: _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_7__["default"]
+  }, {
+    id: 'orders',
+    name: 'Orders',
+    icon: _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__["default"]
+  }];
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+    className: "min-h-screen bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 admin-page",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("div", {
+      className: "glass-card shadow-sm border-b",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("div", {
+        className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+          className: "py-6",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("h1", {
+            className: "text-3xl font-bold text-black",
+            children: "Admin Dashboard"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("p", {
+            className: "text-gray-700 mt-2",
+            children: "Manage your R&B One Stop Mart store"
+          })]
+        })
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+      className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("div", {
         className: "mb-8",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("h1", {
-          className: "text-3xl font-bold text-white mb-4",
-          children: "Admin Dashboard"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
-          className: "text-gray-300",
-          children: "Welcome to R&B One Stop Mart Admin Panel"
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-        className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
-          className: "glass-card rounded-2xl p-6",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-            className: "flex items-center justify-between",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
-                className: "text-gray-400 text-sm",
-                children: "Total Orders"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
-                className: "text-2xl font-bold text-white",
-                children: stats.total_orders || 0
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("nav", {
+          className: "flex space-x-8",
+          children: tabs.map(function (tab) {
+            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("button", {
+              onClick: function onClick() {
+                return setActiveTab(tab.id);
+              },
+              className: "flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ".concat(activeTab === tab.id ? 'bg-blue-600 text-white' : 'text-gray-700 hover:bg-gray-100'),
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(tab.icon, {
+                className: "w-5 h-5"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("span", {
+                children: tab.name
               })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_7__["default"], {
-              className: "w-8 h-8 text-blue-400"
-            })]
+            }, tab.id);
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
-          className: "glass-card rounded-2xl p-6",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-            className: "flex items-center justify-between",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
-                className: "text-gray-400 text-sm",
-                children: "Pending Orders"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
-                className: "text-2xl font-bold text-white",
-                children: stats.pending_orders || 0
+        })
+      }), activeTab === 'overview' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+        className: "space-y-8",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+          className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("div", {
+            className: "glass-card rounded-lg shadow p-6",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+              className: "flex items-center justify-between",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("p", {
+                  className: "text-gray-600 text-sm",
+                  children: "Total Orders"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("p", {
+                  className: "text-2xl font-bold text-black",
+                  children: stats.total_orders || 0
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_10__["default"], {
+                className: "w-8 h-8 text-blue-500"
               })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_4__["default"], {
-              className: "w-8 h-8 text-yellow-400"
-            })]
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
-          className: "glass-card rounded-2xl p-6",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-            className: "flex items-center justify-between",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
-                className: "text-gray-400 text-sm",
-                children: "Total Revenue"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
-                className: "text-2xl font-bold text-white",
-                children: formatPrice(stats.total_revenue || 0)
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("div", {
+            className: "glass-card rounded-lg shadow p-6",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+              className: "flex items-center justify-between",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("p", {
+                  className: "text-gray-600 text-sm",
+                  children: "Total Revenue"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("p", {
+                  className: "text-2xl font-bold text-black",
+                  children: formatPrice(stats.total_revenue || 0)
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_8__["default"], {
+                className: "w-8 h-8 text-green-500"
               })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__["default"], {
-              className: "w-8 h-8 text-green-400"
-            })]
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
-          className: "glass-card rounded-2xl p-6",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-            className: "flex items-center justify-between",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
-                className: "text-gray-400 text-sm",
-                children: "Total Products"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
-                className: "text-2xl font-bold text-white",
-                children: stats.total_products || 0
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("div", {
+            className: "glass-card rounded-lg shadow p-6",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+              className: "flex items-center justify-between",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("p", {
+                  className: "text-gray-600 text-sm",
+                  children: "Total Customers"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("p", {
+                  className: "text-2xl font-bold text-black",
+                  children: stats.total_customers || 0
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_12__["default"], {
+                className: "w-8 h-8 text-purple-500"
               })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_3__["default"], {
-              className: "w-8 h-8 text-purple-400"
-            })]
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
-          className: "glass-card rounded-2xl p-6",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-            className: "flex items-center justify-between",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
-                className: "text-gray-400 text-sm",
-                children: "Total Customers"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
-                className: "text-2xl font-bold text-white",
-                children: stats.total_customers || 0
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("div", {
+            className: "glass-card rounded-lg shadow p-6",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+              className: "flex items-center justify-between",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("p", {
+                  className: "text-gray-600 text-sm",
+                  children: "Low Stock Items"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("p", {
+                  className: "text-2xl font-bold text-black",
+                  children: stats.low_stock_count || 0
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_9__["default"], {
+                className: "w-8 h-8 text-red-500"
               })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_8__["default"], {
-              className: "w-8 h-8 text-indigo-400"
-            })]
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
-          className: "glass-card rounded-2xl p-6",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-            className: "flex items-center justify-between",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
-                className: "text-gray-400 text-sm",
-                children: "Low Stock Items"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
-                className: "text-2xl font-bold text-white",
-                children: lowStockProducts.length
+            })
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+          className: "glass-card rounded-lg shadow p-6",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("h3", {
+            className: "text-lg font-semibold text-black mb-4",
+            children: "Quick Actions"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+            className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+              to: "/admin/products",
+              className: "flex items-center space-x-3 p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_11__["default"], {
+                className: "w-6 h-6 text-blue-500"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("span", {
+                className: "text-black",
+                children: "Manage Products"
               })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__["default"], {
-              className: "w-8 h-8 text-red-400"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+              to: "/admin/orders",
+              className: "flex items-center space-x-3 p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__["default"], {
+                className: "w-6 h-6 text-green-500"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("span", {
+                className: "text-black",
+                children: "View Orders"
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+              to: "/admin/inventory",
+              className: "flex items-center space-x-3 p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_7__["default"], {
+                className: "w-6 h-6 text-orange-500"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("span", {
+                className: "text-black",
+                children: "Inventory"
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("button", {
+              className: "flex items-center space-x-3 p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_13__["default"], {
+                className: "w-6 h-6 text-purple-500"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("span", {
+                className: "text-black",
+                children: "Manage Users"
+              })]
             })]
-          })
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-        className: "grid grid-cols-1 lg:grid-cols-2 gap-8",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-          className: "glass-card rounded-2xl p-6",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("h2", {
-            className: "text-xl font-semibold text-white mb-6",
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+          className: "glass-card rounded-lg shadow p-6",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("h3", {
+            className: "text-lg font-semibold text-black mb-4",
             children: "Recent Orders"
-          }), recentOrders.length > 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
-            className: "space-y-4",
-            children: recentOrders.map(function (order) {
-              var _order$user;
-              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-                className: "flex items-center justify-between p-4 glass rounded-lg",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-                    className: "text-white font-medium",
-                    children: ["#", order.order_number]
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
-                    className: "text-gray-400 text-sm",
-                    children: (_order$user = order.user) === null || _order$user === void 0 ? void 0 : _order$user.name
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
-                    className: "text-gray-400 text-sm",
-                    children: formatPrice(order.total_amount)
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("div", {
+            className: "overflow-x-auto",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("table", {
+              className: "min-w-full",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("thead", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("tr", {
+                  className: "border-b",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("th", {
+                    className: "text-left py-3 px-4 text-black",
+                    children: "Order #"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("th", {
+                    className: "text-left py-3 px-4 text-black",
+                    children: "Customer"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("th", {
+                    className: "text-left py-3 px-4 text-black",
+                    children: "Amount"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("th", {
+                    className: "text-left py-3 px-4 text-black",
+                    children: "Status"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("th", {
+                    className: "text-left py-3 px-4 text-black",
+                    children: "Date"
                   })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-                  className: "text-right",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
-                    className: "font-semibold ".concat(getStatusColor(order.status)),
-                    children: order.status.charAt(0).toUpperCase() + order.status.slice(1)
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
-                    className: "text-gray-400 text-sm",
-                    children: new Date(order.created_at).toLocaleDateString()
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("tbody", {
+                children: recentOrders.slice(0, 5).map(function (order) {
+                  var _order$user;
+                  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("tr", {
+                    className: "border-b",
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("td", {
+                      className: "py-3 px-4 text-black",
+                      children: order.order_number
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("td", {
+                      className: "py-3 px-4 text-black",
+                      children: ((_order$user = order.user) === null || _order$user === void 0 ? void 0 : _order$user.name) || 'N/A'
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("td", {
+                      className: "py-3 px-4 text-black",
+                      children: formatPrice(order.total_amount)
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("td", {
+                      className: "py-3 px-4",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("span", {
+                        className: "px-2 py-1 rounded-full text-xs ".concat(getStatusColor(order.status)),
+                        children: order.status
+                      })
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("td", {
+                      className: "py-3 px-4 text-black",
+                      children: new Date(order.created_at).toLocaleDateString()
+                    })]
+                  }, order.id);
+                })
+              })]
+            })
+          })]
+        })]
+      }), activeTab === 'analytics' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+        className: "space-y-8",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+          className: "glass-card rounded-lg shadow p-6",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("h3", {
+            className: "text-lg font-semibold text-black mb-4",
+            children: "Category Performance"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("div", {
+            className: "grid grid-cols-1 md:grid-cols-3 gap-6",
+            children: Object.entries(categoryAnalytics).map(function (_ref) {
+              var _ref2 = _slicedToArray(_ref, 2),
+                category = _ref2[0],
+                data = _ref2[1];
+              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+                className: "border border-gray-200 rounded-lg p-4",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("h4", {
+                  className: "font-semibold text-black capitalize",
+                  children: category
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+                  className: "mt-4 space-y-2",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+                    className: "flex justify-between",
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("span", {
+                      className: "text-gray-600",
+                      children: "Total Sales:"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("span", {
+                      className: "text-black font-semibold",
+                      children: formatPrice(data.total_sales || 0)
+                    })]
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+                    className: "flex justify-between",
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("span", {
+                      className: "text-gray-600",
+                      children: "Orders:"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("span", {
+                      className: "text-black font-semibold",
+                      children: data.order_count || 0
+                    })]
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+                    className: "flex justify-between",
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("span", {
+                      className: "text-gray-600",
+                      children: "Products:"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("span", {
+                      className: "text-black font-semibold",
+                      children: data.product_count || 0
+                    })]
                   })]
                 })]
-              }, order.id);
+              }, category);
             })
-          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
-            className: "text-gray-400 text-center py-4",
-            children: "No recent orders"
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-          className: "glass-card rounded-2xl p-6",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("h2", {
-            className: "text-xl font-semibold text-white mb-6",
-            children: "Low Stock Products"
-          }), lowStockProducts.length > 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
-            className: "space-y-4",
-            children: lowStockProducts.map(function (product) {
-              var _product$category;
-              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-                className: "flex items-center justify-between p-4 glass rounded-lg",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
-                    className: "text-white font-medium",
-                    children: product.name
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
-                    className: "text-gray-400 text-sm",
-                    children: (_product$category = product.category) === null || _product$category === void 0 ? void 0 : _product$category.name
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+          className: "glass-card rounded-lg shadow p-6",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("h3", {
+            className: "text-lg font-semibold text-black mb-4",
+            children: "Fast Moving Products (Grocery)"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("div", {
+            className: "overflow-x-auto",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("table", {
+              className: "min-w-full",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("thead", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("tr", {
+                  className: "border-b",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("th", {
+                    className: "text-left py-3 px-4 text-black",
+                    children: "Product"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("th", {
+                    className: "text-left py-3 px-4 text-black",
+                    children: "Category"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("th", {
+                    className: "text-left py-3 px-4 text-black",
+                    children: "Units Sold"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("th", {
+                    className: "text-left py-3 px-4 text-black",
+                    children: "Revenue"
                   })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-                  className: "text-right",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-                    className: "text-red-400 font-semibold",
-                    children: [product.stock_quantity, " left"]
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
-                    className: "text-gray-400 text-sm",
-                    children: formatPrice(product.price)
-                  })]
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("tbody", {
+                children: fastMovingProducts.slice(0, 10).map(function (product) {
+                  var _product$category;
+                  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("tr", {
+                    className: "border-b",
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("td", {
+                      className: "py-3 px-4 text-black",
+                      children: product.name
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("td", {
+                      className: "py-3 px-4 text-black capitalize",
+                      children: ((_product$category = product.category) === null || _product$category === void 0 ? void 0 : _product$category.name) || 'N/A'
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("td", {
+                      className: "py-3 px-4 text-black",
+                      children: product.total_quantity_sold || 0
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("td", {
+                      className: "py-3 px-4 text-black",
+                      children: formatPrice(product.total_revenue || 0)
+                    })]
+                  }, product.id);
+                })
+              })]
+            })
+          })]
+        })]
+      }), activeTab === 'users' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("div", {
+        className: "space-y-8",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+          className: "glass-card rounded-lg shadow p-6",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("h3", {
+            className: "text-lg font-semibold text-black mb-4",
+            children: "User Management"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("p", {
+            className: "text-gray-600 mb-4",
+            children: "Manage customer accounts and permissions"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+            className: "grid grid-cols-1 md:grid-cols-3 gap-6",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+              className: "border border-gray-200 rounded-lg p-4",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("h4", {
+                className: "font-semibold text-black",
+                children: "Total Users"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("p", {
+                className: "text-2xl font-bold text-blue-600 mt-2",
+                children: stats.total_customers || 0
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+              className: "border border-gray-200 rounded-lg p-4",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("h4", {
+                className: "font-semibold text-black",
+                children: "Active Users"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("p", {
+                className: "text-2xl font-bold text-green-600 mt-2",
+                children: stats.active_users || 0
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+              className: "border border-gray-200 rounded-lg p-4",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("h4", {
+                className: "font-semibold text-black",
+                children: "New This Month"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("p", {
+                className: "text-2xl font-bold text-purple-600 mt-2",
+                children: stats.new_users_this_month || 0
+              })]
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("div", {
+            className: "mt-6",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("button", {
+              className: "bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors",
+              children: "View All Users"
+            })
+          })]
+        })
+      }), activeTab === 'inventory' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+        className: "space-y-8",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+          className: "glass-card rounded-lg shadow p-6",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("h3", {
+            className: "text-lg font-semibold text-black mb-4",
+            children: "Inventory Overview"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+            className: "grid grid-cols-1 md:grid-cols-3 gap-6 mb-6",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+              className: "border border-gray-200 rounded-lg p-4",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("h4", {
+                className: "font-semibold text-black",
+                children: "Total Products"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("p", {
+                className: "text-2xl font-bold text-blue-600 mt-2",
+                children: stats.total_products || 0
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+              className: "border border-gray-200 rounded-lg p-4",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("h4", {
+                className: "font-semibold text-black",
+                children: "Low Stock Items"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("p", {
+                className: "text-2xl font-bold text-red-600 mt-2",
+                children: stats.low_stock_count || 0
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+              className: "border border-gray-200 rounded-lg p-4",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("h4", {
+                className: "font-semibold text-black",
+                children: "Out of Stock"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("p", {
+                className: "text-2xl font-bold text-orange-600 mt-2",
+                children: stats.out_of_stock_count || 0
+              })]
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+            to: "/admin/inventory",
+            className: "bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors",
+            children: "Manage Inventory"
+          })]
+        }), lowStockProducts.length > 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+          className: "bg-red-50 border border-red-200 rounded-lg p-6",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("h3", {
+            className: "text-lg font-semibold text-red-800 mb-4",
+            children: "Low Stock Alert"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("div", {
+            className: "space-y-2",
+            children: lowStockProducts.slice(0, 5).map(function (product) {
+              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+                className: "flex justify-between items-center p-2 glass-card rounded",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("span", {
+                  className: "text-black",
+                  children: product.name
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("span", {
+                  className: "text-red-600 font-semibold",
+                  children: ["Stock: ", product.stock_quantity]
                 })]
               }, product.id);
             })
-          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
-            className: "text-gray-400 text-center py-4",
-            children: "All products are well stocked"
           })]
         })]
+      }), activeTab === 'orders' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("div", {
+        className: "space-y-8",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+          className: "glass-card rounded-lg shadow p-6",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("h3", {
+            className: "text-lg font-semibold text-black mb-4",
+            children: "Order Management"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+            className: "grid grid-cols-1 md:grid-cols-4 gap-6 mb-6",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+              className: "border border-gray-200 rounded-lg p-4",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("h4", {
+                className: "font-semibold text-black",
+                children: "Pending"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("p", {
+                className: "text-2xl font-bold text-yellow-600 mt-2",
+                children: stats.pending_orders || 0
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+              className: "border border-gray-200 rounded-lg p-4",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("h4", {
+                className: "font-semibold text-black",
+                children: "Confirmed"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("p", {
+                className: "text-2xl font-bold text-blue-600 mt-2",
+                children: stats.confirmed_orders || 0
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+              className: "border border-gray-200 rounded-lg p-4",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("h4", {
+                className: "font-semibold text-black",
+                children: "Ready"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("p", {
+                className: "text-2xl font-bold text-green-600 mt-2",
+                children: stats.ready_orders || 0
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
+              className: "border border-gray-200 rounded-lg p-4",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("h4", {
+                className: "font-semibold text-black",
+                children: "Delivered"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("p", {
+                className: "text-2xl font-bold text-purple-600 mt-2",
+                children: stats.delivered_orders || 0
+              })]
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+            to: "/admin/orders",
+            className: "bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors",
+            children: "View All Orders"
+          })]
+        })
       })]
-    })
+    })]
   });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AdminDashboard);
@@ -57345,16 +57945,16 @@ var AdminInventory = function AdminInventory() {
     });
   }
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-    className: "min-h-screen py-8 px-4 sm:px-6 lg:px-8",
+    className: "min-h-screen bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 admin-page py-8 px-4 sm:px-6 lg:px-8",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
       className: "max-w-7xl mx-auto",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
         className: "mb-8",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h1", {
-          className: "text-3xl font-bold text-white mb-4",
+          className: "text-3xl font-bold text-black mb-4",
           children: "Inventory Management"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
-          className: "text-gray-300",
+          className: "text-gray-700",
           children: "Track and manage product stock levels"
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
@@ -57364,7 +57964,7 @@ var AdminInventory = function AdminInventory() {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
             className: "relative",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__["default"], {
-              className: "absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
+              className: "absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-600"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("input", {
               type: "text",
               value: search,
@@ -57372,14 +57972,14 @@ var AdminInventory = function AdminInventory() {
                 return setSearch(e.target.value);
               },
               placeholder: "Search products...",
-              className: "w-full pl-10 pr-4 py-3 glass rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className: "w-full pl-10 pr-4 py-3 glass rounded-lg text-black placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("select", {
             value: categoryFilter,
             onChange: function onChange(e) {
               return setCategoryFilter(e.target.value);
             },
-            className: "px-4 py-3 glass rounded-lg text-white focus:ring-2 focus:ring-blue-500 focus:outline-none",
+            className: "px-4 py-3 glass rounded-lg text-black focus:ring-2 focus:ring-blue-500 focus:outline-none",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("option", {
               value: "",
               children: "All Categories"
@@ -57394,7 +57994,7 @@ var AdminInventory = function AdminInventory() {
             onChange: function onChange(e) {
               return setStockFilter(e.target.value);
             },
-            className: "px-4 py-3 glass rounded-lg text-white focus:ring-2 focus:ring-blue-500 focus:outline-none",
+            className: "px-4 py-3 glass rounded-lg text-black focus:ring-2 focus:ring-blue-500 focus:outline-none",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("option", {
               value: "",
               children: "All Stock"
@@ -57406,7 +58006,7 @@ var AdminInventory = function AdminInventory() {
               children: "Out of Stock"
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-            className: "text-gray-400 text-sm flex items-center",
+            className: "text-gray-600 text-sm flex items-center",
             children: ["Total Products: ", (products === null || products === void 0 ? void 0 : products.total) || 0]
           })]
         })
@@ -57423,12 +58023,12 @@ var AdminInventory = function AdminInventory() {
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                className: "text-2xl font-bold text-white",
+                className: "text-2xl font-bold text-black",
                 children: (products === null || products === void 0 || (_products$data = products.data) === null || _products$data === void 0 ? void 0 : _products$data.filter(function (p) {
                   return p.stock_quantity > 10;
                 }).length) || 0
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                className: "text-gray-400 text-sm",
+                className: "text-gray-600 text-sm",
                 children: "In Stock"
               })]
             })]
@@ -57444,12 +58044,12 @@ var AdminInventory = function AdminInventory() {
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                className: "text-2xl font-bold text-white",
+                className: "text-2xl font-bold text-black",
                 children: (products === null || products === void 0 || (_products$data2 = products.data) === null || _products$data2 === void 0 ? void 0 : _products$data2.filter(function (p) {
                   return p.stock_quantity > 0 && p.stock_quantity <= 10;
                 }).length) || 0
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                className: "text-gray-400 text-sm",
+                className: "text-gray-600 text-sm",
                 children: "Low Stock"
               })]
             })]
@@ -57465,12 +58065,12 @@ var AdminInventory = function AdminInventory() {
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                className: "text-2xl font-bold text-white",
+                className: "text-2xl font-bold text-black",
                 children: (products === null || products === void 0 || (_products$data3 = products.data) === null || _products$data3 === void 0 ? void 0 : _products$data3.filter(function (p) {
                   return p.stock_quantity === 0;
                 }).length) || 0
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                className: "text-gray-400 text-sm",
+                className: "text-gray-600 text-sm",
                 children: "Out of Stock"
               })]
             })]
@@ -57486,12 +58086,12 @@ var AdminInventory = function AdminInventory() {
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                className: "text-2xl font-bold text-white",
+                className: "text-2xl font-bold text-black",
                 children: (products === null || products === void 0 || (_products$data4 = products.data) === null || _products$data4 === void 0 ? void 0 : _products$data4.filter(function (p) {
                   return p.is_active;
                 }).length) || 0
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                className: "text-gray-400 text-sm",
+                className: "text-gray-600 text-sm",
                 children: "Active Products"
               })]
             })]
@@ -57507,19 +58107,19 @@ var AdminInventory = function AdminInventory() {
               className: "bg-white/5",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("tr", {
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("th", {
-                  className: "px-6 py-4 text-left text-white font-semibold",
+                  className: "px-6 py-4 text-left text-black font-semibold",
                   children: "Product"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("th", {
-                  className: "px-6 py-4 text-left text-white font-semibold",
+                  className: "px-6 py-4 text-left text-black font-semibold",
                   children: "Category"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("th", {
-                  className: "px-6 py-4 text-left text-white font-semibold",
+                  className: "px-6 py-4 text-left text-black font-semibold",
                   children: "Current Stock"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("th", {
-                  className: "px-6 py-4 text-left text-white font-semibold",
+                  className: "px-6 py-4 text-left text-black font-semibold",
                   children: "Status"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("th", {
-                  className: "px-6 py-4 text-left text-white font-semibold",
+                  className: "px-6 py-4 text-left text-black font-semibold",
                   children: "Actions"
                 })]
               })
@@ -57543,16 +58143,16 @@ var AdminInventory = function AdminInventory() {
                         }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
                           className: "w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center",
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
-                            className: "text-lg font-bold text-white",
+                            className: "text-lg font-bold text-black",
                             children: product.name.charAt(0)
                           })
                         })
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
                         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                          className: "text-white font-medium",
+                          className: "text-black font-medium",
                           children: product.name
                         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                          className: "text-gray-400 text-sm",
+                          className: "text-gray-600 text-sm",
                           children: formatPrice(product.price)
                         })]
                       })]
@@ -57566,10 +58166,10 @@ var AdminInventory = function AdminInventory() {
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("td", {
                     className: "px-6 py-4",
                     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                      className: "text-2xl font-bold text-white",
+                      className: "text-2xl font-bold text-black",
                       children: product.stock_quantity
                     }), product.unit && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                      className: "text-gray-400 text-sm",
+                      className: "text-gray-600 text-sm",
                       children: product.unit
                     })]
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("td", {
@@ -57589,7 +58189,7 @@ var AdminInventory = function AdminInventory() {
                           return setStockUpdate(e.target.value);
                         },
                         placeholder: "New stock",
-                        className: "w-20 px-2 py-1 glass rounded text-white text-sm"
+                        className: "w-20 px-2 py-1 glass rounded text-black text-sm"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("button", {
                         onClick: function onClick() {
                           return handleStockUpdate(product.id);
@@ -57603,7 +58203,7 @@ var AdminInventory = function AdminInventory() {
                           setEditingProduct(null);
                           setStockUpdate('');
                         },
-                        className: "p-1 text-gray-400 hover:text-gray-300 transition-colors",
+                        className: "p-1 text-gray-600 hover:text-gray-700 transition-colors",
                         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(XMarkIcon, {
                           className: "w-4 h-4"
                         })
@@ -57626,7 +58226,7 @@ var AdminInventory = function AdminInventory() {
         }), (products === null || products === void 0 || (_products$data6 = products.data) === null || _products$data6 === void 0 ? void 0 : _products$data6.length) === 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
           className: "text-center py-12",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-            className: "text-gray-400 mb-4",
+            className: "text-gray-600 mb-4",
             children: "No products found"
           })
         })]
@@ -57683,11 +58283,28 @@ var AdminOrders = function AdminOrders() {
     _useState4 = _slicedToArray(_useState3, 2),
     statusFilter = _useState4[0],
     setStatusFilter = _useState4[1];
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+    _useState6 = _slicedToArray(_useState5, 2),
+    deliveryMethodFilter = _useState6[0],
+    setDeliveryMethodFilter = _useState6[1];
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+    _useState8 = _slicedToArray(_useState7, 2),
+    selectedOrder = _useState8[0],
+    setSelectedOrder = _useState8[1];
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+    _useState0 = _slicedToArray(_useState9, 2),
+    pickupProof = _useState0[0],
+    setPickupProof = _useState0[1];
+  var _useState1 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+    _useState10 = _slicedToArray(_useState1, 2),
+    pickupNotes = _useState10[0],
+    setPickupNotes = _useState10[1];
   var queryClient = (0,react_query__WEBPACK_IMPORTED_MODULE_1__.useQueryClient)();
-  var _useQuery = (0,react_query__WEBPACK_IMPORTED_MODULE_1__.useQuery)(['admin-orders', search, statusFilter], function () {
+  var _useQuery = (0,react_query__WEBPACK_IMPORTED_MODULE_1__.useQuery)(['admin-orders', search, statusFilter, deliveryMethodFilter], function () {
       var params = new URLSearchParams();
       if (search) params.append('search', search);
       if (statusFilter) params.append('status', statusFilter);
+      if (deliveryMethodFilter) params.append('delivery_method', deliveryMethodFilter);
       return _config_axios__WEBPACK_IMPORTED_MODULE_2__["default"].get("/api/admin/orders?".concat(params.toString())).then(function (res) {
         return res.data;
       });
@@ -57707,6 +58324,30 @@ var AdminOrders = function AdminOrders() {
     },
     onError: function onError() {
       react_hot_toast__WEBPACK_IMPORTED_MODULE_8__["default"].error('Failed to update order status');
+    }
+  });
+  var verifyPickupMutation = (0,react_query__WEBPACK_IMPORTED_MODULE_1__.useMutation)(function (_ref2) {
+    var orderId = _ref2.orderId,
+      proof = _ref2.proof,
+      notes = _ref2.notes;
+    var formData = new FormData();
+    formData.append('proof', proof);
+    formData.append('notes', notes);
+    return _config_axios__WEBPACK_IMPORTED_MODULE_2__["default"].post("/api/admin/orders/".concat(orderId, "/verify-pickup"), formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data'
+      }
+    });
+  }, {
+    onSuccess: function onSuccess() {
+      queryClient.invalidateQueries('admin-orders');
+      setSelectedOrder(null);
+      setPickupProof(null);
+      setPickupNotes('');
+      react_hot_toast__WEBPACK_IMPORTED_MODULE_8__["default"].success('Pickup verified successfully');
+    },
+    onError: function onError() {
+      react_hot_toast__WEBPACK_IMPORTED_MODULE_8__["default"].error('Failed to verify pickup');
     }
   });
   var formatPrice = function formatPrice(price) {
@@ -57739,7 +58380,7 @@ var AdminOrders = function AdminOrders() {
       case 'cancelled':
         return 'text-red-400 bg-red-500/20';
       default:
-        return 'text-gray-400 bg-gray-500/20';
+        return 'text-gray-600 bg-gray-500/20';
     }
   };
   var handleStatusUpdate = function handleStatusUpdate(orderId, newStatus) {
@@ -57755,26 +58396,26 @@ var AdminOrders = function AdminOrders() {
     });
   }
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-    className: "min-h-screen py-8 px-4 sm:px-6 lg:px-8",
+    className: "min-h-screen bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 admin-page py-8 px-4 sm:px-6 lg:px-8",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
       className: "max-w-7xl mx-auto",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
         className: "mb-8",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h1", {
-          className: "text-3xl font-bold text-white mb-4",
+          className: "text-3xl font-bold text-black mb-4",
           children: "Order Management"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
-          className: "text-gray-300",
+          className: "text-gray-700",
           children: "Process and track customer orders"
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
         className: "glass-card rounded-2xl p-6 mb-8",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-          className: "grid grid-cols-1 md:grid-cols-3 gap-4",
+          className: "grid grid-cols-1 md:grid-cols-4 gap-4",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
             className: "relative",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__["default"], {
-              className: "absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
+              className: "absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-600"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("input", {
               type: "text",
               value: search,
@@ -57782,14 +58423,14 @@ var AdminOrders = function AdminOrders() {
                 return setSearch(e.target.value);
               },
               placeholder: "Search orders...",
-              className: "w-full pl-10 pr-4 py-3 glass rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className: "w-full pl-10 pr-4 py-3 glass rounded-lg text-black placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("select", {
             value: statusFilter,
             onChange: function onChange(e) {
               return setStatusFilter(e.target.value);
             },
-            className: "px-4 py-3 glass rounded-lg text-white focus:ring-2 focus:ring-blue-500 focus:outline-none",
+            className: "px-4 py-3 glass rounded-lg text-black focus:ring-2 focus:ring-blue-500 focus:outline-none",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("option", {
               value: "",
               children: "All Status"
@@ -57812,8 +58453,24 @@ var AdminOrders = function AdminOrders() {
               value: "cancelled",
               children: "Cancelled"
             })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("select", {
+            value: deliveryMethodFilter,
+            onChange: function onChange(e) {
+              return setDeliveryMethodFilter(e.target.value);
+            },
+            className: "px-4 py-3 glass rounded-lg text-black focus:ring-2 focus:ring-blue-500 focus:outline-none",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("option", {
+              value: "",
+              children: "All Methods"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("option", {
+              value: "delivery",
+              children: "Delivery"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("option", {
+              value: "pickup",
+              children: "Pickup"
+            })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-            className: "text-gray-400 text-sm flex items-center",
+            className: "text-gray-600 text-sm flex items-center",
             children: ["Total Orders: ", (orders === null || orders === void 0 ? void 0 : orders.total) || 0]
           })]
         })
@@ -57827,10 +58484,10 @@ var AdminOrders = function AdminOrders() {
               className: "flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("h3", {
-                  className: "text-xl font-semibold text-white mb-2",
+                  className: "text-xl font-semibold text-black mb-2",
                   children: ["Order #", order.order_number]
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("p", {
-                  className: "text-gray-400",
+                  className: "text-gray-600",
                   children: ["Customer: ", (_order$user = order.user) === null || _order$user === void 0 ? void 0 : _order$user.name, " \u2022 ", formatDate(order.created_at)]
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
@@ -57851,41 +58508,41 @@ var AdminOrders = function AdminOrders() {
               className: "grid grid-cols-1 md:grid-cols-4 gap-6 mb-6",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                  className: "text-gray-400 text-sm mb-1",
+                  className: "text-gray-600 text-sm mb-1",
                   children: "Total Amount"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                  className: "text-2xl font-bold text-white",
+                  className: "text-2xl font-bold text-black",
                   children: formatPrice(order.total_amount)
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                  className: "text-gray-400 text-sm mb-1",
+                  className: "text-gray-600 text-sm mb-1",
                   children: "Delivery Method"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                  className: "text-white font-medium",
+                  className: "text-black font-medium",
                   children: order.delivery_method === 'delivery' ? 'Delivery' : 'Pickup'
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                  className: "text-gray-400 text-sm mb-1",
+                  className: "text-gray-600 text-sm mb-1",
                   children: "Payment Method"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                  className: "text-white font-medium",
+                  className: "text-black font-medium",
                   children: order.payment_method.toUpperCase()
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                  className: "text-gray-400 text-sm mb-1",
+                  className: "text-gray-600 text-sm mb-1",
                   children: "Items"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-                  className: "text-white font-medium",
+                  className: "text-black font-medium",
                   children: [((_order$order_items = order.order_items) === null || _order$order_items === void 0 ? void 0 : _order$order_items.length) || 0, " item(s)"]
                 })]
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
               className: "border-t border-white/20 pt-4 mb-6",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h4", {
-                className: "text-white font-medium mb-3",
+                className: "text-black font-medium mb-3",
                 children: "Order Items:"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
                 className: "space-y-2",
@@ -57894,15 +58551,15 @@ var AdminOrders = function AdminOrders() {
                   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
                     className: "flex items-center justify-between text-sm",
                     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("span", {
-                      className: "text-gray-300",
+                      className: "text-gray-700",
                       children: [(_item$product = item.product) === null || _item$product === void 0 ? void 0 : _item$product.name, " \xD7 ", item.quantity]
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
-                      className: "text-white",
+                      className: "text-black",
                       children: formatPrice(item.total_price)
                     })]
                   }, item.id);
                 }), ((_order$order_items3 = order.order_items) === null || _order$order_items3 === void 0 ? void 0 : _order$order_items3.length) > 3 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-                  className: "text-gray-400 text-sm",
+                  className: "text-gray-600 text-sm",
                   children: ["+", order.order_items.length - 3, " more item(s)"]
                 })]
               })]
@@ -57913,7 +58570,7 @@ var AdminOrders = function AdminOrders() {
                   onClick: function onClick() {
                     return handleStatusUpdate(order.id, 'confirmed');
                   },
-                  className: "flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors",
+                  className: "flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-black px-4 py-2 rounded-lg text-sm font-medium transition-colors",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_3__["default"], {
                     className: "w-4 h-4"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
@@ -57923,7 +58580,7 @@ var AdminOrders = function AdminOrders() {
                   onClick: function onClick() {
                     return handleStatusUpdate(order.id, 'cancelled');
                   },
-                  className: "flex items-center space-x-2 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors",
+                  className: "flex items-center space-x-2 bg-red-600 hover:bg-red-700 text-black px-4 py-2 rounded-lg text-sm font-medium transition-colors",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__["default"], {
                     className: "w-4 h-4"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
@@ -57934,7 +58591,7 @@ var AdminOrders = function AdminOrders() {
                 onClick: function onClick() {
                   return handleStatusUpdate(order.id, 'preparing');
                 },
-                className: "flex items-center space-x-2 bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors",
+                className: "flex items-center space-x-2 bg-orange-600 hover:bg-orange-700 text-black px-4 py-2 rounded-lg text-sm font-medium transition-colors",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
                   children: "Start Preparing"
                 })
@@ -57942,7 +58599,7 @@ var AdminOrders = function AdminOrders() {
                 onClick: function onClick() {
                   return handleStatusUpdate(order.id, 'ready');
                 },
-                className: "flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors",
+                className: "flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-black px-4 py-2 rounded-lg text-sm font-medium transition-colors",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
                   children: "Mark Ready"
                 })
@@ -57950,7 +58607,7 @@ var AdminOrders = function AdminOrders() {
                 onClick: function onClick() {
                   return handleStatusUpdate(order.id, 'delivered');
                 },
-                className: "flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors",
+                className: "flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-black px-4 py-2 rounded-lg text-sm font-medium transition-colors",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
                   children: "Mark Delivered"
                 })
@@ -57963,10 +58620,10 @@ var AdminOrders = function AdminOrders() {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
           className: "glass-card rounded-2xl p-8 max-w-md mx-auto",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h2", {
-            className: "text-2xl font-bold text-white mb-4",
+            className: "text-2xl font-bold text-black mb-4",
             children: "No Orders Found"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
-            className: "text-gray-300",
+            className: "text-gray-700",
             children: "No orders match your current filters."
           })]
         })
@@ -58074,16 +58731,16 @@ var AdminProducts = function AdminProducts() {
     });
   }
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-    className: "min-h-screen py-8 px-4 sm:px-6 lg:px-8",
+    className: "min-h-screen bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 admin-page py-8 px-4 sm:px-6 lg:px-8",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
       className: "max-w-7xl mx-auto",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
         className: "mb-8",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h1", {
-          className: "text-3xl font-bold text-white mb-4",
+          className: "text-3xl font-bold text-black mb-4",
           children: "Product Management"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
-          className: "text-gray-300",
+          className: "text-gray-700",
           children: "Manage your product catalog"
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
@@ -58093,7 +58750,7 @@ var AdminProducts = function AdminProducts() {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
             className: "relative",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_3__["default"], {
-              className: "absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
+              className: "absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-600"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("input", {
               type: "text",
               value: search,
@@ -58101,14 +58758,14 @@ var AdminProducts = function AdminProducts() {
                 return setSearch(e.target.value);
               },
               placeholder: "Search products...",
-              className: "w-full pl-10 pr-4 py-3 glass rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className: "w-full pl-10 pr-4 py-3 glass rounded-lg text-black placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("select", {
             value: categoryFilter,
             onChange: function onChange(e) {
               return setCategoryFilter(e.target.value);
             },
-            className: "px-4 py-3 glass rounded-lg text-white focus:ring-2 focus:ring-blue-500 focus:outline-none",
+            className: "px-4 py-3 glass rounded-lg text-black focus:ring-2 focus:ring-blue-500 focus:outline-none",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("option", {
               value: "",
               children: "All Categories"
@@ -58123,7 +58780,7 @@ var AdminProducts = function AdminProducts() {
             onChange: function onChange(e) {
               return setStockFilter(e.target.value);
             },
-            className: "px-4 py-3 glass rounded-lg text-white focus:ring-2 focus:ring-blue-500 focus:outline-none",
+            className: "px-4 py-3 glass rounded-lg text-black focus:ring-2 focus:ring-blue-500 focus:outline-none",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("option", {
               value: "",
               children: "All Stock"
@@ -58135,7 +58792,7 @@ var AdminProducts = function AdminProducts() {
               children: "Out of Stock"
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("button", {
-            className: "bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2",
+            className: "bg-blue-600 hover:bg-blue-700 text-black px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__["default"], {
               className: "w-5 h-5"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
@@ -58153,22 +58810,22 @@ var AdminProducts = function AdminProducts() {
               className: "bg-white/5",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("tr", {
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("th", {
-                  className: "px-6 py-4 text-left text-white font-semibold",
+                  className: "px-6 py-4 text-left text-black font-semibold",
                   children: "Product"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("th", {
-                  className: "px-6 py-4 text-left text-white font-semibold",
+                  className: "px-6 py-4 text-left text-black font-semibold",
                   children: "Category"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("th", {
-                  className: "px-6 py-4 text-left text-white font-semibold",
+                  className: "px-6 py-4 text-left text-black font-semibold",
                   children: "Price"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("th", {
-                  className: "px-6 py-4 text-left text-white font-semibold",
+                  className: "px-6 py-4 text-left text-black font-semibold",
                   children: "Stock"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("th", {
-                  className: "px-6 py-4 text-left text-white font-semibold",
+                  className: "px-6 py-4 text-left text-black font-semibold",
                   children: "Status"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("th", {
-                  className: "px-6 py-4 text-left text-white font-semibold",
+                  className: "px-6 py-4 text-left text-black font-semibold",
                   children: "Actions"
                 })]
               })
@@ -58191,16 +58848,16 @@ var AdminProducts = function AdminProducts() {
                         }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
                           className: "w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center",
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
-                            className: "text-lg font-bold text-white",
+                            className: "text-lg font-bold text-black",
                             children: product.name.charAt(0)
                           })
                         })
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
                         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                          className: "text-white font-medium",
+                          className: "text-black font-medium",
                           children: product.name
                         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                          className: "text-gray-400 text-sm line-clamp-1",
+                          className: "text-gray-600 text-sm line-clamp-1",
                           children: product.description
                         })]
                       })]
@@ -58214,10 +58871,10 @@ var AdminProducts = function AdminProducts() {
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("td", {
                     className: "px-6 py-4",
                     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                      className: "text-white font-semibold",
+                      className: "text-black font-semibold",
                       children: formatPrice(product.price)
                     }), product.unit && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-                      className: "text-gray-400 text-sm",
+                      className: "text-gray-600 text-sm",
                       children: ["/", product.unit]
                     })]
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("td", {
@@ -58225,7 +58882,7 @@ var AdminProducts = function AdminProducts() {
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
                       className: "flex items-center space-x-2",
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
-                        className: "px-2 py-1 rounded-full text-xs font-semibold ".concat(product.stock_quantity > 10 ? 'bg-green-500 text-white' : product.stock_quantity > 0 ? 'bg-yellow-500 text-white' : 'bg-red-500 text-white'),
+                        className: "px-2 py-1 rounded-full text-xs font-semibold ".concat(product.stock_quantity > 10 ? 'bg-green-500 text-black' : product.stock_quantity > 0 ? 'bg-yellow-500 text-black' : 'bg-red-500 text-black'),
                         children: product.stock_quantity
                       }), product.stock_quantity <= 10 && product.stock_quantity > 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
                         className: "text-yellow-400 text-xs",
@@ -58235,7 +58892,7 @@ var AdminProducts = function AdminProducts() {
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("td", {
                     className: "px-6 py-4",
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
-                      className: "px-2 py-1 rounded-full text-xs font-semibold ".concat(product.is_active ? 'bg-green-500 text-white' : 'bg-gray-500 text-white'),
+                      className: "px-2 py-1 rounded-full text-xs font-semibold ".concat(product.is_active ? 'bg-green-500 text-black' : 'bg-gray-500 text-black'),
                       children: product.is_active ? 'Active' : 'Inactive'
                     })
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("td", {
@@ -58265,10 +58922,10 @@ var AdminProducts = function AdminProducts() {
         }), (products === null || products === void 0 || (_products$data2 = products.data) === null || _products$data2 === void 0 ? void 0 : _products$data2.length) === 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
           className: "text-center py-12",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-            className: "text-gray-400 mb-4",
+            className: "text-gray-600 mb-4",
             children: "No products found"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("button", {
-            className: "bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors",
+            className: "bg-blue-600 hover:bg-blue-700 text-black px-6 py-3 rounded-lg font-semibold transition-colors",
             children: "Add Your First Product"
           })]
         })]
@@ -58373,14 +59030,14 @@ var CartPage = function CartPage() {
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
             className: "glass-card rounded-2xl p-8 max-w-md mx-auto",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h2", {
-              className: "text-2xl font-bold text-white mb-4",
+              className: "text-2xl font-bold text-black mb-4",
               children: "Your Cart is Empty"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
-              className: "text-gray-300 mb-6",
+              className: "text-gray-700 mb-6",
               children: "Add some products to your cart to get started."
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
               to: "/products",
-              className: "bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors",
+              className: "bg-blue-600 hover:bg-blue-700 text-black px-6 py-3 rounded-lg font-semibold transition-colors",
               children: "Continue Shopping"
             })]
           })
@@ -58395,10 +59052,10 @@ var CartPage = function CartPage() {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
         className: "mb-8",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h1", {
-          className: "text-3xl font-bold text-white mb-4",
+          className: "text-3xl font-bold text-black mb-4",
           children: "Shopping Cart"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("p", {
-          className: "text-gray-300",
+          className: "text-gray-700",
           children: [cartItems.length, " item(s) in your cart"]
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
@@ -58421,7 +59078,7 @@ var CartPage = function CartPage() {
                     }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
                       className: "w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center",
                       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
-                        className: "text-2xl font-bold text-white",
+                        className: "text-2xl font-bold text-black",
                         children: item.product.name.charAt(0)
                       })
                     })
@@ -58431,13 +59088,13 @@ var CartPage = function CartPage() {
                       className: "flex justify-between items-start mb-2",
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
                         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h3", {
-                          className: "text-lg font-semibold text-white mb-1",
+                          className: "text-lg font-semibold text-black mb-1",
                           children: item.product.name
                         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
                           className: "text-sm text-blue-400",
                           children: item.product.category.name
                         }), !item.product.category.allows_delivery && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
-                          className: "inline-block bg-yellow-500 text-white text-xs px-2 py-1 rounded-full mt-1",
+                          className: "inline-block bg-yellow-500 text-black text-xs px-2 py-1 rounded-full mt-1",
                           children: "Pickup Only"
                         })]
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("button", {
@@ -58459,10 +59116,10 @@ var CartPage = function CartPage() {
                           },
                           className: "p-1 glass rounded-lg hover:bg-white/10 transition-colors",
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_3__["default"], {
-                            className: "w-4 h-4 text-white"
+                            className: "w-4 h-4 text-black"
                           })
                         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
-                          className: "text-white font-semibold min-w-[2rem] text-center",
+                          className: "text-black font-semibold min-w-[2rem] text-center",
                           children: item.quantity
                         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("button", {
                           onClick: function onClick() {
@@ -58470,16 +59127,16 @@ var CartPage = function CartPage() {
                           },
                           className: "p-1 glass rounded-lg hover:bg-white/10 transition-colors",
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_4__["default"], {
-                            className: "w-4 h-4 text-white"
+                            className: "w-4 h-4 text-black"
                           })
                         })]
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
                         className: "text-right",
                         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                          className: "text-lg font-bold text-white",
+                          className: "text-lg font-bold text-black",
                           children: formatPrice(item.quantity * item.product.price)
                         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                          className: "text-sm text-gray-400",
+                          className: "text-sm text-gray-600",
                           children: [formatPrice(item.product.price), " each"]
                         })]
                       })]
@@ -58494,19 +59151,19 @@ var CartPage = function CartPage() {
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
             className: "glass-card rounded-2xl p-6 sticky top-4",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h2", {
-              className: "text-xl font-bold text-white mb-6",
+              className: "text-xl font-bold text-black mb-6",
               children: "Order Summary"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
               className: "space-y-4 mb-6",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                className: "flex justify-between text-gray-300",
+                className: "flex justify-between text-gray-700",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
                   children: "Subtotal"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
                   children: formatPrice(getCartTotal())
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                className: "flex justify-between text-gray-300",
+                className: "flex justify-between text-gray-700",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
                   children: "Delivery Fee"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
@@ -58515,7 +59172,7 @@ var CartPage = function CartPage() {
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
                 className: "border-t border-white/20 pt-4",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                  className: "flex justify-between text-lg font-bold text-white",
+                  className: "flex justify-between text-lg font-bold text-black",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
                     children: "Total"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
@@ -58533,11 +59190,11 @@ var CartPage = function CartPage() {
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
               to: "/checkout",
-              className: "w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-semibold transition-colors text-center block",
+              className: "w-full bg-blue-600 hover:bg-blue-700 text-black py-3 px-4 rounded-lg font-semibold transition-colors text-center block",
               children: "Proceed to Checkout"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
               to: "/products",
-              className: "w-full glass-button text-white py-3 px-4 rounded-lg font-semibold transition-colors text-center block mt-3",
+              className: "w-full glass-button text-black py-3 px-4 rounded-lg font-semibold transition-colors text-center block mt-3",
               children: "Continue Shopping"
             })]
           })
@@ -58619,7 +59276,7 @@ var CheckoutPage = function CheckoutPage() {
       delivery_address: (user === null || user === void 0 ? void 0 : user.address) || '',
       contact_phone: (user === null || user === void 0 ? void 0 : user.phone) || '',
       notes: '',
-      delivery_date: ''
+      delivery_date: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString().slice(0, 16) // Tomorrow's date
     }),
     _useState4 = _slicedToArray(_useState3, 2),
     formData = _useState4[0],
@@ -58643,7 +59300,7 @@ var CheckoutPage = function CheckoutPage() {
             setLoading(true);
             _context.p = 1;
             orderData = _objectSpread(_objectSpread({}, formData), {}, {
-              delivery_address: formData.delivery_method === 'delivery' ? formData.delivery_address : null,
+              delivery_address: formData.delivery_method === 'delivery' ? formData.delivery_address : '',
               delivery_date: formData.delivery_date ? new Date(formData.delivery_date).toISOString() : null
             });
             _context.n = 2;
@@ -58691,10 +59348,10 @@ var CheckoutPage = function CheckoutPage() {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
         className: "mb-8",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("h1", {
-          className: "text-3xl font-bold text-white mb-4",
+          className: "text-3xl font-bold text-black mb-4",
           children: "Checkout"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("p", {
-          className: "text-gray-300",
+          className: "text-gray-700",
           children: "Complete your order"
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("form", {
@@ -58705,7 +59362,7 @@ var CheckoutPage = function CheckoutPage() {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
             className: "glass-card rounded-2xl p-6",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("h2", {
-              className: "text-xl font-semibold text-white mb-4 flex items-center",
+              className: "text-xl font-semibold text-black mb-4 flex items-center",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_9__["default"], {
                 className: "w-6 h-6 mr-2"
               }), "Delivery Method"]
@@ -58721,13 +59378,13 @@ var CheckoutPage = function CheckoutPage() {
                   onChange: handleChange,
                   className: "w-4 h-4 text-blue-600"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__["default"], {
-                  className: "w-5 h-5 text-white"
+                  className: "w-5 h-5 text-black"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
-                    className: "text-white font-medium",
+                    className: "text-black font-medium",
                     children: "Pickup"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
-                    className: "text-gray-400 text-sm",
+                    className: "text-gray-600 text-sm",
                     children: "Pick up your order at our store"
                   })]
                 })]
@@ -58741,13 +59398,13 @@ var CheckoutPage = function CheckoutPage() {
                   onChange: handleChange,
                   className: "w-4 h-4 text-blue-600"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_9__["default"], {
-                  className: "w-5 h-5 text-white"
+                  className: "w-5 h-5 text-black"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
-                    className: "text-white font-medium",
+                    className: "text-black font-medium",
                     children: "Delivery"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
-                    className: "text-gray-400 text-sm",
+                    className: "text-gray-600 text-sm",
                     children: "Get your order delivered to your address"
                   })]
                 })]
@@ -58763,7 +59420,7 @@ var CheckoutPage = function CheckoutPage() {
             }), formData.delivery_method === 'delivery' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
               className: "mt-6",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("label", {
-                className: "block text-sm font-medium text-white mb-2",
+                className: "block text-sm font-medium text-black mb-2",
                 children: "Delivery Address"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("textarea", {
                 name: "delivery_address",
@@ -58771,33 +59428,37 @@ var CheckoutPage = function CheckoutPage() {
                 onChange: handleChange,
                 required: true,
                 rows: "3",
-                className: "w-full px-4 py-3 glass rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none",
+                className: "w-full px-4 py-3 glass rounded-lg text-black placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none",
                 placeholder: "Enter your delivery address"
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
               className: "mt-6",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("label", {
-                className: "block text-sm font-medium text-white mb-2",
-                children: "Preferred Delivery/Pickup Date"
+                className: "block text-sm font-medium text-black mb-2",
+                children: "Preferred Delivery/Pickup Date & Time"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("input", {
                 type: "datetime-local",
                 name: "delivery_date",
                 value: formData.delivery_date,
                 onChange: handleChange,
                 min: new Date().toISOString().slice(0, 16),
-                className: "w-full px-4 py-3 glass rounded-lg text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                className: "w-full px-4 py-3 glass rounded-lg text-black focus:ring-2 focus:ring-blue-500 focus:outline-none",
+                required: true
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("p", {
+                className: "text-sm text-gray-600 mt-1",
+                children: "Select your preferred date and time for delivery or pickup"
               })]
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
             className: "glass-card rounded-2xl p-6",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("h2", {
-              className: "text-xl font-semibold text-white mb-4 flex items-center",
+              className: "text-xl font-semibold text-black mb-4 flex items-center",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_8__["default"], {
                 className: "w-6 h-6 mr-2"
               }), "Contact Information"]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("label", {
-                className: "block text-sm font-medium text-white mb-2",
+                className: "block text-sm font-medium text-black mb-2",
                 children: "Contact Phone"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("input", {
                 type: "tel",
@@ -58805,14 +59466,14 @@ var CheckoutPage = function CheckoutPage() {
                 value: formData.contact_phone,
                 onChange: handleChange,
                 required: true,
-                className: "w-full px-4 py-3 glass rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none",
+                className: "w-full px-4 py-3 glass rounded-lg text-black placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none",
                 placeholder: "Enter your phone number"
               })]
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
             className: "glass-card rounded-2xl p-6",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("h2", {
-              className: "text-xl font-semibold text-white mb-4 flex items-center",
+              className: "text-xl font-semibold text-black mb-4 flex items-center",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_7__["default"], {
                 className: "w-6 h-6 mr-2"
               }), "Payment Method"]
@@ -58829,10 +59490,10 @@ var CheckoutPage = function CheckoutPage() {
                   className: "w-4 h-4 text-blue-600"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
-                    className: "text-white font-medium",
+                    className: "text-black font-medium",
                     children: "Cash on Delivery (COD)"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
-                    className: "text-gray-400 text-sm",
+                    className: "text-gray-600 text-sm",
                     children: "Pay when you receive your order"
                   })]
                 })]
@@ -58847,10 +59508,10 @@ var CheckoutPage = function CheckoutPage() {
                   className: "w-4 h-4 text-blue-600"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
-                    className: "text-white font-medium",
+                    className: "text-black font-medium",
                     children: "GCash"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
-                    className: "text-gray-400 text-sm",
+                    className: "text-gray-600 text-sm",
                     children: "Pay via GCash mobile payment"
                   })]
                 })]
@@ -58865,10 +59526,10 @@ var CheckoutPage = function CheckoutPage() {
                   className: "w-4 h-4 text-blue-600"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
-                    className: "text-white font-medium",
+                    className: "text-black font-medium",
                     children: "PayMaya"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
-                    className: "text-gray-400 text-sm",
+                    className: "text-gray-600 text-sm",
                     children: "Pay via PayMaya mobile payment"
                   })]
                 })]
@@ -58877,14 +59538,14 @@ var CheckoutPage = function CheckoutPage() {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
             className: "glass-card rounded-2xl p-6",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("h2", {
-              className: "text-xl font-semibold text-white mb-4",
+              className: "text-xl font-semibold text-black mb-4",
               children: "Order Notes"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("textarea", {
               name: "notes",
               value: formData.notes,
               onChange: handleChange,
               rows: "4",
-              className: "w-full px-4 py-3 glass rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none",
+              className: "w-full px-4 py-3 glass rounded-lg text-black placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none",
               placeholder: "Any special instructions for your order..."
             })]
           })]
@@ -58893,7 +59554,7 @@ var CheckoutPage = function CheckoutPage() {
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
             className: "glass-card rounded-2xl p-6 sticky top-4",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("h2", {
-              className: "text-xl font-bold text-white mb-6",
+              className: "text-xl font-bold text-black mb-6",
               children: "Order Summary"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
               className: "space-y-4 mb-6",
@@ -58903,35 +59564,35 @@ var CheckoutPage = function CheckoutPage() {
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
                     className: "flex-1",
                     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
-                      className: "text-white font-medium text-sm",
+                      className: "text-black font-medium text-sm",
                       children: item.product.name
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
-                      className: "text-gray-400 text-xs",
+                      className: "text-gray-600 text-xs",
                       children: [item.quantity, " \xD7 ", formatPrice(item.product.price)]
                     })]
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
-                    className: "text-white font-semibold",
+                    className: "text-black font-semibold",
                     children: formatPrice(item.quantity * item.product.price)
                   })]
                 }, item.id);
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
                 className: "border-t border-white/20 pt-4",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
-                  className: "flex justify-between text-gray-300 mb-2",
+                  className: "flex justify-between text-gray-700 mb-2",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
                     children: "Subtotal"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
                     children: formatPrice(getCartTotal())
                   })]
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
-                  className: "flex justify-between text-gray-300 mb-2",
+                  className: "flex justify-between text-gray-700 mb-2",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
                     children: "Delivery Fee"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
                     children: "Free"
                   })]
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
-                  className: "flex justify-between text-lg font-bold text-white",
+                  className: "flex justify-between text-lg font-bold text-black",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
                     children: "Total"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
@@ -58942,7 +59603,7 @@ var CheckoutPage = function CheckoutPage() {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("button", {
               type: "submit",
               disabled: loading,
-              className: "w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white py-3 px-4 rounded-lg font-semibold transition-colors flex items-center justify-center",
+              className: "w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-black py-3 px-4 rounded-lg font-semibold transition-colors flex items-center justify-center",
               children: loading ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.Fragment, {
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_UI_LoadingSpinner__WEBPACK_IMPORTED_MODULE_10__["default"], {
                   size: "small",
@@ -59122,14 +59783,14 @@ var HomePage = function HomePage() {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
                 className: "w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("span", {
-                  className: "text-2xl font-bold text-white",
+                  className: "text-2xl font-bold text-black",
                   children: category.name.charAt(0)
                 })
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("h3", {
-                className: "text-xl font-semibold text-white mb-2 group-hover:text-blue-300 transition-colors",
+                className: "text-xl font-semibold text-black mb-2 group-hover:text-blue-300 transition-colors",
                 children: category.name
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("p", {
-                className: "text-gray-300 mb-4",
+                className: "text-gray-700 mb-4",
                 children: category.description
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
                 className: "text-sm text-blue-400",
@@ -59153,10 +59814,10 @@ var HomePage = function HomePage() {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__["default"], {
               className: "w-12 h-12 text-blue-400 mx-auto mb-4"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("h3", {
-              className: "text-xl font-semibold text-white mb-4",
+              className: "text-xl font-semibold text-black mb-4",
               children: "Easy Shopping"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("p", {
-              className: "text-gray-300",
+              className: "text-gray-700",
               children: "Browse our wide selection of products with an intuitive shopping experience."
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
@@ -59164,10 +59825,10 @@ var HomePage = function HomePage() {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_7__["default"], {
               className: "w-12 h-12 text-blue-400 mx-auto mb-4"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("h3", {
-              className: "text-xl font-semibold text-white mb-4",
+              className: "text-xl font-semibold text-black mb-4",
               children: "Delivery & Pickup"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("p", {
-              className: "text-gray-300",
+              className: "text-gray-700",
               children: "Choose between delivery or pickup options for your convenience."
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
@@ -59175,10 +59836,10 @@ var HomePage = function HomePage() {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__["default"], {
               className: "w-12 h-12 text-blue-400 mx-auto mb-4"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("h3", {
-              className: "text-xl font-semibold text-white mb-4",
+              className: "text-xl font-semibold text-black mb-4",
               children: "Multiple Payment"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("p", {
-              className: "text-gray-300",
+              className: "text-gray-700",
               children: "Pay with COD, GCash, or PayMaya - whatever works best for you."
             })]
           })]
@@ -59186,7 +59847,7 @@ var HomePage = function HomePage() {
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("section", {
       id: "about",
-      className: "py-16 px-4 sm:px-6 lg:px-8 bg-gray-50",
+      className: "py-16 px-4 sm:px-6 lg:px-8 about-section",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
         className: "max-w-7xl mx-auto",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("h2", {
@@ -59227,7 +59888,7 @@ var HomePage = function HomePage() {
               })]
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
-            className: "bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-8 text-white",
+            className: "mission-vision-section rounded-2xl p-8 text-black",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("h4", {
               className: "text-xl font-bold mb-4",
               children: "Our Mission"
@@ -59331,8 +59992,13 @@ var LoginPage = function LoginPage() {
             result = _context.v;
             if (result.success) {
               react_hot_toast__WEBPACK_IMPORTED_MODULE_7__["default"].success('Login successful!');
-              // Let the App.jsx routing handle the redirect
-              window.location.reload();
+              // Check if user is admin and redirect accordingly
+              if (result.user && result.user.role === 'admin') {
+                navigate('/admin/dashboard');
+              } else {
+                // Let the App.jsx routing handle the redirect for regular users
+                window.location.reload();
+              }
             } else {
               react_hot_toast__WEBPACK_IMPORTED_MODULE_7__["default"].error(result.message);
             }
@@ -59385,7 +60051,7 @@ var LoginPage = function LoginPage() {
               required: true,
               value: formData.email,
               onChange: handleChange,
-              className: "w-full px-4 py-3 glass rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none",
+              className: "w-full px-4 py-3 glass rounded-lg text-black placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:outline-none",
               placeholder: "Enter your email"
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
@@ -59409,7 +60075,7 @@ var LoginPage = function LoginPage() {
                 onClick: function onClick() {
                   return setShowPassword(!showPassword);
                 },
-                className: "absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white",
+                className: "absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600 hover:text-white",
                 children: showPassword ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_4__["default"], {
                   className: "w-5 h-5"
                 }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -59521,7 +60187,7 @@ var OrderDetailPage = function OrderDetailPage() {
       case 'cancelled':
         return 'text-red-400';
       default:
-        return 'text-gray-400';
+        return 'text-gray-600';
     }
   };
   if (isLoading) {
@@ -59536,16 +60202,16 @@ var OrderDetailPage = function OrderDetailPage() {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
         className: "glass-card rounded-2xl p-8 text-center",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("h2", {
-          className: "text-2xl font-bold text-white mb-4",
+          className: "text-2xl font-bold text-black mb-4",
           children: "Order Not Found"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("p", {
-          className: "text-gray-300 mb-6",
+          className: "text-gray-700 mb-6",
           children: "The order you're looking for doesn't exist."
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("button", {
           onClick: function onClick() {
             return navigate('/orders');
           },
-          className: "bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors",
+          className: "bg-blue-600 hover:bg-blue-700 text-black px-6 py-3 rounded-lg font-semibold transition-colors",
           children: "Back to Orders"
         })]
       })
@@ -59559,7 +60225,7 @@ var OrderDetailPage = function OrderDetailPage() {
         onClick: function onClick() {
           return navigate('/orders');
         },
-        className: "flex items-center space-x-2 text-white hover:text-blue-300 transition-colors mb-8",
+        className: "flex items-center space-x-2 text-black hover:text-blue-300 transition-colors mb-8",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_4__["default"], {
           className: "w-5 h-5"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
@@ -59573,10 +60239,10 @@ var OrderDetailPage = function OrderDetailPage() {
             className: "flex flex-col md:flex-row md:items-center md:justify-between mb-6",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("h1", {
-                className: "text-2xl font-bold text-white mb-2",
+                className: "text-2xl font-bold text-black mb-2",
                 children: ["Order #", order.order_number]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("p", {
-                className: "text-gray-400",
+                className: "text-gray-600",
                 children: ["Placed on ", formatDate(order.created_at)]
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
@@ -59596,10 +60262,10 @@ var OrderDetailPage = function OrderDetailPage() {
                 className: "w-6 h-6 text-green-400"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
-                  className: "text-white font-medium",
+                  className: "text-black font-medium",
                   children: order.delivery_method === 'delivery' ? 'Delivery' : 'Pickup'
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
-                  className: "text-gray-400 text-sm",
+                  className: "text-gray-600 text-sm",
                   children: order.delivery_method === 'delivery' ? 'To your address' : 'At store location'
                 })]
               })]
@@ -59609,10 +60275,10 @@ var OrderDetailPage = function OrderDetailPage() {
                 className: "w-6 h-6 text-purple-400"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
-                  className: "text-white font-medium",
+                  className: "text-black font-medium",
                   children: order.payment_method.toUpperCase()
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
-                  className: "text-gray-400 text-sm",
+                  className: "text-gray-600 text-sm",
                   children: "Payment method"
                 })]
               })]
@@ -59622,10 +60288,10 @@ var OrderDetailPage = function OrderDetailPage() {
                 className: "w-6 h-6 text-orange-400"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
-                  className: "text-white font-medium",
+                  className: "text-black font-medium",
                   children: order.delivery_date ? formatDate(order.delivery_date) : 'Not scheduled'
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
-                  className: "text-gray-400 text-sm",
+                  className: "text-gray-600 text-sm",
                   children: "Delivery date"
                 })]
               })]
@@ -59634,7 +60300,7 @@ var OrderDetailPage = function OrderDetailPage() {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
           className: "glass-card rounded-2xl p-6",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("h2", {
-            className: "text-xl font-semibold text-white mb-6",
+            className: "text-xl font-semibold text-black mb-6",
             children: "Order Items"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
             className: "space-y-4",
@@ -59651,29 +60317,29 @@ var OrderDetailPage = function OrderDetailPage() {
                   }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
                     className: "w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center",
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
-                      className: "text-xl font-bold text-white",
+                      className: "text-xl font-bold text-black",
                       children: ((_item$product2 = item.product) === null || _item$product2 === void 0 || (_item$product2 = _item$product2.name) === null || _item$product2 === void 0 ? void 0 : _item$product2.charAt(0)) || '?'
                     })
                   })
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
                   className: "flex-1",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("h3", {
-                    className: "text-white font-medium",
+                    className: "text-black font-medium",
                     children: (_item$product3 = item.product) === null || _item$product3 === void 0 ? void 0 : _item$product3.name
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("p", {
-                    className: "text-gray-400 text-sm",
+                    className: "text-gray-600 text-sm",
                     children: (_item$product4 = item.product) === null || _item$product4 === void 0 || (_item$product4 = _item$product4.category) === null || _item$product4 === void 0 ? void 0 : _item$product4.name
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("p", {
-                    className: "text-gray-400 text-sm",
+                    className: "text-gray-600 text-sm",
                     children: ["Quantity: ", item.quantity]
                   })]
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
                   className: "text-right",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
-                    className: "text-white font-semibold",
+                    className: "text-black font-semibold",
                     children: formatPrice(item.total_price)
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
-                    className: "text-gray-400 text-sm",
+                    className: "text-gray-600 text-sm",
                     children: [formatPrice(item.unit_price), " each"]
                   })]
                 })]
@@ -59683,19 +60349,19 @@ var OrderDetailPage = function OrderDetailPage() {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
           className: "glass-card rounded-2xl p-6",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("h2", {
-            className: "text-xl font-semibold text-white mb-6",
+            className: "text-xl font-semibold text-black mb-6",
             children: "Order Summary"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
             className: "space-y-4",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
-              className: "flex justify-between text-gray-300",
+              className: "flex justify-between text-gray-700",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
                 children: "Subtotal"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
                 children: formatPrice(order.total_amount)
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
-              className: "flex justify-between text-gray-300",
+              className: "flex justify-between text-gray-700",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
                 children: "Delivery Fee"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
@@ -59704,7 +60370,7 @@ var OrderDetailPage = function OrderDetailPage() {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
               className: "border-t border-white/20 pt-4",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
-                className: "flex justify-between text-xl font-bold text-white",
+                className: "flex justify-between text-xl font-bold text-black",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
                   children: "Total"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
@@ -59716,35 +60382,35 @@ var OrderDetailPage = function OrderDetailPage() {
         }), order.delivery_address && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
           className: "glass-card rounded-2xl p-6",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("h2", {
-            className: "text-xl font-semibold text-white mb-4 flex items-center",
+            className: "text-xl font-semibold text-black mb-4 flex items-center",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_8__["default"], {
               className: "w-6 h-6 mr-2"
             }), "Delivery Address"]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("p", {
-            className: "text-gray-300",
+            className: "text-gray-700",
             children: order.delivery_address
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
           className: "glass-card rounded-2xl p-6",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("h2", {
-            className: "text-xl font-semibold text-white mb-4 flex items-center",
+            className: "text-xl font-semibold text-black mb-4 flex items-center",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_9__["default"], {
               className: "w-6 h-6 mr-2"
             }), "Contact Information"]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
             className: "space-y-2",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("p", {
-              className: "text-gray-300",
+              className: "text-gray-700",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
                 className: "font-medium",
                 children: "Phone:"
               }), " ", order.contact_phone]
             }), order.notes && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("p", {
-                className: "font-medium text-white mb-1",
+                className: "font-medium text-black mb-1",
                 children: "Notes:"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("p", {
-                className: "text-gray-300",
+                className: "text-gray-700",
                 children: order.notes
               })]
             })]
@@ -59824,7 +60490,7 @@ var OrdersPage = function OrdersPage() {
       case 'cancelled':
         return 'text-red-400 bg-red-500/20';
       default:
-        return 'text-gray-400 bg-gray-500/20';
+        return 'text-gray-600 bg-gray-500/20';
     }
   };
   if (isLoading) {
@@ -59840,10 +60506,10 @@ var OrdersPage = function OrdersPage() {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
         className: "mb-8",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h1", {
-          className: "text-3xl font-bold text-white mb-4",
+          className: "text-3xl font-bold text-black mb-4",
           children: "My Orders"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
-          className: "text-gray-300",
+          className: "text-gray-700",
           children: "Track and manage your orders"
         })]
       }), (orders === null || orders === void 0 || (_orders$data = orders.data) === null || _orders$data === void 0 ? void 0 : _orders$data.length) > 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
@@ -59856,10 +60522,10 @@ var OrdersPage = function OrdersPage() {
               className: "flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("h3", {
-                  className: "text-xl font-semibold text-white mb-2",
+                  className: "text-xl font-semibold text-black mb-2",
                   children: ["Order #", order.order_number]
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("p", {
-                  className: "text-gray-400",
+                  className: "text-gray-600",
                   children: ["Placed on ", formatDate(order.created_at)]
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
@@ -59887,10 +60553,10 @@ var OrdersPage = function OrdersPage() {
                   className: "w-5 h-5 text-green-400"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                    className: "text-white font-medium",
+                    className: "text-black font-medium",
                     children: order.delivery_method === 'delivery' ? 'Delivery' : 'Pickup'
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                    className: "text-gray-400 text-sm",
+                    className: "text-gray-600 text-sm",
                     children: order.delivery_method === 'delivery' ? 'To your address' : 'At store location'
                   })]
                 })]
@@ -59900,27 +60566,27 @@ var OrdersPage = function OrdersPage() {
                   className: "w-5 h-5 text-purple-400"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                    className: "text-white font-medium",
+                    className: "text-black font-medium",
                     children: order.delivery_date ? formatDate(order.delivery_date) : 'Not scheduled'
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                    className: "text-gray-400 text-sm",
+                    className: "text-gray-600 text-sm",
                     children: "Delivery date"
                   })]
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
                 className: "text-right",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                  className: "text-2xl font-bold text-white",
+                  className: "text-2xl font-bold text-black",
                   children: formatPrice(order.total_amount)
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-                  className: "text-gray-400 text-sm",
+                  className: "text-gray-600 text-sm",
                   children: [((_order$order_items = order.order_items) === null || _order$order_items === void 0 ? void 0 : _order$order_items.length) || 0, " item(s)"]
                 })]
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
               className: "border-t border-white/20 pt-4",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h4", {
-                className: "text-white font-medium mb-3",
+                className: "text-black font-medium mb-3",
                 children: "Items:"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
                 className: "space-y-2",
@@ -59929,15 +60595,15 @@ var OrdersPage = function OrdersPage() {
                   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
                     className: "flex items-center justify-between text-sm",
                     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("span", {
-                      className: "text-gray-300",
+                      className: "text-gray-700",
                       children: [(_item$product = item.product) === null || _item$product === void 0 ? void 0 : _item$product.name, " \xD7 ", item.quantity]
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
-                      className: "text-white",
+                      className: "text-black",
                       children: formatPrice(item.total_price)
                     })]
                   }, item.id);
                 }), ((_order$order_items3 = order.order_items) === null || _order$order_items3 === void 0 ? void 0 : _order$order_items3.length) > 3 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-                  className: "text-gray-400 text-sm",
+                  className: "text-gray-600 text-sm",
                   children: ["+", order.order_items.length - 3, " more item(s)"]
                 })]
               })]
@@ -59949,14 +60615,14 @@ var OrdersPage = function OrdersPage() {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
           className: "glass-card rounded-2xl p-8 max-w-md mx-auto",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h2", {
-            className: "text-2xl font-bold text-white mb-4",
+            className: "text-2xl font-bold text-black mb-4",
             children: "No Orders Yet"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
-            className: "text-gray-300 mb-6",
+            className: "text-gray-700 mb-6",
             children: "You haven't placed any orders yet. Start shopping to see your orders here."
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
             to: "/products",
-            className: "bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors",
+            className: "bg-blue-600 hover:bg-blue-700 text-black px-6 py-3 rounded-lg font-semibold transition-colors",
             children: "Start Shopping"
           })]
         })
@@ -60071,16 +60737,16 @@ var ProductDetailPage = function ProductDetailPage() {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)("div", {
         className: "glass-card rounded-2xl p-8 text-center",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("h2", {
-          className: "text-2xl font-bold text-white mb-4",
+          className: "text-2xl font-bold text-black mb-4",
           children: "Product Not Found"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("p", {
-          className: "text-gray-300 mb-6",
+          className: "text-gray-700 mb-6",
           children: "The product you're looking for doesn't exist."
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("button", {
           onClick: function onClick() {
             return navigate('/products');
           },
-          className: "bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors",
+          className: "bg-blue-600 hover:bg-blue-700 text-black px-6 py-3 rounded-lg font-semibold transition-colors",
           children: "Back to Products"
         })]
       })
@@ -60094,7 +60760,7 @@ var ProductDetailPage = function ProductDetailPage() {
         onClick: function onClick() {
           return navigate(-1);
         },
-        className: "flex items-center space-x-2 text-white hover:text-blue-300 transition-colors mb-8",
+        className: "flex items-center space-x-2 text-black hover:text-blue-300 transition-colors mb-8",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__["default"], {
           className: "w-5 h-5"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("span", {
@@ -60113,7 +60779,7 @@ var ProductDetailPage = function ProductDetailPage() {
             }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("div", {
               className: "w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("span", {
-                className: "text-8xl font-bold text-white",
+                className: "text-8xl font-bold text-black",
                 children: product.name.charAt(0)
               })
             })
@@ -60139,29 +60805,29 @@ var ProductDetailPage = function ProductDetailPage() {
                 className: "text-sm text-blue-400 font-medium",
                 children: (_product$category = product.category) === null || _product$category === void 0 ? void 0 : _product$category.name
               }), !((_product$category2 = product.category) !== null && _product$category2 !== void 0 && _product$category2.allows_delivery) && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("span", {
-                className: "inline-block bg-yellow-500 text-white text-xs px-2 py-1 rounded-full",
+                className: "inline-block bg-yellow-500 text-black text-xs px-2 py-1 rounded-full",
                 children: "Pickup Only"
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("h1", {
-              className: "text-3xl font-bold text-white mb-4",
+              className: "text-3xl font-bold text-black mb-4",
               children: product.name
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)("div", {
               className: "flex items-center space-x-4 mb-6",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("div", {
-                className: "text-3xl font-bold text-white",
+                className: "text-3xl font-bold text-black",
                 children: formatPrice(product.price)
               }), product.unit && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)("span", {
-                className: "text-gray-400",
+                className: "text-gray-600",
                 children: ["/", product.unit]
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("p", {
-              className: "text-gray-300 text-lg leading-relaxed",
+              className: "text-gray-700 text-lg leading-relaxed",
               children: product.description
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)("div", {
             className: "flex items-center space-x-4",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("span", {
-              className: "px-3 py-1 rounded-full text-sm font-semibold ".concat(product.stock_quantity > 10 ? 'bg-green-500 text-white' : product.stock_quantity > 0 ? 'bg-yellow-500 text-white' : 'bg-red-500 text-white'),
+              className: "px-3 py-1 rounded-full text-sm font-semibold ".concat(product.stock_quantity > 10 ? 'bg-green-500 text-black' : product.stock_quantity > 0 ? 'bg-yellow-500 text-black' : 'bg-red-500 text-black'),
               children: product.stock_quantity > 0 ? 'In Stock' : 'Out of Stock'
             }), product.stock_quantity <= 10 && product.stock_quantity > 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)("span", {
               className: "text-yellow-400 text-sm",
@@ -60170,7 +60836,7 @@ var ProductDetailPage = function ProductDetailPage() {
           }), product.stock_quantity > 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)("div", {
             className: "flex items-center space-x-4",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("label", {
-              className: "text-white font-medium",
+              className: "text-black font-medium",
               children: "Quantity:"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)("div", {
               className: "flex items-center space-x-3",
@@ -60181,7 +60847,7 @@ var ProductDetailPage = function ProductDetailPage() {
                 className: "p-2 glass rounded-lg hover:bg-white/10 transition-colors",
                 children: "-"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("span", {
-                className: "text-white font-semibold min-w-[2rem] text-center",
+                className: "text-black font-semibold min-w-[2rem] text-center",
                 children: quantity
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("button", {
                 onClick: function onClick() {
@@ -60196,7 +60862,7 @@ var ProductDetailPage = function ProductDetailPage() {
             children: [product.stock_quantity > 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.Fragment, {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)("button", {
                 onClick: handleAddToCart,
-                className: "flex-1 bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2",
+                className: "flex-1 bg-blue-600 hover:bg-blue-700 text-black py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_9__["default"], {
                   className: "w-5 h-5"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("span", {
@@ -60204,12 +60870,12 @@ var ProductDetailPage = function ProductDetailPage() {
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("button", {
                 onClick: handleBuyNow,
-                className: "flex-1 glass-button text-white py-3 px-6 rounded-lg font-semibold transition-colors",
+                className: "flex-1 glass-button text-black py-3 px-6 rounded-lg font-semibold transition-colors",
                 children: "Buy Now"
               })]
             }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("button", {
               disabled: true,
-              className: "w-full bg-gray-500 text-white py-3 px-6 rounded-lg font-semibold cursor-not-allowed",
+              className: "w-full bg-gray-500 text-black py-3 px-6 rounded-lg font-semibold cursor-not-allowed",
               children: "Out of Stock"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("button", {
               onClick: function onClick() {
@@ -60219,13 +60885,13 @@ var ProductDetailPage = function ProductDetailPage() {
               children: isFavorite ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_heroicons_react_24_solid__WEBPACK_IMPORTED_MODULE_11__["default"], {
                 className: "w-6 h-6 text-red-500"
               }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_8__["default"], {
-                className: "w-6 h-6 text-white"
+                className: "w-6 h-6 text-black"
               })
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)("div", {
             className: "glass-card rounded-2xl p-6",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("h3", {
-              className: "text-lg font-semibold text-white mb-4",
+              className: "text-lg font-semibold text-black mb-4",
               children: "Delivery Information"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)("div", {
               className: "space-y-3",
@@ -60234,7 +60900,7 @@ var ProductDetailPage = function ProductDetailPage() {
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_10__["default"], {
                   className: "w-5 h-5 text-green-400"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("span", {
-                  className: "text-white",
+                  className: "text-black",
                   children: "Available for delivery"
                 })]
               }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)("div", {
@@ -60242,11 +60908,11 @@ var ProductDetailPage = function ProductDetailPage() {
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_7__["default"], {
                   className: "w-5 h-5 text-yellow-400"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("span", {
-                  className: "text-white",
+                  className: "text-black",
                   children: "Pickup only"
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("div", {
-                className: "text-sm text-gray-400",
+                className: "text-sm text-gray-600",
                 children: (_product$category4 = product.category) !== null && _product$category4 !== void 0 && _product$category4.allows_delivery ? 'This item can be delivered to your address or picked up at our store.' : 'This item is only available for pickup at our store location.'
               })]
             })]
@@ -60375,10 +61041,10 @@ var ProductsPage = function ProductsPage() {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
         className: "mb-8",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h1", {
-          className: "text-3xl font-bold text-white mb-4",
+          className: "text-3xl font-bold text-black mb-4",
           children: "Our Products"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
-          className: "text-gray-300",
+          className: "text-gray-700",
           children: "Discover our wide range of products"
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
@@ -60389,7 +61055,7 @@ var ProductsPage = function ProductsPage() {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
             className: "flex-1 relative",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__["default"], {
-              className: "absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
+              className: "absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-600"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("input", {
               type: "text",
               value: search,
@@ -60397,14 +61063,14 @@ var ProductsPage = function ProductsPage() {
                 return setSearch(e.target.value);
               },
               placeholder: "Search products...",
-              className: "w-full pl-10 pr-4 py-3 glass rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className: "w-full pl-10 pr-4 py-3 glass rounded-lg text-black placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("button", {
             type: "button",
             onClick: function onClick() {
               return setShowFilters(!showFilters);
             },
-            className: "md:hidden flex items-center justify-center px-4 py-3 glass rounded-lg text-white hover:bg-white/10 transition-colors",
+            className: "md:hidden flex items-center justify-center px-4 py-3 glass rounded-lg text-black hover:bg-white/10 transition-colors",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_4__["default"], {
               className: "w-5 h-5 mr-2"
             }), "Filters"]
@@ -60419,14 +61085,14 @@ var ProductsPage = function ProductsPage() {
             className: "grid grid-cols-1 md:grid-cols-3 gap-4",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("label", {
-                className: "block text-sm font-medium text-white mb-2",
+                className: "block text-sm font-medium text-black mb-2",
                 children: "Category"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("select", {
                 value: category,
                 onChange: function onChange(e) {
                   return handleCategoryChange(e.target.value);
                 },
-                className: "w-full px-4 py-3 glass rounded-lg text-white focus:ring-2 focus:ring-blue-500 focus:outline-none",
+                className: "w-full px-4 py-3 glass rounded-lg text-black focus:ring-2 focus:ring-blue-500 focus:outline-none",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("option", {
                   value: "",
                   children: "All Categories"
@@ -60439,14 +61105,14 @@ var ProductsPage = function ProductsPage() {
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("label", {
-                className: "block text-sm font-medium text-white mb-2",
+                className: "block text-sm font-medium text-black mb-2",
                 children: "Sort By"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("select", {
                 value: sortBy,
                 onChange: function onChange(e) {
                   return handleSortChange(e.target.value, sortOrder);
                 },
-                className: "w-full px-4 py-3 glass rounded-lg text-white focus:ring-2 focus:ring-blue-500 focus:outline-none",
+                className: "w-full px-4 py-3 glass rounded-lg text-black focus:ring-2 focus:ring-blue-500 focus:outline-none",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("option", {
                   value: "created_at",
                   children: "Newest First"
@@ -60460,14 +61126,14 @@ var ProductsPage = function ProductsPage() {
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("label", {
-                className: "block text-sm font-medium text-white mb-2",
+                className: "block text-sm font-medium text-black mb-2",
                 children: "Order"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("select", {
                 value: sortOrder,
                 onChange: function onChange(e) {
                   return handleSortChange(sortBy, e.target.value);
                 },
-                className: "w-full px-4 py-3 glass rounded-lg text-white focus:ring-2 focus:ring-blue-500 focus:outline-none",
+                className: "w-full px-4 py-3 glass rounded-lg text-black focus:ring-2 focus:ring-blue-500 focus:outline-none",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("option", {
                   value: "desc",
                   children: "Descending"
@@ -60487,7 +61153,7 @@ var ProductsPage = function ProductsPage() {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
             className: "mb-6",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("p", {
-              className: "text-gray-300",
+              className: "text-gray-700",
               children: ["Showing ", products.data.length, " of ", products.total, " products"]
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
@@ -60526,7 +61192,7 @@ var ProductsPage = function ProductsPage() {
               className: "text-xl font-semibold text-white mb-4",
               children: "No Products Found"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
-              className: "text-gray-300 mb-6",
+              className: "text-gray-700 mb-6",
               children: "Try adjusting your search criteria or browse all products."
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("button", {
               onClick: function onClick() {
@@ -60544,6 +61210,238 @@ var ProductsPage = function ProductsPage() {
   });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ProductsPage);
+
+/***/ }),
+
+/***/ "./resources/js/components/Pages/ProfilePage.jsx":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/Pages/ProfilePage.jsx ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
+/* harmony import */ var _hooks_useAuth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../hooks/useAuth */ "./resources/js/hooks/useAuth.jsx");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/ArrowLeftIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/MapPinIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/PhoneIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/UserIcon.js");
+/* harmony import */ var _UI_LoadingSpinner__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../UI/LoadingSpinner */ "./resources/js/components/UI/LoadingSpinner.jsx");
+/* harmony import */ var react_hot_toast__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-hot-toast */ "./node_modules/react-hot-toast/dist/index.mjs");
+/* harmony import */ var _config_axios__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../config/axios */ "./resources/js/config/axios.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
+function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); } r ? i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n : (o("next", 0), o("throw", 1), o("return", 2)); }, _regeneratorDefine2(e, r, n, t); }
+function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
+function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+
+
+
+
+
+
+
+
+var ProfilePage = function ProfilePage() {
+  var _useAuth = (0,_hooks_useAuth__WEBPACK_IMPORTED_MODULE_2__.useAuth)(),
+    user = _useAuth.user,
+    setUser = _useAuth.setUser;
+  var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_1__.useNavigate)();
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+    _useState2 = _slicedToArray(_useState, 2),
+    loading = _useState2[0],
+    setLoading = _useState2[1];
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
+      name: (user === null || user === void 0 ? void 0 : user.name) || '',
+      phone: (user === null || user === void 0 ? void 0 : user.phone) || '',
+      address: (user === null || user === void 0 ? void 0 : user.address) || ''
+    }),
+    _useState4 = _slicedToArray(_useState3, 2),
+    formData = _useState4[0],
+    setFormData = _useState4[1];
+  var handleChange = function handleChange(e) {
+    setFormData(_objectSpread(_objectSpread({}, formData), {}, _defineProperty({}, e.target.name, e.target.value)));
+  };
+  var handleSubmit = /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee(e) {
+      var response, _error$response, firstError, _error$response2, _t;
+      return _regenerator().w(function (_context) {
+        while (1) switch (_context.p = _context.n) {
+          case 0:
+            e.preventDefault();
+            setLoading(true);
+            _context.p = 1;
+            _context.n = 2;
+            return _config_axios__WEBPACK_IMPORTED_MODULE_9__["default"].get('/sanctum/csrf-cookie');
+          case 2:
+            _context.n = 3;
+            return _config_axios__WEBPACK_IMPORTED_MODULE_9__["default"].put('/api/profile', formData);
+          case 3:
+            response = _context.v;
+            // Update user data in context
+            setUser(response.data.user);
+            react_hot_toast__WEBPACK_IMPORTED_MODULE_8__["default"].success('Profile updated successfully!');
+            _context.n = 5;
+            break;
+          case 4:
+            _context.p = 4;
+            _t = _context.v;
+            console.error('Profile update error:', _t);
+            if ((_error$response = _t.response) !== null && _error$response !== void 0 && (_error$response = _error$response.data) !== null && _error$response !== void 0 && _error$response.errors) {
+              firstError = Object.values(_t.response.data.errors)[0][0];
+              react_hot_toast__WEBPACK_IMPORTED_MODULE_8__["default"].error(firstError);
+            } else {
+              react_hot_toast__WEBPACK_IMPORTED_MODULE_8__["default"].error(((_error$response2 = _t.response) === null || _error$response2 === void 0 || (_error$response2 = _error$response2.data) === null || _error$response2 === void 0 ? void 0 : _error$response2.message) || 'Failed to update profile');
+            }
+          case 5:
+            _context.p = 5;
+            setLoading(false);
+            return _context.f(5);
+          case 6:
+            return _context.a(2);
+        }
+      }, _callee, null, [[1, 4, 5, 6]]);
+    }));
+    return function handleSubmit(_x) {
+      return _ref.apply(this, arguments);
+    };
+  }();
+  if (!user) {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
+      className: "min-h-screen flex items-center justify-center",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_UI_LoadingSpinner__WEBPACK_IMPORTED_MODULE_7__["default"], {})
+    });
+  }
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
+    className: "min-h-screen py-8 px-4 sm:px-6 lg:px-8",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+      className: "max-w-4xl mx-auto",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+        className: "mb-8",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("button", {
+          onClick: function onClick() {
+            return navigate(-1);
+          },
+          className: "flex items-center text-gray-600 hover:text-gray-800 mb-4 transition-colors",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_3__["default"], {
+            className: "w-5 h-5 mr-2"
+          }), "Back"]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("h1", {
+          className: "text-3xl font-bold text-black mb-2",
+          children: "User Profile"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
+          className: "text-gray-700",
+          children: "Manage your account information"
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+        className: "glass-card rounded-2xl p-8",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+          className: "flex items-center mb-8",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
+            className: "w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__["default"], {
+              className: "w-8 h-8 text-blue-600"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("h2", {
+              className: "text-2xl font-bold text-black",
+              children: user.name
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
+              className: "text-gray-600",
+              children: user.email
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("span", {
+              className: "inline-block px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full mt-2",
+              children: user.role === 'admin' ? 'Administrator' : 'Customer'
+            })]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("form", {
+          onSubmit: handleSubmit,
+          className: "space-y-6",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("label", {
+              htmlFor: "name",
+              className: "block text-sm font-medium text-black mb-2",
+              children: "Full Name"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("input", {
+              id: "name",
+              name: "name",
+              type: "text",
+              required: true,
+              value: formData.name,
+              onChange: handleChange,
+              className: "w-full px-4 py-3 glass rounded-lg text-black placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:outline-none",
+              placeholder: "Enter your full name"
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("label", {
+              htmlFor: "phone",
+              className: "block text-sm font-medium text-black mb-2",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__["default"], {
+                className: "w-4 h-4 inline mr-2"
+              }), "Phone Number"]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("input", {
+              id: "phone",
+              name: "phone",
+              type: "tel",
+              value: formData.phone,
+              onChange: handleChange,
+              className: "w-full px-4 py-3 glass rounded-lg text-black placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:outline-none",
+              placeholder: "Enter your phone number"
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("label", {
+              htmlFor: "address",
+              className: "block text-sm font-medium text-black mb-2",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_4__["default"], {
+                className: "w-4 h-4 inline mr-2"
+              }), "Address"]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("textarea", {
+              id: "address",
+              name: "address",
+              rows: "3",
+              value: formData.address,
+              onChange: handleChange,
+              className: "w-full px-4 py-3 glass rounded-lg text-black placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:outline-none",
+              placeholder: "Enter your address"
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
+            className: "flex justify-end",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("button", {
+              type: "submit",
+              disabled: loading,
+              className: "bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center",
+              children: loading ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.Fragment, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_UI_LoadingSpinner__WEBPACK_IMPORTED_MODULE_7__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("span", {
+                  className: "ml-2",
+                  children: "Updating..."
+                })]
+              }) : 'Update Profile'
+            })
+          })]
+        })]
+      })]
+    })
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ProfilePage);
 
 /***/ }),
 
@@ -60597,8 +61495,7 @@ var RegisterPage = function RegisterPage() {
       email: '',
       password: '',
       password_confirmation: '',
-      phone: '',
-      address: ''
+      phone: ''
     }),
     _useState2 = _slicedToArray(_useState, 2),
     formData = _useState2[0],
@@ -60689,7 +61586,7 @@ var RegisterPage = function RegisterPage() {
               required: true,
               value: formData.name,
               onChange: handleChange,
-              className: "w-full px-4 py-3 glass rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none",
+              className: "w-full px-4 py-3 glass rounded-lg text-black placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:outline-none",
               placeholder: "Enter your full name"
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
@@ -60704,7 +61601,7 @@ var RegisterPage = function RegisterPage() {
               required: true,
               value: formData.email,
               onChange: handleChange,
-              className: "w-full px-4 py-3 glass rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none",
+              className: "w-full px-4 py-3 glass rounded-lg text-black placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:outline-none",
               placeholder: "Enter your email"
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
@@ -60718,22 +61615,8 @@ var RegisterPage = function RegisterPage() {
               type: "tel",
               value: formData.phone,
               onChange: handleChange,
-              className: "w-full px-4 py-3 glass rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none",
+              className: "w-full px-4 py-3 glass rounded-lg text-black placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:outline-none",
               placeholder: "Enter your phone number"
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("label", {
-              htmlFor: "address",
-              className: "block text-sm font-medium text-black mb-2",
-              children: "Address"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("textarea", {
-              id: "address",
-              name: "address",
-              rows: "3",
-              value: formData.address,
-              onChange: handleChange,
-              className: "w-full px-4 py-3 glass rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none",
-              placeholder: "Enter your address"
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("label", {
@@ -60756,7 +61639,7 @@ var RegisterPage = function RegisterPage() {
                 onClick: function onClick() {
                   return setShowPassword(!showPassword);
                 },
-                className: "absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white",
+                className: "absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600 hover:text-white",
                 children: showPassword ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_4__["default"], {
                   className: "w-5 h-5"
                 }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -60785,7 +61668,7 @@ var RegisterPage = function RegisterPage() {
                 onClick: function onClick() {
                   return setShowConfirmPassword(!showConfirmPassword);
                 },
-                className: "absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white",
+                className: "absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600 hover:text-white",
                 children: showConfirmPassword ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_4__["default"], {
                   className: "w-5 h-5"
                 }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -60925,13 +61808,13 @@ var ProductCard = function ProductCard(_ref) {
         }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
           className: "w-full h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
-            className: "text-4xl font-bold text-white",
+            className: "text-4xl font-bold text-black",
             children: product.name.charAt(0)
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
           className: "absolute top-2 right-2",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
-            className: "px-2 py-1 rounded-full text-xs font-semibold ".concat(product.stock_quantity > 10 ? 'bg-green-500 text-white' : product.stock_quantity > 0 ? 'bg-yellow-500 text-white' : 'bg-red-500 text-white'),
+            className: "px-2 py-1 rounded-full text-xs font-semibold ".concat(product.stock_quantity > 10 ? 'bg-green-500 text-black' : product.stock_quantity > 0 ? 'bg-yellow-500 text-black' : 'bg-red-500 text-black'),
             children: product.stock_quantity > 0 ? 'In Stock' : 'Out of Stock'
           })
         })]
@@ -60944,19 +61827,19 @@ var ProductCard = function ProductCard(_ref) {
             children: (_product$category = product.category) === null || _product$category === void 0 ? void 0 : _product$category.name
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h3", {
-          className: "text-lg font-semibold text-white mb-2 line-clamp-2",
+          className: "text-lg font-semibold text-black mb-2 line-clamp-2",
           children: product.name
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
-          className: "text-gray-300 text-sm mb-4 line-clamp-2",
+          className: "text-gray-700 text-sm mb-4 line-clamp-2",
           children: product.description
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
           className: "flex items-center justify-between",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
-              className: "text-2xl font-bold text-white",
+              className: "text-2xl font-bold text-black",
               children: formatPrice(product.price)
             }), product.unit && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("span", {
-              className: "text-sm text-gray-400 ml-1",
+              className: "text-sm text-gray-600 ml-1",
               children: ["/", product.unit]
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
@@ -60966,14 +61849,14 @@ var ProductCard = function ProductCard(_ref) {
               className: "p-2 glass-button rounded-lg hover:scale-110 transition-transform",
               title: "View Details",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__["default"], {
-                className: "w-4 h-4 text-white"
+                className: "w-4 h-4 text-black"
               })
             }), product.stock_quantity > 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("button", {
               onClick: handleAddToCart,
               className: "p-2 bg-blue-600 hover:bg-blue-700 rounded-lg hover:scale-110 transition-transform",
               title: "Add to Cart",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__["default"], {
-                className: "w-4 h-4 text-white"
+                className: "w-4 h-4 text-black"
               })
             })]
           })]
@@ -61051,7 +61934,7 @@ var PromotionalCarousel = function PromotionalCarousel(_ref) {
     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       className: "relative h-96 bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-        className: "text-center text-white",
+        className: "text-center text-black",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h2", {
           className: "text-4xl font-bold mb-4",
           children: "Welcome to R&B One Stop Mart"
@@ -61098,10 +61981,10 @@ var PromotionalCarousel = function PromotionalCarousel(_ref) {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
                 className: "text-center",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
-                  className: "text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-tight tracking-tight",
+                  className: "text-5xl md:text-7xl lg:text-8xl font-black text-black mb-6 leading-tight tracking-tight",
                   children: slide.title
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-                  className: "text-xl md:text-2xl lg:text-3xl text-white mb-8 max-w-4xl mx-auto leading-relaxed font-light",
+                  className: "text-xl md:text-2xl lg:text-3xl text-black mb-8 max-w-4xl mx-auto leading-relaxed font-light",
                   children: slide.subtitle
                 }), slide.offer && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
                   className: "text-lg md:text-xl text-yellow-300 font-semibold mb-12 tracking-wide",
@@ -61133,14 +62016,14 @@ var PromotionalCarousel = function PromotionalCarousel(_ref) {
     }), slides.length > 1 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
         onClick: prevSlide,
-        className: "absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm",
+        className: "absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-black p-3 rounded-full transition-all duration-300 backdrop-blur-sm",
         "aria-label": "Previous slide",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_1__["default"], {
           className: "w-6 h-6"
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
         onClick: nextSlide,
-        className: "absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm",
+        className: "absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-black p-3 rounded-full transition-all duration-300 backdrop-blur-sm",
         "aria-label": "Next slide",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_2__["default"], {
           className: "w-6 h-6"
@@ -61183,6 +62066,7 @@ axios__WEBPACK_IMPORTED_MODULE_0__["default"].defaults.baseURL = 'http://127.0.0
 axios__WEBPACK_IMPORTED_MODULE_0__["default"].defaults.headers.common['Content-Type'] = 'application/json';
 axios__WEBPACK_IMPORTED_MODULE_0__["default"].defaults.headers.common['Accept'] = 'application/json';
 axios__WEBPACK_IMPORTED_MODULE_0__["default"].defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+axios__WEBPACK_IMPORTED_MODULE_0__["default"].defaults.withCredentials = true;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (axios__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 /***/ }),
@@ -61261,27 +62145,33 @@ var AuthProvider = function AuthProvider(_ref) {
               email: email,
               password: password
             });
+
+            // Fetch CSRF cookie first
             _context.n = 1;
+            return _config_axios__WEBPACK_IMPORTED_MODULE_1__["default"].get('/sanctum/csrf-cookie');
+          case 1:
+            _context.n = 2;
             return _config_axios__WEBPACK_IMPORTED_MODULE_1__["default"].post('/api/login', {
               email: email,
               password: password
             });
-          case 1:
+          case 2:
             response = _context.v;
             console.log('Login response:', response.data);
             localStorage.setItem('token', response.data.token);
             _config_axios__WEBPACK_IMPORTED_MODULE_1__["default"].defaults.headers.common['Authorization'] = "Bearer ".concat(response.data.token);
             setUser(response.data.user);
             return _context.a(2, {
-              success: true
+              success: true,
+              user: response.data.user
             });
-          case 2:
-            _context.p = 2;
+          case 3:
+            _context.p = 3;
             _t = _context.v;
             console.error('Login error:', _t);
             console.error('Error response:', (_error$response = _t.response) === null || _error$response === void 0 ? void 0 : _error$response.data);
             if (!((_error$response2 = _t.response) !== null && _error$response2 !== void 0 && (_error$response2 = _error$response2.data) !== null && _error$response2 !== void 0 && _error$response2.errors)) {
-              _context.n = 3;
+              _context.n = 4;
               break;
             }
             console.error('Validation errors:', _t.response.data.errors);
@@ -61290,13 +62180,13 @@ var AuthProvider = function AuthProvider(_ref) {
               success: false,
               message: firstError
             });
-          case 3:
+          case 4:
             return _context.a(2, {
               success: false,
               message: ((_error$response3 = _t.response) === null || _error$response3 === void 0 || (_error$response3 = _error$response3.data) === null || _error$response3 === void 0 ? void 0 : _error$response3.message) || 'Login failed'
             });
         }
-      }, _callee, null, [[0, 2]]);
+      }, _callee, null, [[0, 3]]);
     }));
     return function login(_x, _x2) {
       return _ref2.apply(this, arguments);
@@ -61310,20 +62200,24 @@ var AuthProvider = function AuthProvider(_ref) {
           case 0:
             _context2.p = 0;
             _context2.n = 1;
-            return _config_axios__WEBPACK_IMPORTED_MODULE_1__["default"].post('/api/register', formData);
+            return _config_axios__WEBPACK_IMPORTED_MODULE_1__["default"].get('/sanctum/csrf-cookie');
           case 1:
+            _context2.n = 2;
+            return _config_axios__WEBPACK_IMPORTED_MODULE_1__["default"].post('/api/register', formData);
+          case 2:
             response = _context2.v;
             localStorage.setItem('token', response.data.token);
             _config_axios__WEBPACK_IMPORTED_MODULE_1__["default"].defaults.headers.common['Authorization'] = "Bearer ".concat(response.data.token);
             setUser(response.data.user);
             return _context2.a(2, {
-              success: true
+              success: true,
+              user: response.data.user
             });
-          case 2:
-            _context2.p = 2;
+          case 3:
+            _context2.p = 3;
             _t2 = _context2.v;
             if (!((_error$response4 = _t2.response) !== null && _error$response4 !== void 0 && (_error$response4 = _error$response4.data) !== null && _error$response4 !== void 0 && _error$response4.errors)) {
-              _context2.n = 3;
+              _context2.n = 4;
               break;
             }
             firstError = Object.values(_t2.response.data.errors)[0][0];
@@ -61331,13 +62225,13 @@ var AuthProvider = function AuthProvider(_ref) {
               success: false,
               message: firstError
             });
-          case 3:
+          case 4:
             return _context2.a(2, {
               success: false,
               message: ((_error$response5 = _t2.response) === null || _error$response5 === void 0 || (_error$response5 = _error$response5.data) === null || _error$response5 === void 0 ? void 0 : _error$response5.message) || 'Registration failed'
             });
         }
-      }, _callee2, null, [[0, 2]]);
+      }, _callee2, null, [[0, 3]]);
     }));
     return function register(_x3) {
       return _ref3.apply(this, arguments);
@@ -61345,19 +62239,31 @@ var AuthProvider = function AuthProvider(_ref) {
   }();
   var logout = /*#__PURE__*/function () {
     var _ref4 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee3() {
+      var _t3;
       return _regenerator().w(function (_context3) {
-        while (1) switch (_context3.n) {
+        while (1) switch (_context3.p = _context3.n) {
           case 0:
+            _context3.p = 0;
             _context3.n = 1;
             return _config_axios__WEBPACK_IMPORTED_MODULE_1__["default"].post('/api/logout');
           case 1:
+            _context3.n = 3;
+            break;
+          case 2:
+            _context3.p = 2;
+            _t3 = _context3.v;
+            console.error('Logout error:', _t3);
+            // Continue with logout even if API call fails
+          case 3:
+            _context3.p = 3;
             localStorage.removeItem('token');
             delete _config_axios__WEBPACK_IMPORTED_MODULE_1__["default"].defaults.headers.common['Authorization'];
             setUser(null);
-          case 2:
+            return _context3.f(3);
+          case 4:
             return _context3.a(2);
         }
-      }, _callee3);
+      }, _callee3, null, [[0, 2, 3, 4]]);
     }));
     return function logout() {
       return _ref4.apply(this, arguments);

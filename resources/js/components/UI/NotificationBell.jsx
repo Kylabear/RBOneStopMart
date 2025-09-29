@@ -92,7 +92,7 @@ const NotificationBell = () => {
         <div className="relative">
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="relative p-2 text-white hover:text-blue-300 transition-colors"
+                className="relative p-2 text-black hover:text-blue-300 transition-colors"
             >
                 {unreadCount > 0 ? (
                     <BellIconSolid className="w-6 h-6" />
@@ -100,7 +100,7 @@ const NotificationBell = () => {
                     <BellIcon className="w-6 h-6" />
                 )}
                 {unreadCount > 0 && (
-                    <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                    <span className="absolute -top-1 -right-1 bg-red-500 text-black text-xs rounded-full w-5 h-5 flex items-center justify-center">
                         {unreadCount > 99 ? '99+' : unreadCount}
                     </span>
                 )}
@@ -110,7 +110,7 @@ const NotificationBell = () => {
                 <div className="absolute right-0 mt-2 w-80 glass-card rounded-2xl shadow-lg z-50">
                     <div className="p-4 border-b border-white/20">
                         <div className="flex items-center justify-between">
-                            <h3 className="text-lg font-semibold text-white">Notifications</h3>
+                            <h3 className="text-lg font-semibold text-black">Notifications</h3>
                             {notifications?.data?.length > 0 && (
                                 <button
                                     onClick={handleMarkAllAsRead}
@@ -135,16 +135,16 @@ const NotificationBell = () => {
                                     >
                                         <div className="flex items-start justify-between">
                                             <div className="flex-1">
-                                                <p className="text-white text-sm font-medium">
+                                                <p className="text-black text-sm font-medium">
                                                     {notification.data.message}
                                                 </p>
-                                                <p className="text-gray-400 text-xs mt-1">
+                                                <p className="text-gray-600 text-xs mt-1">
                                                     {formatTimeAgo(notification.created_at)}
                                                 </p>
                                             </div>
                                             <button
                                                 onClick={(e) => handleDeleteNotification(notification.id, e)}
-                                                className="text-gray-400 hover:text-red-400 transition-colors ml-2"
+                                                className="text-gray-600 hover:text-red-400 transition-colors ml-2"
                                             >
                                                 ×
                                             </button>
@@ -154,8 +154,8 @@ const NotificationBell = () => {
                             </div>
                         ) : (
                             <div className="p-8 text-center">
-                                <BellIcon className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-                                <p className="text-gray-400">No notifications yet</p>
+                                <BellIcon className="w-12 h-12 text-gray-600 mx-auto mb-4" />
+                                <p className="text-gray-600">No notifications yet</p>
                             </div>
                         )}
                     </div>

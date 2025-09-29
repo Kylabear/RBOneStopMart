@@ -12,7 +12,6 @@ const RegisterPage = () => {
         password: '',
         password_confirmation: '',
         phone: '',
-        address: '',
     });
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -68,7 +67,7 @@ const RegisterPage = () => {
                                 required
                                 value={formData.name}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 glass rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                                className="w-full px-4 py-3 glass rounded-lg text-black placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
                                 placeholder="Enter your full name"
                             />
                         </div>
@@ -84,7 +83,7 @@ const RegisterPage = () => {
                                 required
                                 value={formData.email}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 glass rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                                className="w-full px-4 py-3 glass rounded-lg text-black placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
                                 placeholder="Enter your email"
                             />
                         </div>
@@ -99,25 +98,11 @@ const RegisterPage = () => {
                                 type="tel"
                                 value={formData.phone}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 glass rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                                className="w-full px-4 py-3 glass rounded-lg text-black placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
                                 placeholder="Enter your phone number"
                             />
                         </div>
 
-                        <div>
-                            <label htmlFor="address" className="block text-sm font-medium text-black mb-2">
-                                Address
-                            </label>
-                            <textarea
-                                id="address"
-                                name="address"
-                                rows="3"
-                                value={formData.address}
-                                onChange={handleChange}
-                                className="w-full px-4 py-3 glass rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                                placeholder="Enter your address"
-                            />
-                        </div>
 
                         <div>
                             <label htmlFor="password" className="block text-sm font-medium text-black mb-2">
@@ -137,7 +122,7 @@ const RegisterPage = () => {
                                 <button
                                     type="button"
                                     onClick={() => setShowPassword(!showPassword)}
-                                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
+                                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600 hover:text-white"
                                 >
                                     {showPassword ? (
                                         <EyeSlashIcon className="w-5 h-5" />
@@ -166,7 +151,7 @@ const RegisterPage = () => {
                                 <button
                                     type="button"
                                     onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
+                                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600 hover:text-white"
                                 >
                                     {showConfirmPassword ? (
                                         <EyeSlashIcon className="w-5 h-5" />

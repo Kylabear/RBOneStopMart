@@ -78,31 +78,31 @@ const AdminInventory = () => {
     }
 
     return (
-        <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 admin-page py-8 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 <div className="mb-8">
-                    <h1 className="text-3xl font-bold text-white mb-4">Inventory Management</h1>
-                    <p className="text-gray-300">Track and manage product stock levels</p>
+                    <h1 className="text-3xl font-bold text-black mb-4">Inventory Management</h1>
+                    <p className="text-gray-700">Track and manage product stock levels</p>
                 </div>
 
                 {/* Filters */}
                 <div className="glass-card rounded-2xl p-6 mb-8">
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                         <div className="relative">
-                            <MagnifyingGlassIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                            <MagnifyingGlassIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-600" />
                             <input
                                 type="text"
                                 value={search}
                                 onChange={(e) => setSearch(e.target.value)}
                                 placeholder="Search products..."
-                                className="w-full pl-10 pr-4 py-3 glass rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                                className="w-full pl-10 pr-4 py-3 glass rounded-lg text-black placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
                             />
                         </div>
                         
                         <select
                             value={categoryFilter}
                             onChange={(e) => setCategoryFilter(e.target.value)}
-                            className="px-4 py-3 glass rounded-lg text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                            className="px-4 py-3 glass rounded-lg text-black focus:ring-2 focus:ring-blue-500 focus:outline-none"
                         >
                             <option value="">All Categories</option>
                             {categories?.map((category) => (
@@ -115,14 +115,14 @@ const AdminInventory = () => {
                         <select
                             value={stockFilter}
                             onChange={(e) => setStockFilter(e.target.value)}
-                            className="px-4 py-3 glass rounded-lg text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                            className="px-4 py-3 glass rounded-lg text-black focus:ring-2 focus:ring-blue-500 focus:outline-none"
                         >
                             <option value="">All Stock</option>
                             <option value="low">Low Stock</option>
                             <option value="out">Out of Stock</option>
                         </select>
 
-                        <div className="text-gray-400 text-sm flex items-center">
+                        <div className="text-gray-600 text-sm flex items-center">
                             Total Products: {products?.total || 0}
                         </div>
                     </div>
@@ -136,10 +136,10 @@ const AdminInventory = () => {
                                 <CheckCircleIcon className="w-6 h-6 text-green-400" />
                             </div>
                             <div>
-                                <div className="text-2xl font-bold text-white">
+                                <div className="text-2xl font-bold text-black">
                                     {products?.data?.filter(p => p.stock_quantity > 10).length || 0}
                                 </div>
-                                <div className="text-gray-400 text-sm">In Stock</div>
+                                <div className="text-gray-600 text-sm">In Stock</div>
                             </div>
                         </div>
                     </div>
@@ -150,10 +150,10 @@ const AdminInventory = () => {
                                 <ExclamationTriangleIcon className="w-6 h-6 text-yellow-400" />
                             </div>
                             <div>
-                                <div className="text-2xl font-bold text-white">
+                                <div className="text-2xl font-bold text-black">
                                     {products?.data?.filter(p => p.stock_quantity > 0 && p.stock_quantity <= 10).length || 0}
                                 </div>
-                                <div className="text-gray-400 text-sm">Low Stock</div>
+                                <div className="text-gray-600 text-sm">Low Stock</div>
                             </div>
                         </div>
                     </div>
@@ -164,10 +164,10 @@ const AdminInventory = () => {
                                 <ExclamationTriangleIcon className="w-6 h-6 text-red-400" />
                             </div>
                             <div>
-                                <div className="text-2xl font-bold text-white">
+                                <div className="text-2xl font-bold text-black">
                                     {products?.data?.filter(p => p.stock_quantity === 0).length || 0}
                                 </div>
-                                <div className="text-gray-400 text-sm">Out of Stock</div>
+                                <div className="text-gray-600 text-sm">Out of Stock</div>
                             </div>
                         </div>
                     </div>
@@ -178,10 +178,10 @@ const AdminInventory = () => {
                                 <CheckCircleIcon className="w-6 h-6 text-blue-400" />
                             </div>
                             <div>
-                                <div className="text-2xl font-bold text-white">
+                                <div className="text-2xl font-bold text-black">
                                     {products?.data?.filter(p => p.is_active).length || 0}
                                 </div>
-                                <div className="text-gray-400 text-sm">Active Products</div>
+                                <div className="text-gray-600 text-sm">Active Products</div>
                             </div>
                         </div>
                     </div>
@@ -193,11 +193,11 @@ const AdminInventory = () => {
                         <table className="w-full">
                             <thead className="bg-white/5">
                                 <tr>
-                                    <th className="px-6 py-4 text-left text-white font-semibold">Product</th>
-                                    <th className="px-6 py-4 text-left text-white font-semibold">Category</th>
-                                    <th className="px-6 py-4 text-left text-white font-semibold">Current Stock</th>
-                                    <th className="px-6 py-4 text-left text-white font-semibold">Status</th>
-                                    <th className="px-6 py-4 text-left text-white font-semibold">Actions</th>
+                                    <th className="px-6 py-4 text-left text-black font-semibold">Product</th>
+                                    <th className="px-6 py-4 text-left text-black font-semibold">Category</th>
+                                    <th className="px-6 py-4 text-left text-black font-semibold">Current Stock</th>
+                                    <th className="px-6 py-4 text-left text-black font-semibold">Status</th>
+                                    <th className="px-6 py-4 text-left text-black font-semibold">Actions</th>
                                 </tr>
                             </thead>
                             <tbody className="divide-y divide-white/10">
@@ -216,15 +216,15 @@ const AdminInventory = () => {
                                                             />
                                                         ) : (
                                                             <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                                                                <span className="text-lg font-bold text-white">
+                                                                <span className="text-lg font-bold text-black">
                                                                     {product.name.charAt(0)}
                                                                 </span>
                                                             </div>
                                                         )}
                                                     </div>
                                                     <div>
-                                                        <div className="text-white font-medium">{product.name}</div>
-                                                        <div className="text-gray-400 text-sm">
+                                                        <div className="text-black font-medium">{product.name}</div>
+                                                        <div className="text-gray-600 text-sm">
                                                             {formatPrice(product.price)}
                                                         </div>
                                                     </div>
@@ -234,11 +234,11 @@ const AdminInventory = () => {
                                                 <span className="text-blue-400">{product.category?.name}</span>
                                             </td>
                                             <td className="px-6 py-4">
-                                                <div className="text-2xl font-bold text-white">
+                                                <div className="text-2xl font-bold text-black">
                                                     {product.stock_quantity}
                                                 </div>
                                                 {product.unit && (
-                                                    <div className="text-gray-400 text-sm">{product.unit}</div>
+                                                    <div className="text-gray-600 text-sm">{product.unit}</div>
                                                 )}
                                             </td>
                                             <td className="px-6 py-4">
@@ -254,7 +254,7 @@ const AdminInventory = () => {
                                                             value={stockUpdate}
                                                             onChange={(e) => setStockUpdate(e.target.value)}
                                                             placeholder="New stock"
-                                                            className="w-20 px-2 py-1 glass rounded text-white text-sm"
+                                                            className="w-20 px-2 py-1 glass rounded text-black text-sm"
                                                         />
                                                         <button
                                                             onClick={() => handleStockUpdate(product.id)}
@@ -267,7 +267,7 @@ const AdminInventory = () => {
                                                                 setEditingProduct(null);
                                                                 setStockUpdate('');
                                                             }}
-                                                            className="p-1 text-gray-400 hover:text-gray-300 transition-colors"
+                                                            className="p-1 text-gray-600 hover:text-gray-700 transition-colors"
                                                         >
                                                             <XMarkIcon className="w-4 h-4" />
                                                         </button>
@@ -293,7 +293,7 @@ const AdminInventory = () => {
 
                     {products?.data?.length === 0 && (
                         <div className="text-center py-12">
-                            <div className="text-gray-400 mb-4">No products found</div>
+                            <div className="text-gray-600 mb-4">No products found</div>
                         </div>
                     )}
                 </div>

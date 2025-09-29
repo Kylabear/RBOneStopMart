@@ -31,8 +31,13 @@ const LoginPage = () => {
             
             if (result.success) {
                 toast.success('Login successful!');
-                // Let the App.jsx routing handle the redirect
-                window.location.reload();
+                // Check if user is admin and redirect accordingly
+                if (result.user && result.user.role === 'admin') {
+                    navigate('/admin/dashboard');
+                } else {
+                    // Let the App.jsx routing handle the redirect for regular users
+                    window.location.reload();
+                }
             } else {
                 toast.error(result.message);
             }
@@ -64,7 +69,7 @@ const LoginPage = () => {
                                 required
                                 value={formData.email}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 glass rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                                className="w-full px-4 py-3 glass rounded-lg text-black placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
                                 placeholder="Enter your email"
                             />
                         </div>
@@ -87,7 +92,7 @@ const LoginPage = () => {
                                 <button
                                     type="button"
                                     onClick={() => setShowPassword(!showPassword)}
-                                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
+                                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600 hover:text-white"
                                 >
                                     {showPassword ? (
                                         <EyeSlashIcon className="w-5 h-5" />
