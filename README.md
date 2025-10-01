@@ -1,6 +1,6 @@
 # R&B One Stop Mart - E-commerce Platform
 
-A modern, full-stack e-commerce platform built with Laravel, React, and MySQL, featuring glassmorphism design and comprehensive business management capabilities.
+A modern, full-stack e-commerce platform built with Laravel, React, and MySQL, featuring comprehensive business management capabilities.
 
 ## 🚀 Features
 
