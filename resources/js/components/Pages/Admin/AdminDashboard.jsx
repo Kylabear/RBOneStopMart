@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useQuery } from 'react-query';
 import { Link } from 'react-router-dom';
 import axios from '../../../config/axios';
+import toast from 'react-hot-toast';
 import { 
     ShoppingCartIcon, 
     CurrencyDollarIcon,
@@ -62,6 +63,22 @@ const AdminDashboard = () => {
             case 'cancelled': return 'text-red-600 bg-red-100';
             default: return 'text-gray-600 bg-gray-100';
         }
+    };
+
+    // User management handlers
+    const handleViewUser = (userId) => {
+        console.log('View user:', userId);
+        toast.success('View user functionality - Coming soon!');
+    };
+
+    const handleActivateUser = (userId) => {
+        console.log('Activate user:', userId);
+        toast.success('User activated successfully!');
+    };
+
+    const handleDeactivateUser = (userId) => {
+        console.log('Deactivate user:', userId);
+        toast.success('User deactivated successfully!');
     };
 
 
@@ -536,13 +553,25 @@ const AdminDashboard = () => {
                                                 </td>
                                                 <td className="py-3 px-4">
                                                     <div className="flex space-x-2">
-                                                        <button className="text-blue-600 hover:text-blue-800">
+                                                        <button 
+                                                            onClick={() => handleViewUser(user.id)}
+                                                            className="text-blue-600 hover:text-blue-800"
+                                                            title="View User Details"
+                                                        >
                                                             <EyeIcon className="w-4 h-4" />
                                                         </button>
-                                                        <button className="text-green-600 hover:text-green-800">
+                                                        <button 
+                                                            onClick={() => handleActivateUser(user.id)}
+                                                            className="text-green-600 hover:text-green-800"
+                                                            title="Activate User"
+                                                        >
                                                             <CheckIcon className="w-4 h-4" />
                                                         </button>
-                                                        <button className="text-red-600 hover:text-red-800">
+                                                        <button 
+                                                            onClick={() => handleDeactivateUser(user.id)}
+                                                            className="text-red-600 hover:text-red-800"
+                                                            title="Deactivate User"
+                                                        >
                                                             <XMarkIcon className="w-4 h-4" />
                                                         </button>
                                                     </div>

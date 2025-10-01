@@ -14,7 +14,6 @@ const ProfilePage = () => {
     const [formData, setFormData] = useState({
         name: user?.name || '',
         phone: user?.phone || '',
-        address: user?.address || '',
     });
 
     const handleChange = (e) => {
@@ -121,21 +120,6 @@ const ProfilePage = () => {
                             />
                         </div>
 
-                        <div>
-                            <label htmlFor="address" className="block text-sm font-medium text-black mb-2">
-                                <MapPinIcon className="w-4 h-4 inline mr-2" />
-                                Address
-                            </label>
-                            <textarea
-                                id="address"
-                                name="address"
-                                rows="3"
-                                value={formData.address}
-                                onChange={handleChange}
-                                className="w-full px-4 py-3 glass rounded-lg text-black placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                                placeholder="Enter your address"
-                            />
-                        </div>
 
                         <div className="flex justify-end">
                             <button
