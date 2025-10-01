@@ -8,6 +8,8 @@ use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\CartController;
 use App\Http\Controllers\Api\OrderController;
 use App\Http\Controllers\Api\NotificationController;
+use App\Http\Controllers\Api\AddressController;
+use App\Http\Controllers\Api\ReviewController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\ProductManagementController;
 
@@ -26,6 +28,11 @@ use App\Http\Controllers\Admin\ProductManagementController;
 Route::get('/test', function () {
     return response()->json(['message' => 'API is working!', 'timestamp' => now()]);
 })->middleware([]);
+
+// Test address route
+Route::get('/test-address', function () {
+    return response()->json(['message' => 'Address API is working!', 'timestamp' => now()]);
+})->middleware(['auth:sanctum']);
 
 // Public routes
 Route::post('/register', [AuthController::class, 'register']);
@@ -58,6 +65,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/orders/{order}', [OrderController::class, 'show']);
     Route::post('/orders', [OrderController::class, 'store']);
     Route::post('/orders/{order}/cancel', [OrderController::class, 'cancel']);
+    Route::post('/orders/{order}/reorder', [OrderController::class, 'reorder']);
 
     // Notification routes
     Route::get('/notifications', [NotificationController::class, 'index']);
@@ -65,6 +73,20 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::put('/notifications/{id}/read', [NotificationController::class, 'markAsRead']);
     Route::put('/notifications/mark-all-read', [NotificationController::class, 'markAllAsRead']);
     Route::delete('/notifications/{id}', [NotificationController::class, 'destroy']);
+
+    // Address routes
+    Route::get('/addresses', [AddressController::class, 'index']);
+    Route::post('/addresses', [AddressController::class, 'store']);
+    Route::put('/addresses/{address}', [AddressController::class, 'update']);
+    Route::delete('/addresses/{address}', [AddressController::class, 'destroy']);
+    Route::put('/addresses/{address}/default', [AddressController::class, 'setDefault']);
+
+    // Review routes
+    Route::get('/products/{product}/reviews', [ReviewController::class, 'index']);
+    Route::post('/reviews', [ReviewController::class, 'store']);
+    Route::put('/reviews/{review}', [ReviewController::class, 'update']);
+    Route::delete('/reviews/{review}', [ReviewController::class, 'destroy']);
+    Route::get('/reviews/my-reviews', [ReviewController::class, 'userReviews']);
 
     // Admin routes
     Route::middleware('admin')->prefix('admin')->group(function () {

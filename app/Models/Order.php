@@ -20,6 +20,7 @@ class Order extends Model
         'contact_phone',
         'notes',
         'delivery_date',
+        'cancellation_reason',
     ];
 
     protected $casts = [

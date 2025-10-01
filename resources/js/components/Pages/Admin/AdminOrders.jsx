@@ -9,7 +9,8 @@ import {
     CameraIcon,
     DocumentIcon,
     TruckIcon,
-    UserIcon
+    UserIcon,
+    ArrowLeftIcon
 } from '@heroicons/react/24/outline';
 import LoadingSpinner from '../../UI/LoadingSpinner';
 import toast from 'react-hot-toast';
@@ -21,6 +22,9 @@ const AdminOrders = () => {
     const [selectedOrder, setSelectedOrder] = useState(null);
     const [pickupProof, setPickupProof] = useState(null);
     const [pickupNotes, setPickupNotes] = useState('');
+    const [showCancelModal, setShowCancelModal] = useState(false);
+    const [cancellationReason, setCancellationReason] = useState('');
+    const [orderToCancel, setOrderToCancel] = useState(null);
     const queryClient = useQueryClient();
 
     const { data: orders, isLoading } = useQuery(
@@ -35,15 +39,58 @@ const AdminOrders = () => {
         }
     );
 
+    // Fetch all orders for statistics (without filters)
+    const { data: allOrders } = useQuery(
+        'admin-orders-stats',
+        () => axios.get('/api/admin/orders').then(res => res.data)
+    );
+
+    // Calculate order statistics from all orders
+    const orderStats = React.useMemo(() => {
+        console.log('All orders data:', allOrders);
+        
+        if (!allOrders?.data) {
+            console.log('No allOrders data available');
+            return {};
+        }
+        
+        const stats = {
+            pending: 0,
+            confirmed: 0,
+            start_preparing: 0,
+            mark_ready: 0,
+            out_for_delivery: 0,
+            delivered: 0,
+            processed: 0,
+            cancelled: 0,
+            total: 0
+        };
+
+        console.log('Processing orders:', allOrders.data);
+        
+        allOrders.data.forEach(order => {
+            console.log('Order status:', order.status);
+            stats[order.status] = (stats[order.status] || 0) + 1;
+            stats.total += 1;
+        });
+
+        console.log('Calculated stats:', stats);
+        return stats;
+    }, [allOrders?.data]);
+
     const updateOrderStatusMutation = useMutation(
-        ({ orderId, status }) => axios.put(`/api/admin/orders/${orderId}/status`, { status }),
+        ({ orderId, status, cancellation_reason }) => axios.put(`/api/admin/orders/${orderId}/status`, { status, cancellation_reason }),
         {
             onSuccess: () => {
                 queryClient.invalidateQueries('admin-orders');
+                queryClient.invalidateQueries('admin-orders-stats');
                 toast.success('Order status updated successfully');
+                setShowCancelModal(false);
+                setCancellationReason('');
+                setOrderToCancel(null);
             },
-            onError: () => {
-                toast.error('Failed to update order status');
+            onError: (error) => {
+                toast.error(error.response?.data?.message || 'Failed to update order status');
             }
         }
     );
@@ -60,6 +107,7 @@ const AdminOrders = () => {
         {
             onSuccess: () => {
                 queryClient.invalidateQueries('admin-orders');
+                queryClient.invalidateQueries('admin-orders-stats');
                 setSelectedOrder(null);
                 setPickupProof(null);
                 setPickupNotes('');
@@ -92,16 +140,35 @@ const AdminOrders = () => {
         switch (status) {
             case 'pending': return 'text-yellow-400 bg-yellow-500/20';
             case 'confirmed': return 'text-blue-400 bg-blue-500/20';
-            case 'preparing': return 'text-orange-400 bg-orange-500/20';
-            case 'ready': return 'text-green-400 bg-green-500/20';
+            case 'start_preparing': return 'text-orange-400 bg-orange-500/20';
+            case 'mark_ready': return 'text-green-400 bg-green-500/20';
+            case 'out_for_delivery': return 'text-purple-400 bg-purple-500/20';
             case 'delivered': return 'text-green-500 bg-green-500/20';
+            case 'processed': return 'text-green-500 bg-green-500/20';
             case 'cancelled': return 'text-red-400 bg-red-500/20';
             default: return 'text-gray-600 bg-gray-500/20';
         }
     };
 
     const handleStatusUpdate = (orderId, newStatus) => {
-        updateOrderStatusMutation.mutate({ orderId, status: newStatus });
+        if (newStatus === 'cancelled') {
+            setOrderToCancel({ id: orderId });
+            setShowCancelModal(true);
+        } else {
+            updateOrderStatusMutation.mutate({ orderId, status: newStatus });
+        }
+    };
+
+    const handleCancelOrder = () => {
+        if (!cancellationReason.trim()) {
+            toast.error('Please provide a cancellation reason');
+            return;
+        }
+        updateOrderStatusMutation.mutate({ 
+            orderId: orderToCancel.id, 
+            status: 'cancelled', 
+            cancellation_reason: cancellationReason 
+        });
     };
 
     if (isLoading) {
@@ -116,8 +183,53 @@ const AdminOrders = () => {
         <div className="min-h-screen bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 admin-page py-8 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 <div className="mb-8">
+                    <div className="flex items-center mb-4">
+                        <button
+                            onClick={() => window.history.back()}
+                            className="flex items-center text-gray-600 hover:text-gray-800 mr-4 transition-colors"
+                        >
+                            <ArrowLeftIcon className="w-5 h-5 mr-2" />
+                            Back
+                        </button>
+                    </div>
                     <h1 className="text-3xl font-bold text-black mb-4">Order Management</h1>
                     <p className="text-gray-700">Process and track customer orders</p>
+                </div>
+
+                {/* Order Statistics */}
+                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 mb-8">
+                    <div className="glass-card rounded-xl p-4 text-center">
+                        <div className="text-2xl font-bold text-yellow-600">{orderStats.pending || 0}</div>
+                        <div className="text-sm text-gray-600">Pending</div>
+                    </div>
+                    <div className="glass-card rounded-xl p-4 text-center">
+                        <div className="text-2xl font-bold text-blue-600">{orderStats.confirmed || 0}</div>
+                        <div className="text-sm text-gray-600">Confirmed</div>
+                    </div>
+                    <div className="glass-card rounded-xl p-4 text-center">
+                        <div className="text-2xl font-bold text-orange-600">{orderStats.start_preparing || 0}</div>
+                        <div className="text-sm text-gray-600">Preparing</div>
+                    </div>
+                    <div className="glass-card rounded-xl p-4 text-center">
+                        <div className="text-2xl font-bold text-green-600">{orderStats.mark_ready || 0}</div>
+                        <div className="text-sm text-gray-600">Ready</div>
+                    </div>
+                    <div className="glass-card rounded-xl p-4 text-center">
+                        <div className="text-2xl font-bold text-purple-600">{orderStats.out_for_delivery || 0}</div>
+                        <div className="text-sm text-gray-600">Out for Delivery</div>
+                    </div>
+                    <div className="glass-card rounded-xl p-4 text-center">
+                        <div className="text-2xl font-bold text-green-700">{orderStats.delivered || 0}</div>
+                        <div className="text-sm text-gray-600">Delivered</div>
+                    </div>
+                    <div className="glass-card rounded-xl p-4 text-center">
+                        <div className="text-2xl font-bold text-green-800">{orderStats.processed || 0}</div>
+                        <div className="text-sm text-gray-600">Processed</div>
+                    </div>
+                    <div className="glass-card rounded-xl p-4 text-center">
+                        <div className="text-2xl font-bold text-red-600">{orderStats.cancelled || 0}</div>
+                        <div className="text-sm text-gray-600">Cancelled</div>
+                    </div>
                 </div>
 
                 {/* Filters */}
@@ -142,9 +254,11 @@ const AdminOrders = () => {
                             <option value="">All Status</option>
                             <option value="pending">Pending</option>
                             <option value="confirmed">Confirmed</option>
-                            <option value="preparing">Preparing</option>
-                            <option value="ready">Ready</option>
+                            <option value="start_preparing">Start Preparing</option>
+                            <option value="mark_ready">Mark Ready</option>
+                            <option value="out_for_delivery">Out for Delivery</option>
                             <option value="delivered">Delivered</option>
+                            <option value="processed">Processed</option>
                             <option value="cancelled">Cancelled</option>
                         </select>
 
@@ -159,7 +273,7 @@ const AdminOrders = () => {
                         </select>
 
                         <div className="text-gray-600 text-sm flex items-center">
-                            Total Orders: {orders?.total || 0}
+                            Total Orders: {orderStats.total || 0}
                         </div>
                     </div>
                 </div>
@@ -260,28 +374,47 @@ const AdminOrders = () => {
                                 
                                 {order.status === 'confirmed' && (
                                     <button
-                                        onClick={() => handleStatusUpdate(order.id, 'preparing')}
+                                        onClick={() => handleStatusUpdate(order.id, 'start_preparing')}
                                         className="flex items-center space-x-2 bg-orange-600 hover:bg-orange-700 text-black px-4 py-2 rounded-lg text-sm font-medium transition-colors"
                                     >
                                         <span>Start Preparing</span>
                                     </button>
                                 )}
                                 
-                                {order.status === 'preparing' && (
+                                {order.status === 'start_preparing' && (
                                     <button
-                                        onClick={() => handleStatusUpdate(order.id, 'ready')}
+                                        onClick={() => handleStatusUpdate(order.id, 'mark_ready')}
                                         className="flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-black px-4 py-2 rounded-lg text-sm font-medium transition-colors"
                                     >
                                         <span>Mark Ready</span>
                                     </button>
                                 )}
                                 
-                                {order.status === 'ready' && order.delivery_method === 'delivery' && (
+                                {order.status === 'mark_ready' && order.delivery_method === 'delivery' && (
+                                    <button
+                                        onClick={() => handleStatusUpdate(order.id, 'out_for_delivery')}
+                                        className="flex items-center space-x-2 bg-purple-600 hover:bg-purple-700 text-black px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                                    >
+                                        <TruckIcon className="w-4 h-4" />
+                                        <span>Out for Delivery</span>
+                                    </button>
+                                )}
+                                
+                                {order.status === 'out_for_delivery' && order.delivery_method === 'delivery' && (
                                     <button
                                         onClick={() => handleStatusUpdate(order.id, 'delivered')}
                                         className="flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-black px-4 py-2 rounded-lg text-sm font-medium transition-colors"
                                     >
                                         <span>Mark Delivered</span>
+                                    </button>
+                                )}
+                                
+                                {order.status === 'mark_ready' && order.delivery_method === 'pickup' && (
+                                    <button
+                                        onClick={() => handleStatusUpdate(order.id, 'processed')}
+                                        className="flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-black px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                                    >
+                                        <span>Mark Processed</span>
                                     </button>
                                 )}
                             </div>
@@ -300,6 +433,68 @@ const AdminOrders = () => {
                     </div>
                 )}
             </div>
+
+            {/* Cancellation Modal */}
+            {showCancelModal && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+                    <div className="bg-white rounded-2xl p-6 w-full max-w-md">
+                        <div className="flex items-center justify-between mb-4">
+                            <h3 className="text-lg font-semibold text-black">Cancel Order</h3>
+                            <button
+                                onClick={() => {
+                                    setShowCancelModal(false);
+                                    setCancellationReason('');
+                                    setOrderToCancel(null);
+                                }}
+                                className="text-gray-400 hover:text-gray-600"
+                            >
+                                ✕
+                            </button>
+                        </div>
+
+                        <div className="mb-4">
+                            <label className="block text-sm font-medium text-black mb-2">
+                                Cancellation Reason *
+                            </label>
+                            <textarea
+                                value={cancellationReason}
+                                onChange={(e) => setCancellationReason(e.target.value)}
+                                required
+                                rows="4"
+                                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                placeholder="Please provide a reason for cancelling this order..."
+                            />
+                        </div>
+
+                        <div className="flex space-x-3">
+                            <button
+                                onClick={() => {
+                                    setShowCancelModal(false);
+                                    setCancellationReason('');
+                                    setOrderToCancel(null);
+                                }}
+                                className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
+                            >
+                                Cancel
+                            </button>
+                            <button
+                                onClick={handleCancelOrder}
+                                disabled={updateOrderStatusMutation.isLoading}
+                                className="flex-1 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 disabled:bg-red-400 transition-colors flex items-center justify-center"
+                            >
+                                {updateOrderStatusMutation.isLoading ? (
+                                    <>
+                                        <LoadingSpinner size="small" className="mr-2" />
+                                        Cancelling...
+                                    </>
+                                ) : (
+                                    'Cancel Order'
+                                )}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

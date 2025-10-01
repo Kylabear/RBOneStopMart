@@ -172,7 +172,7 @@ const CartPage = () => {
                             {/* Delivery Restrictions Notice */}
                             {hasDryGoods && (
                                 <div className="mb-4 p-3 bg-yellow-500/20 border border-yellow-500/30 rounded-lg">
-                                    <p className="text-yellow-200 text-sm">
+                                    <p className="text-black text-sm">
                                         <strong>Note:</strong> Your cart contains Dry Goods items which are pickup only. 
                                         Delivery option will not be available.
                                     </p>

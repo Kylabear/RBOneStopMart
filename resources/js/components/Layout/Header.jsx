@@ -4,7 +4,6 @@ import { useAuth } from '../../hooks/useAuth';
 import { useCart } from '../../hooks/useCart';
 import { 
     MagnifyingGlassIcon, 
-    HeartIcon, 
     ShoppingCartIcon,
     UserIcon,
     Bars3Icon,
@@ -105,14 +104,9 @@ const Header = () => {
 
                         {/* Right Side Icons */}
                         <div className="flex items-center space-x-4">
-                            {/* Only show wishlist and cart when user is logged in */}
+                            {/* Only show cart when user is logged in */}
                             {user && (
                                 <>
-                                    {/* Wishlist */}
-                                    <button className="p-2 text-gray-800 hover:text-red-500 transition-colors">
-                                        <HeartIcon className="w-6 h-6" />
-                                    </button>
-
                                     {/* Cart */}
                                     <Link to="/cart" className="p-2 text-gray-800 hover:text-blue-600 transition-colors relative">
                                         <ShoppingCartIcon className="w-6 h-6" />

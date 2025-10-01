@@ -199,4 +199,88 @@ class OrderController extends Controller
             ], 500);
         }
     }
+
+    /**
+     * Re-order items from a previous order
+     */
+    public function reorder(Order $order)
+    {
+        // Check if order belongs to user
+        if ($order->user_id !== Auth::id()) {
+            return response()->json([
+                'message' => 'Unauthorized'
+            ], 403);
+        }
+
+        // Check if order is eligible for re-order
+        if (!in_array($order->status, ['delivered', 'processed'])) {
+            return response()->json([
+                'message' => 'Order is not eligible for re-order'
+            ], 422);
+        }
+
+        DB::beginTransaction();
+        try {
+            $cartItems = [];
+            $unavailableProducts = [];
+
+            foreach ($order->orderItems as $orderItem) {
+                $product = $orderItem->product;
+
+                // Check if product is still active and in stock
+                if (!$product->is_active) {
+                    $unavailableProducts[] = $product->name;
+                    continue;
+                }
+
+                if ($product->stock_quantity < $orderItem->quantity) {
+                    $unavailableProducts[] = $product->name;
+                    continue;
+                }
+
+                // Check if item already exists in cart
+                $existingCartItem = CartItem::where('user_id', Auth::id())
+                    ->where('product_id', $product->id)
+                    ->first();
+
+                if ($existingCartItem) {
+                    // Update quantity
+                    $existingCartItem->quantity += $orderItem->quantity;
+                    $existingCartItem->save();
+                } else {
+                    // Create new cart item
+                    CartItem::create([
+                        'user_id' => Auth::id(),
+                        'product_id' => $product->id,
+                        'quantity' => $orderItem->quantity,
+                    ]);
+                }
+
+                $cartItems[] = [
+                    'product' => $product,
+                    'quantity' => $orderItem->quantity
+                ];
+            }
+
+            DB::commit();
+
+            $message = 'Items added to cart successfully';
+            if (count($unavailableProducts) > 0) {
+                $message .= '. Note: Some items are no longer available: ' . implode(', ', $unavailableProducts);
+            }
+
+            return response()->json([
+                'message' => $message,
+                'added_items' => $cartItems,
+                'unavailable_products' => $unavailableProducts
+            ]);
+
+        } catch (\Exception $e) {
+            DB::rollback();
+            return response()->json([
+                'message' => 'Failed to re-order items',
+                'error' => $e->getMessage()
+            ], 500);
+        }
+    }
 }

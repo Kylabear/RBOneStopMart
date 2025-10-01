@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
-import { UserIcon, PhoneIcon, MapPinIcon, ArrowLeftIcon } from '@heroicons/react/24/outline';
+import { UserIcon, PhoneIcon, MapPinIcon, ArrowLeftIcon, PlusIcon } from '@heroicons/react/24/outline';
 import LoadingSpinner from '../UI/LoadingSpinner';
+import AddressSelector from '../UI/AddressSelector';
 import toast from 'react-hot-toast';
 import axios from '../../config/axios';
 
@@ -153,6 +154,28 @@ const ProfilePage = () => {
                             </button>
                         </div>
                     </form>
+                </div>
+
+                {/* Address Management Section */}
+                <div className="glass-card rounded-2xl p-8 mt-8">
+                    <div className="flex items-center justify-between mb-6">
+                        <div>
+                            <h2 className="text-2xl font-bold text-black mb-2">My Addresses</h2>
+                            <p className="text-gray-600">Manage your delivery addresses</p>
+                        </div>
+                    </div>
+
+                    <div className="border-2 border-dashed border-gray-300 rounded-lg p-4 mb-4">
+                        <p className="text-gray-600 text-center mb-4">
+                            Add and manage your delivery addresses for faster checkout
+                        </p>
+                        <AddressSelector
+                            selectedAddress={null}
+                            onAddressSelect={() => {}}
+                            onAddressChange={() => {}}
+                            isProfileMode={true}
+                        />
+                    </div>
                 </div>
             </div>
         </div>

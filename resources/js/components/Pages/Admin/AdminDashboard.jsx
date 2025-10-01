@@ -4,18 +4,20 @@ import { Link } from 'react-router-dom';
 import axios from '../../../config/axios';
 import { 
     ShoppingCartIcon, 
-    UserGroupIcon, 
     CurrencyDollarIcon,
     ExclamationTriangleIcon,
-    ClockIcon,
     CheckCircleIcon,
     ChartBarIcon,
-    CubeIcon,
-    TagIcon,
     ArrowTrendingUpIcon,
-    UsersIcon,
-    ClipboardDocumentListIcon,
-    EyeIcon
+    TagIcon,
+    DocumentIcon,
+    CubeIcon,
+    UserGroupIcon,
+    ClockIcon,
+    TruckIcon,
+    EyeIcon,
+    CheckIcon,
+    XMarkIcon
 } from '@heroicons/react/24/outline';
 import LoadingSpinner from '../../UI/LoadingSpinner';
 
@@ -50,22 +52,26 @@ const AdminDashboard = () => {
 
     const getStatusColor = (status) => {
         switch (status) {
-            case 'pending': return 'text-yellow-400';
-            case 'confirmed': return 'text-blue-400';
-            case 'preparing': return 'text-orange-400';
-            case 'ready': return 'text-green-400';
-            case 'delivered': return 'text-green-500';
-            case 'cancelled': return 'text-red-400';
-            default: return 'text-gray-600';
+            case 'pending': return 'text-yellow-600 bg-yellow-100';
+            case 'confirmed': return 'text-blue-600 bg-blue-100';
+            case 'start_preparing': return 'text-orange-600 bg-orange-100';
+            case 'mark_ready': return 'text-green-600 bg-green-100';
+            case 'out_for_delivery': return 'text-purple-600 bg-purple-100';
+            case 'delivered': return 'text-green-700 bg-green-100';
+            case 'processed': return 'text-green-800 bg-green-100';
+            case 'cancelled': return 'text-red-600 bg-red-100';
+            default: return 'text-gray-600 bg-gray-100';
         }
     };
+
 
     const tabs = [
         { id: 'overview', name: 'Overview', icon: ChartBarIcon },
         { id: 'analytics', name: 'Analytics', icon: ArrowTrendingUpIcon },
-        { id: 'users', name: 'User Management', icon: UsersIcon },
+        { id: 'manage-products', name: 'Manage Products', icon: TagIcon },
+        { id: 'view-orders', name: 'View Orders', icon: DocumentIcon },
         { id: 'inventory', name: 'Inventory', icon: CubeIcon },
-        { id: 'orders', name: 'Orders', icon: ClipboardDocumentListIcon }
+        { id: 'manage-users', name: 'Manage Users', icon: UserGroupIcon }
     ];
 
     return (
@@ -132,7 +138,7 @@ const AdminDashboard = () => {
                                         <p className="text-gray-600 text-sm">Total Customers</p>
                                         <p className="text-2xl font-bold text-black">{stats.total_customers || 0}</p>
                                     </div>
-                                    <UserGroupIcon className="w-8 h-8 text-purple-500" />
+                                    <CheckCircleIcon className="w-8 h-8 text-purple-500" />
                                 </div>
                             </div>
 
@@ -147,37 +153,6 @@ const AdminDashboard = () => {
                             </div>
                         </div>
 
-                        {/* Quick Actions */}
-                        <div className="glass-card rounded-lg shadow p-6">
-                            <h3 className="text-lg font-semibold text-black mb-4">Quick Actions</h3>
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                                <Link
-                                    to="/admin/products"
-                                    className="flex items-center space-x-3 p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
-                                >
-                                    <TagIcon className="w-6 h-6 text-blue-500" />
-                                    <span className="text-black">Manage Products</span>
-                                </Link>
-                                <Link
-                                    to="/admin/orders"
-                                    className="flex items-center space-x-3 p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
-                                >
-                                    <ClipboardDocumentListIcon className="w-6 h-6 text-green-500" />
-                                    <span className="text-black">View Orders</span>
-                                </Link>
-                                <Link
-                                    to="/admin/inventory"
-                                    className="flex items-center space-x-3 p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
-                                >
-                                    <CubeIcon className="w-6 h-6 text-orange-500" />
-                                    <span className="text-black">Inventory</span>
-                                </Link>
-                                <button className="flex items-center space-x-3 p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-                                    <UsersIcon className="w-6 h-6 text-purple-500" />
-                                    <span className="text-black">Manage Users</span>
-                                </button>
-                            </div>
-                        </div>
 
                         {/* Recent Orders */}
                         <div className="glass-card rounded-lg shadow p-6">
@@ -206,6 +181,371 @@ const AdminDashboard = () => {
                                                 </td>
                                                 <td className="py-3 px-4 text-black">
                                                     {new Date(order.created_at).toLocaleDateString()}
+                                                </td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                {/* Manage Products Tab */}
+                {activeTab === 'manage-products' && (
+                    <div className="space-y-8">
+                        {/* Product Statistics */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div className="glass-card rounded-lg shadow p-6">
+                                <div className="flex items-center justify-between">
+                                    <div>
+                                        <p className="text-gray-600 text-sm">Total Products</p>
+                                        <p className="text-2xl font-bold text-black">{dashboardData?.products?.total || 0}</p>
+                                    </div>
+                                    <TagIcon className="w-8 h-8 text-blue-500" />
+                                </div>
+                            </div>
+                            <div className="glass-card rounded-lg shadow p-6">
+                                <div className="flex items-center justify-between">
+                                    <div>
+                                        <p className="text-gray-600 text-sm">Active Products</p>
+                                        <p className="text-2xl font-bold text-black">{dashboardData?.products?.active || 0}</p>
+                                    </div>
+                                    <CheckCircleIcon className="w-8 h-8 text-green-500" />
+                                </div>
+                            </div>
+                            <div className="glass-card rounded-lg shadow p-6">
+                                <div className="flex items-center justify-between">
+                                    <div>
+                                        <p className="text-gray-600 text-sm">Low Stock</p>
+                                        <p className="text-2xl font-bold text-black">{dashboardData?.products?.low_stock || 0}</p>
+                                    </div>
+                                    <ExclamationTriangleIcon className="w-8 h-8 text-yellow-500" />
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Products Table */}
+                        <div className="glass-card rounded-lg shadow p-6">
+                            <h3 className="text-lg font-semibold text-black mb-4">All Products</h3>
+                            <div className="overflow-x-auto">
+                                <table className="min-w-full">
+                                    <thead>
+                                        <tr className="border-b">
+                                            <th className="text-left py-3 px-4 text-black">Product</th>
+                                            <th className="text-left py-3 px-4 text-black">Category</th>
+                                            <th className="text-left py-3 px-4 text-black">Price</th>
+                                            <th className="text-left py-3 px-4 text-black">Stock</th>
+                                            <th className="text-left py-3 px-4 text-black">Status</th>
+                                            <th className="text-left py-3 px-4 text-black">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {dashboardData?.products?.data?.map((product) => (
+                                            <tr key={product.id} className="border-b">
+                                                <td className="py-3 px-4 text-black">{product.name}</td>
+                                                <td className="py-3 px-4 text-black capitalize">{product.category?.name || 'N/A'}</td>
+                                                <td className="py-3 px-4 text-black">{formatPrice(product.price)}</td>
+                                                <td className="py-3 px-4 text-black">{product.stock_quantity}</td>
+                                                <td className="py-3 px-4">
+                                                    <span className={`px-2 py-1 rounded-full text-xs ${
+                                                        product.is_active ? 'text-green-600 bg-green-100' : 'text-red-600 bg-red-100'
+                                                    }`}>
+                                                        {product.is_active ? 'Active' : 'Inactive'}
+                                                    </span>
+                                                </td>
+                                                <td className="py-3 px-4">
+                                                    <div className="flex space-x-2">
+                                                        <button className="text-blue-600 hover:text-blue-800">
+                                                            <EyeIcon className="w-4 h-4" />
+                                                        </button>
+                                                        <button className="text-green-600 hover:text-green-800">
+                                                            <CheckIcon className="w-4 h-4" />
+                                                        </button>
+                                                        <button className="text-red-600 hover:text-red-800">
+                                                            <XMarkIcon className="w-4 h-4" />
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                {/* View Orders Tab */}
+                {activeTab === 'view-orders' && (
+                    <div className="space-y-8">
+                        {/* Order Statistics */}
+                        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                            <div className="glass-card rounded-lg shadow p-6">
+                                <div className="flex items-center justify-between">
+                                    <div>
+                                        <p className="text-gray-600 text-sm">Pending</p>
+                                        <p className="text-2xl font-bold text-black">{dashboardData?.stats?.pending_orders || 0}</p>
+                                    </div>
+                                    <ClockIcon className="w-8 h-8 text-yellow-500" />
+                                </div>
+                            </div>
+                            <div className="glass-card rounded-lg shadow p-6">
+                                <div className="flex items-center justify-between">
+                                    <div>
+                                        <p className="text-gray-600 text-sm">Confirmed</p>
+                                        <p className="text-2xl font-bold text-black">{dashboardData?.stats?.confirmed_orders || 0}</p>
+                                    </div>
+                                    <CheckCircleIcon className="w-8 h-8 text-blue-500" />
+                                </div>
+                            </div>
+                            <div className="glass-card rounded-lg shadow p-6">
+                                <div className="flex items-center justify-between">
+                                    <div>
+                                        <p className="text-gray-600 text-sm">Ready</p>
+                                        <p className="text-2xl font-bold text-black">{dashboardData?.stats?.ready_orders || 0}</p>
+                                    </div>
+                                    <CheckCircleIcon className="w-8 h-8 text-green-500" />
+                                </div>
+                            </div>
+                            <div className="glass-card rounded-lg shadow p-6">
+                                <div className="flex items-center justify-between">
+                                    <div>
+                                        <p className="text-gray-600 text-sm">Delivered</p>
+                                        <p className="text-2xl font-bold text-black">{dashboardData?.stats?.delivered_orders || 0}</p>
+                                    </div>
+                                    <TruckIcon className="w-8 h-8 text-purple-500" />
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Orders Table */}
+                        <div className="glass-card rounded-lg shadow p-6">
+                            <h3 className="text-lg font-semibold text-black mb-4">All Orders</h3>
+                            <div className="overflow-x-auto">
+                                <table className="min-w-full">
+                                    <thead>
+                                        <tr className="border-b">
+                                            <th className="text-left py-3 px-4 text-black">Order #</th>
+                                            <th className="text-left py-3 px-4 text-black">Customer</th>
+                                            <th className="text-left py-3 px-4 text-black">Amount</th>
+                                            <th className="text-left py-3 px-4 text-black">Status</th>
+                                            <th className="text-left py-3 px-4 text-black">Method</th>
+                                            <th className="text-left py-3 px-4 text-black">Date</th>
+                                            <th className="text-left py-3 px-4 text-black">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {dashboardData?.recent_orders?.map((order) => (
+                                            <tr key={order.id} className="border-b">
+                                                <td className="py-3 px-4 text-black">{order.order_number}</td>
+                                                <td className="py-3 px-4 text-black">{order.user?.name || 'N/A'}</td>
+                                                <td className="py-3 px-4 text-black">{formatPrice(order.total_amount)}</td>
+                                                <td className="py-3 px-4">
+                                                    <span className={`px-2 py-1 rounded-full text-xs ${
+                                                        order.status === 'pending' ? 'text-yellow-600 bg-yellow-100' :
+                                                        order.status === 'confirmed' ? 'text-blue-600 bg-blue-100' :
+                                                        order.status === 'delivered' ? 'text-green-600 bg-green-100' :
+                                                        'text-gray-600 bg-gray-100'
+                                                    }`}>
+                                                        {order.status.replace('_', ' ').replace(/\b\w/g, l => l.toUpperCase())}
+                                                    </span>
+                                                </td>
+                                                <td className="py-3 px-4 text-black capitalize">{order.delivery_method}</td>
+                                                <td className="py-3 px-4 text-black">
+                                                    {new Date(order.created_at).toLocaleDateString()}
+                                                </td>
+                                                <td className="py-3 px-4">
+                                                    <div className="flex space-x-2">
+                                                        <button className="text-blue-600 hover:text-blue-800">
+                                                            <EyeIcon className="w-4 h-4" />
+                                                        </button>
+                                                        <button className="text-green-600 hover:text-green-800">
+                                                            <CheckIcon className="w-4 h-4" />
+                                                        </button>
+                                                        <button className="text-red-600 hover:text-red-800">
+                                                            <XMarkIcon className="w-4 h-4" />
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                {/* Inventory Tab */}
+                {activeTab === 'inventory' && (
+                    <div className="space-y-8">
+                        {/* Inventory Statistics */}
+                        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                            <div className="glass-card rounded-lg shadow p-6">
+                                <div className="flex items-center justify-between">
+                                    <div>
+                                        <p className="text-gray-600 text-sm">Total Products</p>
+                                        <p className="text-2xl font-bold text-black">{dashboardData?.products?.total || 0}</p>
+                                    </div>
+                                    <CubeIcon className="w-8 h-8 text-blue-500" />
+                                </div>
+                            </div>
+                            <div className="glass-card rounded-lg shadow p-6">
+                                <div className="flex items-center justify-between">
+                                    <div>
+                                        <p className="text-gray-600 text-sm">In Stock</p>
+                                        <p className="text-2xl font-bold text-black">{dashboardData?.products?.in_stock || 0}</p>
+                                    </div>
+                                    <CheckCircleIcon className="w-8 h-8 text-green-500" />
+                                </div>
+                            </div>
+                            <div className="glass-card rounded-lg shadow p-6">
+                                <div className="flex items-center justify-between">
+                                    <div>
+                                        <p className="text-gray-600 text-sm">Low Stock</p>
+                                        <p className="text-2xl font-bold text-black">{dashboardData?.products?.low_stock || 0}</p>
+                                    </div>
+                                    <ExclamationTriangleIcon className="w-8 h-8 text-yellow-500" />
+                                </div>
+                            </div>
+                            <div className="glass-card rounded-lg shadow p-6">
+                                <div className="flex items-center justify-between">
+                                    <div>
+                                        <p className="text-gray-600 text-sm">Out of Stock</p>
+                                        <p className="text-2xl font-bold text-black">{dashboardData?.products?.out_of_stock || 0}</p>
+                                    </div>
+                                    <XMarkIcon className="w-8 h-8 text-red-500" />
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Low Stock Products */}
+                        <div className="glass-card rounded-lg shadow p-6">
+                            <h3 className="text-lg font-semibold text-black mb-4">Low Stock Products</h3>
+                            <div className="overflow-x-auto">
+                                <table className="min-w-full">
+                                    <thead>
+                                        <tr className="border-b">
+                                            <th className="text-left py-3 px-4 text-black">Product</th>
+                                            <th className="text-left py-3 px-4 text-black">Category</th>
+                                            <th className="text-left py-3 px-4 text-black">Current Stock</th>
+                                            <th className="text-left py-3 px-4 text-black">Status</th>
+                                            <th className="text-left py-3 px-4 text-black">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {dashboardData?.low_stock_products?.map((product) => (
+                                            <tr key={product.id} className="border-b">
+                                                <td className="py-3 px-4 text-black">{product.name}</td>
+                                                <td className="py-3 px-4 text-black capitalize">{product.category?.name || 'N/A'}</td>
+                                                <td className="py-3 px-4 text-black">{product.stock_quantity}</td>
+                                                <td className="py-3 px-4">
+                                                    <span className={`px-2 py-1 rounded-full text-xs ${
+                                                        product.stock_quantity === 0 ? 'text-red-600 bg-red-100' :
+                                                        product.stock_quantity < 10 ? 'text-yellow-600 bg-yellow-100' :
+                                                        'text-green-600 bg-green-100'
+                                                    }`}>
+                                                        {product.stock_quantity === 0 ? 'Out of Stock' :
+                                                         product.stock_quantity < 10 ? 'Low Stock' : 'In Stock'}
+                                                    </span>
+                                                </td>
+                                                <td className="py-3 px-4">
+                                                    <div className="flex space-x-2">
+                                                        <button className="text-blue-600 hover:text-blue-800">
+                                                            <EyeIcon className="w-4 h-4" />
+                                                        </button>
+                                                        <button className="text-green-600 hover:text-green-800">
+                                                            <CheckIcon className="w-4 h-4" />
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                {/* Manage Users Tab */}
+                {activeTab === 'manage-users' && (
+                    <div className="space-y-8">
+                        {/* User Statistics */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div className="glass-card rounded-lg shadow p-6">
+                                <div className="flex items-center justify-between">
+                                    <div>
+                                        <p className="text-gray-600 text-sm">Total Users</p>
+                                        <p className="text-2xl font-bold text-black">{dashboardData?.users?.total || 0}</p>
+                                    </div>
+                                    <UserGroupIcon className="w-8 h-8 text-blue-500" />
+                                </div>
+                            </div>
+                            <div className="glass-card rounded-lg shadow p-6">
+                                <div className="flex items-center justify-between">
+                                    <div>
+                                        <p className="text-gray-600 text-sm">Active Users</p>
+                                        <p className="text-2xl font-bold text-black">{dashboardData?.users?.active || 0}</p>
+                                    </div>
+                                    <CheckCircleIcon className="w-8 h-8 text-green-500" />
+                                </div>
+                            </div>
+                            <div className="glass-card rounded-lg shadow p-6">
+                                <div className="flex items-center justify-between">
+                                    <div>
+                                        <p className="text-gray-600 text-sm">New This Month</p>
+                                        <p className="text-2xl font-bold text-black">{dashboardData?.users?.new_this_month || 0}</p>
+                                    </div>
+                                    <ArrowTrendingUpIcon className="w-8 h-8 text-purple-500" />
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Users Table */}
+                        <div className="glass-card rounded-lg shadow p-6">
+                            <h3 className="text-lg font-semibold text-black mb-4">All Users</h3>
+                            <div className="overflow-x-auto">
+                                <table className="min-w-full">
+                                    <thead>
+                                        <tr className="border-b">
+                                            <th className="text-left py-3 px-4 text-black">Name</th>
+                                            <th className="text-left py-3 px-4 text-black">Email</th>
+                                            <th className="text-left py-3 px-4 text-black">Phone</th>
+                                            <th className="text-left py-3 px-4 text-black">Status</th>
+                                            <th className="text-left py-3 px-4 text-black">Joined</th>
+                                            <th className="text-left py-3 px-4 text-black">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {dashboardData?.users?.data?.map((user) => (
+                                            <tr key={user.id} className="border-b">
+                                                <td className="py-3 px-4 text-black">{user.name}</td>
+                                                <td className="py-3 px-4 text-black">{user.email}</td>
+                                                <td className="py-3 px-4 text-black">{user.phone || 'N/A'}</td>
+                                                <td className="py-3 px-4">
+                                                    <span className={`px-2 py-1 rounded-full text-xs ${
+                                                        user.email_verified_at ? 'text-green-600 bg-green-100' : 'text-yellow-600 bg-yellow-100'
+                                                    }`}>
+                                                        {user.email_verified_at ? 'Active' : 'Pending'}
+                                                    </span>
+                                                </td>
+                                                <td className="py-3 px-4 text-black">
+                                                    {new Date(user.created_at).toLocaleDateString()}
+                                                </td>
+                                                <td className="py-3 px-4">
+                                                    <div className="flex space-x-2">
+                                                        <button className="text-blue-600 hover:text-blue-800">
+                                                            <EyeIcon className="w-4 h-4" />
+                                                        </button>
+                                                        <button className="text-green-600 hover:text-green-800">
+                                                            <CheckIcon className="w-4 h-4" />
+                                                        </button>
+                                                        <button className="text-red-600 hover:text-red-800">
+                                                            <XMarkIcon className="w-4 h-4" />
+                                                        </button>
+                                                    </div>
                                                 </td>
                                             </tr>
                                         ))}
@@ -274,118 +614,8 @@ const AdminDashboard = () => {
                     </div>
                 )}
 
-                {/* User Management Tab */}
-                {activeTab === 'users' && (
-                    <div className="space-y-8">
-                        <div className="glass-card rounded-lg shadow p-6">
-                            <h3 className="text-lg font-semibold text-black mb-4">User Management</h3>
-                            <p className="text-gray-600 mb-4">Manage customer accounts and permissions</p>
-                            
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                <div className="border border-gray-200 rounded-lg p-4">
-                                    <h4 className="font-semibold text-black">Total Users</h4>
-                                    <p className="text-2xl font-bold text-blue-600 mt-2">{stats.total_customers || 0}</p>
-                                </div>
-                                <div className="border border-gray-200 rounded-lg p-4">
-                                    <h4 className="font-semibold text-black">Active Users</h4>
-                                    <p className="text-2xl font-bold text-green-600 mt-2">{stats.active_users || 0}</p>
-                                </div>
-                                <div className="border border-gray-200 rounded-lg p-4">
-                                    <h4 className="font-semibold text-black">New This Month</h4>
-                                    <p className="text-2xl font-bold text-purple-600 mt-2">{stats.new_users_this_month || 0}</p>
-                                </div>
-                            </div>
-
-                            <div className="mt-6">
-                                <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                                    View All Users
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                )}
-
-                {/* Inventory Tab */}
-                {activeTab === 'inventory' && (
-                    <div className="space-y-8">
-                        <div className="glass-card rounded-lg shadow p-6">
-                            <h3 className="text-lg font-semibold text-black mb-4">Inventory Overview</h3>
-                            
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-                                <div className="border border-gray-200 rounded-lg p-4">
-                                    <h4 className="font-semibold text-black">Total Products</h4>
-                                    <p className="text-2xl font-bold text-blue-600 mt-2">{stats.total_products || 0}</p>
-                                </div>
-                                <div className="border border-gray-200 rounded-lg p-4">
-                                    <h4 className="font-semibold text-black">Low Stock Items</h4>
-                                    <p className="text-2xl font-bold text-red-600 mt-2">{stats.low_stock_count || 0}</p>
-                                </div>
-                                <div className="border border-gray-200 rounded-lg p-4">
-                                    <h4 className="font-semibold text-black">Out of Stock</h4>
-                                    <p className="text-2xl font-bold text-orange-600 mt-2">{stats.out_of_stock_count || 0}</p>
-                                </div>
-                            </div>
-
-                            <Link
-                                to="/admin/inventory"
-                                className="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors"
-                            >
-                                Manage Inventory
-                            </Link>
-                        </div>
-
-                        {/* Low Stock Alert */}
-                        {lowStockProducts.length > 0 && (
-                            <div className="bg-red-50 border border-red-200 rounded-lg p-6">
-                                <h3 className="text-lg font-semibold text-red-800 mb-4">Low Stock Alert</h3>
-                                <div className="space-y-2">
-                                    {lowStockProducts.slice(0, 5).map((product) => (
-                                        <div key={product.id} className="flex justify-between items-center p-2 glass-card rounded">
-                                            <span className="text-black">{product.name}</span>
-                                            <span className="text-red-600 font-semibold">Stock: {product.stock_quantity}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                )}
-
-                {/* Orders Tab */}
-                {activeTab === 'orders' && (
-                    <div className="space-y-8">
-                        <div className="glass-card rounded-lg shadow p-6">
-                            <h3 className="text-lg font-semibold text-black mb-4">Order Management</h3>
-                            
-                            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
-                                <div className="border border-gray-200 rounded-lg p-4">
-                                    <h4 className="font-semibold text-black">Pending</h4>
-                                    <p className="text-2xl font-bold text-yellow-600 mt-2">{stats.pending_orders || 0}</p>
-                                </div>
-                                <div className="border border-gray-200 rounded-lg p-4">
-                                    <h4 className="font-semibold text-black">Confirmed</h4>
-                                    <p className="text-2xl font-bold text-blue-600 mt-2">{stats.confirmed_orders || 0}</p>
-                                </div>
-                                <div className="border border-gray-200 rounded-lg p-4">
-                                    <h4 className="font-semibold text-black">Ready</h4>
-                                    <p className="text-2xl font-bold text-green-600 mt-2">{stats.ready_orders || 0}</p>
-                                </div>
-                                <div className="border border-gray-200 rounded-lg p-4">
-                                    <h4 className="font-semibold text-black">Delivered</h4>
-                                    <p className="text-2xl font-bold text-purple-600 mt-2">{stats.delivered_orders || 0}</p>
-                                </div>
-                            </div>
-
-                            <Link
-                                to="/admin/orders"
-                                className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
-                            >
-                                View All Orders
-                            </Link>
-                        </div>
-                    </div>
-                )}
             </div>
+
         </div>
     );
 };

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../../hooks/useCart';
 import { useQuery } from 'react-query';
@@ -9,9 +9,11 @@ import {
     BuildingStorefrontIcon,
     CreditCardIcon,
     PhoneIcon,
-    MapPinIcon
+    MapPinIcon,
+    ArrowLeftIcon
 } from '@heroicons/react/24/outline';
 import LoadingSpinner from '../UI/LoadingSpinner';
+import AddressSelector from '../UI/AddressSelector';
 import toast from 'react-hot-toast';
 
 const CheckoutPage = () => {
@@ -19,23 +21,104 @@ const CheckoutPage = () => {
     const { user } = useAuth();
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
-    const [formData, setFormData] = useState({
-        delivery_method: 'pickup',
-        payment_method: 'cod',
-        delivery_address: user?.address || '',
-        contact_phone: user?.phone || '',
-        notes: '',
-        delivery_date: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString().slice(0, 16), // Tomorrow's date
+    const [formData, setFormData] = useState(() => {
+        // Try to get delivery method from localStorage, default to pickup
+        const savedDeliveryMethod = localStorage.getItem('checkout_delivery_method');
+        return {
+            delivery_method: savedDeliveryMethod || 'pickup',
+            payment_method: 'cod',
+            delivery_address: '',
+            contact_phone: user?.phone || '',
+            notes: '',
+            delivery_date: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString().slice(0, 16), // Tomorrow's date
+        };
     });
+    const [selectedAddress, setSelectedAddress] = useState(null);
 
     const hasDryGoods = cartItems?.some(item => item.product.category.slug === 'dry-goods');
     const canDeliver = cartItems?.every(item => item.product.category.allows_delivery);
 
+    // Fetch user addresses when delivery method is selected
+    const { data: addresses } = useQuery(
+        'addresses',
+        () => axios.get('/api/addresses').then(res => res.data),
+        {
+            enabled: formData.delivery_method === 'delivery',
+            onSuccess: (data) => {
+                // Auto-select default address if available and no address is selected
+                if (data && data.length > 0 && !selectedAddress) {
+                    const defaultAddress = data.find(addr => addr.is_default) || data[0];
+                    if (defaultAddress) {
+                        handleAddressSelect(defaultAddress);
+                    }
+                }
+            }
+        }
+    );
+
+    // Reset selected address when delivery method changes
+    useEffect(() => {
+        if (formData.delivery_method === 'pickup') {
+            setSelectedAddress(null);
+            setFormData(prev => ({
+                ...prev,
+                delivery_address: '',
+            }));
+        }
+    }, [formData.delivery_method]);
+
+    // Cleanup localStorage on unmount
+    useEffect(() => {
+        return () => {
+            // Don't clear localStorage here as we want to persist the delivery method
+            // localStorage.removeItem('checkout_delivery_method');
+        };
+    }, []);
+
+    // Debug formData changes
+    useEffect(() => {
+        console.log('FormData changed:', formData);
+    }, [formData]);
+
     const handleChange = (e) => {
-        setFormData({
+        console.log('Form change:', e.target.name, e.target.value);
+        console.log('Current formData:', formData);
+        
+        const newFormData = {
             ...formData,
             [e.target.name]: e.target.value,
+        };
+        
+        // Save delivery method to localStorage
+        if (e.target.name === 'delivery_method') {
+            localStorage.setItem('checkout_delivery_method', e.target.value);
+        }
+        
+        setFormData(newFormData);
+    };
+
+    const handleAddressSelect = (address) => {
+        setSelectedAddress(address);
+        setFormData({
+            ...formData,
+            delivery_address: address.full_address,
+            contact_phone: address.contact_phone,
         });
+    };
+
+    const handleAddressChange = (address) => {
+        // This will be called when a new address is added
+        console.log('Address change triggered:', address);
+        console.log('Current formData before change:', formData);
+        
+        if (address) {
+            setSelectedAddress(address);
+            setFormData(prev => ({
+                ...prev, // Preserve all existing form data including delivery_method
+                delivery_address: address.full_address,
+                contact_phone: address.contact_phone,
+            }));
+        }
     };
 
     const handleSubmit = async (e) => {
@@ -43,6 +126,13 @@ const CheckoutPage = () => {
         setLoading(true);
 
         try {
+            // Validate delivery address if delivery method is selected
+            if (formData.delivery_method === 'delivery' && !formData.delivery_address.trim()) {
+                toast.error('Please select a delivery address');
+                setLoading(false);
+                return;
+            }
+
             const orderData = {
                 ...formData,
                 delivery_address: formData.delivery_method === 'delivery' ? formData.delivery_address : '',
@@ -50,6 +140,9 @@ const CheckoutPage = () => {
             };
 
             const response = await axios.post('/api/orders', orderData);
+            
+            // Clear localStorage after successful order
+            localStorage.removeItem('checkout_delivery_method');
             
             toast.success('Order placed successfully!');
             await clearCart();
@@ -77,6 +170,15 @@ const CheckoutPage = () => {
         <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 <div className="mb-8">
+                    <div className="flex items-center mb-4">
+                        <button
+                            onClick={() => navigate('/cart')}
+                            className="flex items-center text-gray-600 hover:text-gray-800 mr-4 transition-colors"
+                        >
+                            <ArrowLeftIcon className="w-5 h-5 mr-2" />
+                            Back to Cart
+                        </button>
+                    </div>
                     <h1 className="text-3xl font-bold text-black mb-4">Checkout</h1>
                     <p className="text-gray-700">Complete your order</p>
                 </div>
@@ -128,7 +230,7 @@ const CheckoutPage = () => {
 
                                 {hasDryGoods && (
                                     <div className="p-3 bg-yellow-500/20 border border-yellow-500/30 rounded-lg">
-                                        <p className="text-yellow-200 text-sm">
+                                        <p className="text-black text-sm">
                                             <strong>Note:</strong> Your cart contains Dry Goods items which are pickup only. 
                                             Delivery option is not available for these items.
                                         </p>
@@ -142,15 +244,24 @@ const CheckoutPage = () => {
                                     <label className="block text-sm font-medium text-black mb-2">
                                         Delivery Address
                                     </label>
-                                    <textarea
-                                        name="delivery_address"
-                                        value={formData.delivery_address}
-                                        onChange={handleChange}
-                                        required
-                                        rows="3"
-                                        className="w-full px-4 py-3 glass rounded-lg text-black placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                                        placeholder="Enter your delivery address"
-                                    />
+                                    {addresses && addresses.length > 0 ? (
+                                        <AddressSelector
+                                            key={`address-selector-${selectedAddress?.id || 'none'}`}
+                                            selectedAddress={selectedAddress}
+                                            onAddressSelect={handleAddressSelect}
+                                            onAddressChange={handleAddressChange}
+                                        />
+                                    ) : (
+                                        <div className="text-center py-8">
+                                            <p className="text-gray-600 mb-4">No saved addresses found</p>
+                                            <AddressSelector
+                                                key="address-selector-new"
+                                                selectedAddress={selectedAddress}
+                                                onAddressSelect={handleAddressSelect}
+                                                onAddressChange={handleAddressChange}
+                                            />
+                                        </div>
+                                    )}
                                 </div>
                             )}
 

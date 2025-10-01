@@ -7,12 +7,10 @@ import { useAuth } from '../../hooks/useAuth';
 import { 
     ArrowLeftIcon, 
     ShoppingCartIcon, 
-    HeartIcon,
     StarIcon,
     TruckIcon,
     BuildingStorefrontIcon
 } from '@heroicons/react/24/outline';
-import { HeartIcon as HeartIconSolid } from '@heroicons/react/24/solid';
 import LoadingSpinner from '../UI/LoadingSpinner';
 import toast from 'react-hot-toast';
 
@@ -22,7 +20,6 @@ const ProductDetailPage = () => {
     const { addToCart } = useCart();
     const { user } = useAuth();
     const [quantity, setQuantity] = useState(1);
-    const [isFavorite, setIsFavorite] = useState(false);
 
     const { data: product, isLoading } = useQuery(
         ['product', id],
@@ -228,16 +225,6 @@ const ProductDetailPage = () => {
                                 </button>
                             )}
                             
-                            <button
-                                onClick={() => setIsFavorite(!isFavorite)}
-                                className="p-3 glass rounded-lg hover:bg-white/10 transition-colors"
-                            >
-                                {isFavorite ? (
-                                    <HeartIconSolid className="w-6 h-6 text-red-500" />
-                                ) : (
-                                    <HeartIcon className="w-6 h-6 text-black" />
-                                )}
-                            </button>
                         </div>
 
                         {/* Delivery Information */}

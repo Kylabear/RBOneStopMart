@@ -55,6 +55,30 @@ class Product extends Model
     }
 
     /**
+     * Get reviews for this product
+     */
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
+
+    /**
+     * Get average rating for this product
+     */
+    public function getAverageRatingAttribute()
+    {
+        return $this->reviews()->avg('rating') ?? 0;
+    }
+
+    /**
+     * Get total reviews count for this product
+     */
+    public function getReviewsCountAttribute()
+    {
+        return $this->reviews()->count();
+    }
+
+    /**
      * Scope for active products
      */
     public function scopeActive($query)

@@ -16,11 +16,6 @@ const Footer = () => {
                         <p className="text-gray-700 mb-4">
                             Your one-stop destination for Grocery, Dry Goods, and Farm Supply needs.
                         </p>
-                        <div className="flex space-x-4">
-                            <a href="#" className="text-gray-700 hover:text-black transition-colors">
-                                <span className="w-6 h-6 text-blue-500 font-bold">f</span>
-                            </a>
-                        </div>
                     </div>
 
                     {/* Contact Information */}
@@ -38,10 +33,6 @@ const Footer = () => {
                             <div className="flex items-center space-x-3">
                                 <ChatBubbleLeftRightIcon className="w-5 h-5 text-blue-600" />
                                 <span className="text-gray-700">+639686654565 (WhatsApp)</span>
-                            </div>
-                            <div className="flex items-center space-x-3">
-                                <span className="w-5 h-5 text-blue-600 font-bold">f</span>
-                                <span className="text-gray-700">Brenda Bangachon</span>
                             </div>
                         </div>
                     </div>

@@ -86,7 +86,7 @@ const LoginPage = () => {
                                     required
                                     value={formData.password}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 glass rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none pr-12"
+                                    className="w-full px-4 py-3 glass rounded-lg text-black placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none pr-12"
                                     placeholder="Enter your password"
                                 />
                                 <button

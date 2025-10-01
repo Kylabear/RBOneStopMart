@@ -78,4 +78,28 @@ class User extends Authenticatable
     {
         return $this->hasMany(CartItem::class);
     }
+
+    /**
+     * Get user's addresses
+     */
+    public function addresses()
+    {
+        return $this->hasMany(UserAddress::class);
+    }
+
+    /**
+     * Get user's default address
+     */
+    public function defaultAddress()
+    {
+        return $this->hasOne(UserAddress::class)->where('is_default', true);
+    }
+
+    /**
+     * Get user's reviews
+     */
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
 }
