@@ -105,5 +105,11 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::delete('/products/{product}', [ProductManagementController::class, 'destroy']);
         Route::put('/products/{product}/stock', [ProductManagementController::class, 'updateStock']);
         Route::get('/products/low-stock', [ProductManagementController::class, 'lowStock']);
+        
+        // User management
+        Route::get('/users', [AdminController::class, 'users']);
+        Route::put('/users/{user}/activate', [AdminController::class, 'activateUser']);
+        Route::put('/users/{user}/deactivate', [AdminController::class, 'deactivateUser']);
+        Route::get('/users/{user}', [AdminController::class, 'userDetails']);
     });
 });

@@ -1,25 +1,16 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { useQuery } from 'react-query';
-import axios from '../../config/axios';
-import { useAuth } from '../../hooks/useAuth';
+import { useNavigate } from 'react-router-dom';
 import { 
     ShoppingCartIcon, 
     TruckIcon, 
     CreditCardIcon
 } from '@heroicons/react/24/outline';
-import LoadingSpinner from '../UI/LoadingSpinner';
 import PromotionalCarousel from '../UI/PromotionalCarousel';
-import toast from 'react-hot-toast';
+ 
 
 const HomePage = () => {
-    const { user } = useAuth();
     const navigate = useNavigate();
     
-    const { data: categories, isLoading: categoriesLoading } = useQuery(
-        'categories',
-        () => axios.get('/api/categories').then(res => res.data)
-    );
 
     // Promotional slides data based on business categories
     const promotionalSlides = [
@@ -79,32 +70,7 @@ const HomePage = () => {
         }
     ];
 
-    const handleShopNow = () => {
-        if (!user) {
-            toast.error('Please login to browse our products');
-            navigate('/login');
-            return;
-        }
-        navigate('/products');
-    };
-
-    const handleViewAllProducts = () => {
-        if (!user) {
-            toast.error('Please login to view all products');
-            navigate('/login');
-            return;
-        }
-        navigate('/products');
-    };
-
-    const handleCategoryClick = (categorySlug) => {
-        if (!user) {
-            toast.error('Please login to browse products by category');
-            navigate('/login');
-            return;
-        }
-        navigate(`/products?category=${categorySlug}`);
-    };
+    
 
     return (
         <div className="min-h-screen">
@@ -117,40 +83,7 @@ const HomePage = () => {
                 />
             </section>
 
-            {/* Categories Section */}
-            <section className="py-16 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-7xl mx-auto">
-                    <h2 className="text-3xl font-bold text-black text-center mb-12">Our Categories</h2>
-                    {categoriesLoading ? (
-                        <div className="flex justify-center">
-                            <LoadingSpinner />
-                        </div>
-                    ) : (
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                            {categories?.map((category) => (
-                                <button 
-                                    key={category.id} 
-                                    onClick={() => handleCategoryClick(category.slug)}
-                                    className="glass-card rounded-2xl p-4 sm:p-6 md:p-8 text-center hover:scale-105 transition-transform group w-full"
-                                >
-                                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                                        <span className="text-2xl font-bold text-black">
-                                            {category.name.charAt(0)}
-                                        </span>
-                                    </div>
-                                    <h3 className="text-xl font-semibold text-black mb-2 group-hover:text-blue-300 transition-colors">
-                                        {category.name}
-                                    </h3>
-                                    <p className="text-gray-700 mb-4">{category.description}</p>
-                                    <div className="text-sm text-blue-400">
-                                        {category.products_count} products
-                                    </div>
-                                </button>
-                            ))}
-                        </div>
-                    )}
-                </div>
-            </section>
+            
 
             {/* Why Choose Us Section */}
             <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -190,12 +123,10 @@ const HomePage = () => {
                         <div>
                             <h3 className="text-2xl font-bold text-black mb-6">R&B One Stop Mart</h3>
                             <p className="text-gray-700 mb-6 leading-relaxed">
-                                We are your trusted neighborhood store, providing quality groceries, dry goods, and farm supplies to our community. 
-                                With years of experience in serving our customers, we understand the importance of fresh products and reliable service.
+                                We started our journey way back in 2003 focusing on Dry Goods. With God’s grace and the continued support of our community, we have been able to expand our business into Groceries and Farm Supplies over the years.
                             </p>
                             <p className="text-gray-700 mb-6 leading-relaxed">
-                                Our commitment is to offer the best products at competitive prices, with convenient delivery and pickup options 
-                                to make your shopping experience as easy as possible.
+                                Today, we proudly provide quality groceries, dry goods, and farm supplies with a commitment to fresh products, reliable service, and competitive prices—along with convenient delivery and pickup options to make your shopping experience easy.
                             </p>
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="text-center">

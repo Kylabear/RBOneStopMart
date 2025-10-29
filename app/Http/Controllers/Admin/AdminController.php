@@ -198,4 +198,53 @@ class AdminController extends Controller
         $order->load('user', 'orderItems.product.category');
         return response()->json($order);
     }
+
+    /**
+     * Get all users
+     */
+    public function users()
+    {
+        $users = User::with('orders')
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+        return response()->json($users);
+    }
+
+    /**
+     * Get user details
+     */
+    public function userDetails(User $user)
+    {
+        $user->load('orders', 'addresses');
+        return response()->json($user);
+    }
+
+    /**
+     * Activate user
+     */
+    public function activateUser(User $user)
+    {
+        $user->email_verified_at = now();
+        $user->save();
+
+        return response()->json([
+            'message' => 'User activated successfully',
+            'user' => $user
+        ]);
+    }
+
+    /**
+     * Deactivate user
+     */
+    public function deactivateUser(User $user)
+    {
+        $user->email_verified_at = null;
+        $user->save();
+
+        return response()->json([
+            'message' => 'User deactivated successfully',
+            'user' => $user
+        ]);
+    }
 }

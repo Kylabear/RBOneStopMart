@@ -57296,6 +57296,7 @@ var AdminDashboard = function AdminDashboard() {
     _useState2 = _slicedToArray(_useState, 2),
     activeTab = _useState2[0],
     setActiveTab = _useState2[1];
+  var queryClient = (0,react_query__WEBPACK_IMPORTED_MODULE_1__.useQueryClient)();
   var _useQuery = (0,react_query__WEBPACK_IMPORTED_MODULE_1__.useQuery)('admin-dashboard', function () {
       return _config_axios__WEBPACK_IMPORTED_MODULE_2__["default"].get('/api/admin/dashboard').then(function (res) {
         return res.data;
@@ -57343,18 +57344,114 @@ var AdminDashboard = function AdminDashboard() {
     }
   };
 
+  // User management mutations
+  var activateUserMutation = (0,react_query__WEBPACK_IMPORTED_MODULE_1__.useMutation)(function (userId) {
+    return _config_axios__WEBPACK_IMPORTED_MODULE_2__["default"].put("/api/admin/users/".concat(userId, "/activate"));
+  }, {
+    onSuccess: function onSuccess() {
+      queryClient.invalidateQueries('admin-dashboard');
+      react_hot_toast__WEBPACK_IMPORTED_MODULE_3__["default"].success('User activated successfully!');
+    },
+    onError: function onError(error) {
+      var _error$response;
+      react_hot_toast__WEBPACK_IMPORTED_MODULE_3__["default"].error(((_error$response = error.response) === null || _error$response === void 0 || (_error$response = _error$response.data) === null || _error$response === void 0 ? void 0 : _error$response.message) || 'Failed to activate user');
+    }
+  });
+  var deactivateUserMutation = (0,react_query__WEBPACK_IMPORTED_MODULE_1__.useMutation)(function (userId) {
+    return _config_axios__WEBPACK_IMPORTED_MODULE_2__["default"].put("/api/admin/users/".concat(userId, "/deactivate"));
+  }, {
+    onSuccess: function onSuccess() {
+      queryClient.invalidateQueries('admin-dashboard');
+      react_hot_toast__WEBPACK_IMPORTED_MODULE_3__["default"].success('User deactivated successfully!');
+    },
+    onError: function onError(error) {
+      var _error$response2;
+      react_hot_toast__WEBPACK_IMPORTED_MODULE_3__["default"].error(((_error$response2 = error.response) === null || _error$response2 === void 0 || (_error$response2 = _error$response2.data) === null || _error$response2 === void 0 ? void 0 : _error$response2.message) || 'Failed to deactivate user');
+    }
+  });
+
   // User management handlers
   var handleViewUser = function handleViewUser(userId) {
     console.log('View user:', userId);
     react_hot_toast__WEBPACK_IMPORTED_MODULE_3__["default"].success('View user functionality - Coming soon!');
   };
   var handleActivateUser = function handleActivateUser(userId) {
-    console.log('Activate user:', userId);
-    react_hot_toast__WEBPACK_IMPORTED_MODULE_3__["default"].success('User activated successfully!');
+    activateUserMutation.mutate(userId);
   };
   var handleDeactivateUser = function handleDeactivateUser(userId) {
-    console.log('Deactivate user:', userId);
-    react_hot_toast__WEBPACK_IMPORTED_MODULE_3__["default"].success('User deactivated successfully!');
+    deactivateUserMutation.mutate(userId);
+  };
+
+  // Product management mutations
+  var updateProductStatusMutation = (0,react_query__WEBPACK_IMPORTED_MODULE_1__.useMutation)(function (_ref) {
+    var productId = _ref.productId,
+      isActive = _ref.isActive;
+    return _config_axios__WEBPACK_IMPORTED_MODULE_2__["default"].put("/api/admin/products/".concat(productId), {
+      is_active: isActive
+    });
+  }, {
+    onSuccess: function onSuccess() {
+      queryClient.invalidateQueries('admin-dashboard');
+      react_hot_toast__WEBPACK_IMPORTED_MODULE_3__["default"].success('Product status updated successfully!');
+    },
+    onError: function onError(error) {
+      var _error$response3;
+      react_hot_toast__WEBPACK_IMPORTED_MODULE_3__["default"].error(((_error$response3 = error.response) === null || _error$response3 === void 0 || (_error$response3 = _error$response3.data) === null || _error$response3 === void 0 ? void 0 : _error$response3.message) || 'Failed to update product');
+    }
+  });
+
+  // Product management handlers
+  var handleViewProduct = function handleViewProduct(productId) {
+    console.log('View product:', productId);
+    react_hot_toast__WEBPACK_IMPORTED_MODULE_3__["default"].success('View product functionality - Coming soon!');
+  };
+  var handleActivateProduct = function handleActivateProduct(productId) {
+    updateProductStatusMutation.mutate({
+      productId: productId,
+      isActive: true
+    });
+  };
+  var handleDeactivateProduct = function handleDeactivateProduct(productId) {
+    updateProductStatusMutation.mutate({
+      productId: productId,
+      isActive: false
+    });
+  };
+
+  // Order management mutations
+  var updateOrderStatusMutation = (0,react_query__WEBPACK_IMPORTED_MODULE_1__.useMutation)(function (_ref2) {
+    var orderId = _ref2.orderId,
+      status = _ref2.status;
+    return _config_axios__WEBPACK_IMPORTED_MODULE_2__["default"].put("/api/admin/orders/".concat(orderId, "/status"), {
+      status: status
+    });
+  }, {
+    onSuccess: function onSuccess() {
+      queryClient.invalidateQueries('admin-dashboard');
+      react_hot_toast__WEBPACK_IMPORTED_MODULE_3__["default"].success('Order status updated successfully!');
+    },
+    onError: function onError(error) {
+      var _error$response4;
+      react_hot_toast__WEBPACK_IMPORTED_MODULE_3__["default"].error(((_error$response4 = error.response) === null || _error$response4 === void 0 || (_error$response4 = _error$response4.data) === null || _error$response4 === void 0 ? void 0 : _error$response4.message) || 'Failed to update order status');
+    }
+  });
+
+  // Order management handlers
+  var handleViewOrder = function handleViewOrder(orderId) {
+    console.log('View order:', orderId);
+    react_hot_toast__WEBPACK_IMPORTED_MODULE_3__["default"].success('View order functionality - Coming soon!');
+  };
+  var handleConfirmOrder = function handleConfirmOrder(orderId) {
+    updateOrderStatusMutation.mutate({
+      orderId: orderId,
+      status: 'confirmed'
+    });
+  };
+  var handleCancelOrder = function handleCancelOrder(orderId) {
+    updateOrderStatusMutation.mutate({
+      orderId: orderId,
+      status: 'cancelled'
+    });
   };
   var tabs = [{
     id: 'overview',
@@ -57659,17 +57756,29 @@ var AdminDashboard = function AdminDashboard() {
                       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_20__.jsxs)("div", {
                         className: "flex space-x-2",
                         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_20__.jsx)("button", {
+                          onClick: function onClick() {
+                            return handleViewProduct(product.id);
+                          },
                           className: "text-blue-600 hover:text-blue-800",
+                          title: "View Product Details",
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_20__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_13__["default"], {
                             className: "w-4 h-4"
                           })
                         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_20__.jsx)("button", {
+                          onClick: function onClick() {
+                            return handleActivateProduct(product.id);
+                          },
                           className: "text-green-600 hover:text-green-800",
+                          title: "Activate Product",
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_20__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_7__["default"], {
                             className: "w-4 h-4"
                           })
                         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_20__.jsx)("button", {
+                          onClick: function onClick() {
+                            return handleDeactivateProduct(product.id);
+                          },
                           className: "text-red-600 hover:text-red-800",
+                          title: "Deactivate Product",
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_20__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_18__["default"], {
                             className: "w-4 h-4"
                           })
@@ -57819,17 +57928,29 @@ var AdminDashboard = function AdminDashboard() {
                       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_20__.jsxs)("div", {
                         className: "flex space-x-2",
                         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_20__.jsx)("button", {
+                          onClick: function onClick() {
+                            return handleViewOrder(order.id);
+                          },
                           className: "text-blue-600 hover:text-blue-800",
+                          title: "View Order Details",
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_20__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_13__["default"], {
                             className: "w-4 h-4"
                           })
-                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_20__.jsx)("button", {
+                        }), order.status === 'pending' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_20__.jsx)("button", {
+                          onClick: function onClick() {
+                            return handleConfirmOrder(order.id);
+                          },
                           className: "text-green-600 hover:text-green-800",
+                          title: "Confirm Order",
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_20__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_7__["default"], {
                             className: "w-4 h-4"
                           })
-                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_20__.jsx)("button", {
+                        }), order.status !== 'cancelled' && order.status !== 'delivered' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_20__.jsx)("button", {
+                          onClick: function onClick() {
+                            return handleCancelOrder(order.id);
+                          },
                           className: "text-red-600 hover:text-red-800",
+                          title: "Cancel Order",
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_20__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_18__["default"], {
                             className: "w-4 h-4"
                           })
@@ -58139,10 +58260,10 @@ var AdminDashboard = function AdminDashboard() {
             children: "Category Performance"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_20__.jsx)("div", {
             className: "grid grid-cols-1 md:grid-cols-3 gap-6",
-            children: Object.entries(categoryAnalytics).map(function (_ref) {
-              var _ref2 = _slicedToArray(_ref, 2),
-                category = _ref2[0],
-                data = _ref2[1];
+            children: Object.entries(categoryAnalytics).map(function (_ref3) {
+              var _ref4 = _slicedToArray(_ref3, 2),
+                category = _ref4[0],
+                data = _ref4[1];
               return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_20__.jsxs)("div", {
                 className: "border border-gray-200 rounded-lg p-4",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_20__.jsx)("h4", {
@@ -60417,37 +60538,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
-/* harmony import */ var react_query__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-query */ "./node_modules/react-query/es/index.js");
-/* harmony import */ var _config_axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../config/axios */ "./resources/js/config/axios.js");
-/* harmony import */ var _hooks_useAuth__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../hooks/useAuth */ "./resources/js/hooks/useAuth.jsx");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/CreditCardIcon.js");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/ShoppingCartIcon.js");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/TruckIcon.js");
-/* harmony import */ var _UI_LoadingSpinner__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../UI/LoadingSpinner */ "./resources/js/components/UI/LoadingSpinner.jsx");
-/* harmony import */ var _UI_PromotionalCarousel__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../UI/PromotionalCarousel */ "./resources/js/components/UI/PromotionalCarousel.jsx");
-/* harmony import */ var react_hot_toast__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-hot-toast */ "./node_modules/react-hot-toast/dist/index.mjs");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-
-
-
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/CreditCardIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/ShoppingCartIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/TruckIcon.js");
+/* harmony import */ var _UI_PromotionalCarousel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../UI/PromotionalCarousel */ "./resources/js/components/UI/PromotionalCarousel.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
 
 
 var HomePage = function HomePage() {
-  var _useAuth = (0,_hooks_useAuth__WEBPACK_IMPORTED_MODULE_4__.useAuth)(),
-    user = _useAuth.user;
   var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_1__.useNavigate)();
-  var _useQuery = (0,react_query__WEBPACK_IMPORTED_MODULE_2__.useQuery)('categories', function () {
-      return _config_axios__WEBPACK_IMPORTED_MODULE_3__["default"].get('/api/categories').then(function (res) {
-        return res.data;
-      });
-    }),
-    categories = _useQuery.data,
-    categoriesLoading = _useQuery.isLoading;
 
   // Promotional slides data based on business categories
   var promotionalSlides = [{
@@ -60511,176 +60613,114 @@ var HomePage = function HomePage() {
       return navigate('/products?category=beverages');
     }
   }];
-  var handleShopNow = function handleShopNow() {
-    if (!user) {
-      react_hot_toast__WEBPACK_IMPORTED_MODULE_10__["default"].error('Please login to browse our products');
-      navigate('/login');
-      return;
-    }
-    navigate('/products');
-  };
-  var handleViewAllProducts = function handleViewAllProducts() {
-    if (!user) {
-      react_hot_toast__WEBPACK_IMPORTED_MODULE_10__["default"].error('Please login to view all products');
-      navigate('/login');
-      return;
-    }
-    navigate('/products');
-  };
-  var handleCategoryClick = function handleCategoryClick(categorySlug) {
-    if (!user) {
-      react_hot_toast__WEBPACK_IMPORTED_MODULE_10__["default"].error('Please login to browse products by category');
-      navigate('/login');
-      return;
-    }
-    navigate("/products?category=".concat(categorySlug));
-  };
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
     className: "min-h-screen",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("section", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("section", {
       className: "relative",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_UI_PromotionalCarousel__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_UI_PromotionalCarousel__WEBPACK_IMPORTED_MODULE_5__["default"], {
         slides: promotionalSlides,
         autoPlay: true,
         interval: 6000
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("section", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("section", {
       className: "py-16 px-4 sm:px-6 lg:px-8",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
         className: "max-w-7xl mx-auto",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("h2", {
-          className: "text-3xl font-bold text-black text-center mb-12",
-          children: "Our Categories"
-        }), categoriesLoading ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
-          className: "flex justify-center",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_UI_LoadingSpinner__WEBPACK_IMPORTED_MODULE_8__["default"], {})
-        }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
-          className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8",
-          children: categories === null || categories === void 0 ? void 0 : categories.map(function (category) {
-            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("button", {
-              onClick: function onClick() {
-                return handleCategoryClick(category.slug);
-              },
-              className: "glass-card rounded-2xl p-4 sm:p-6 md:p-8 text-center hover:scale-105 transition-transform group w-full",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
-                className: "w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("span", {
-                  className: "text-2xl font-bold text-black",
-                  children: category.name.charAt(0)
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("h3", {
-                className: "text-xl font-semibold text-black mb-2 group-hover:text-blue-300 transition-colors",
-                children: category.name
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("p", {
-                className: "text-gray-700 mb-4",
-                children: category.description
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
-                className: "text-sm text-blue-400",
-                children: [category.products_count, " products"]
-              })]
-            }, category.id);
-          })
-        })]
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("section", {
-      className: "py-16 px-4 sm:px-6 lg:px-8",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
-        className: "max-w-7xl mx-auto",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("h2", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h2", {
           className: "text-3xl font-bold text-black text-center mb-12",
           children: "Why Choose Us?"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
           className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
             className: "glass-card rounded-2xl p-8 text-center",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__["default"], {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_3__["default"], {
               className: "w-12 h-12 text-blue-400 mx-auto mb-4"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("h3", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h3", {
               className: "text-xl font-semibold text-black mb-4",
               children: "Easy Shopping"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("p", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
               className: "text-gray-700",
               children: "Browse our wide selection of products with an intuitive shopping experience."
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
             className: "glass-card rounded-2xl p-8 text-center",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_7__["default"], {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_4__["default"], {
               className: "w-12 h-12 text-blue-400 mx-auto mb-4"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("h3", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h3", {
               className: "text-xl font-semibold text-black mb-4",
               children: "Delivery & Pickup"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("p", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
               className: "text-gray-700",
               children: "Choose between delivery or pickup options for your convenience."
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
             className: "glass-card rounded-2xl p-8 text-center",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__["default"], {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_2__["default"], {
               className: "w-12 h-12 text-blue-400 mx-auto mb-4"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("h3", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h3", {
               className: "text-xl font-semibold text-black mb-4",
               children: "Multiple Payment"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("p", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
               className: "text-gray-700",
               children: "Pay with COD, GCash, or PayMaya - whatever works best for you."
             })]
           })]
         })]
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("section", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("section", {
       id: "about",
       className: "py-16 px-4 sm:px-6 lg:px-8 about-section",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
         className: "max-w-7xl mx-auto",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("h2", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h2", {
           className: "text-3xl font-bold text-black text-center mb-12",
           children: "About Us"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
           className: "grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("h3", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h3", {
               className: "text-2xl font-bold text-black mb-6",
               children: "R&B One Stop Mart"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("p", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
               className: "text-gray-700 mb-6 leading-relaxed",
-              children: "We are your trusted neighborhood store, providing quality groceries, dry goods, and farm supplies to our community. With years of experience in serving our customers, we understand the importance of fresh products and reliable service."
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("p", {
+              children: "We started our journey way back in 2003 focusing on Dry Goods. With God\u2019s grace and the continued support of our community, we have been able to expand our business into Groceries and Farm Supplies over the years."
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
               className: "text-gray-700 mb-6 leading-relaxed",
-              children: "Our commitment is to offer the best products at competitive prices, with convenient delivery and pickup options to make your shopping experience as easy as possible."
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
+              children: "Today, we proudly provide quality groceries, dry goods, and farm supplies with a commitment to fresh products, reliable service, and competitive prices\u2014along with convenient delivery and pickup options to make your shopping experience easy."
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
               className: "grid grid-cols-2 gap-4",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
                 className: "text-center",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
                   className: "text-3xl font-bold text-blue-600",
                   children: "500+"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
                   className: "text-gray-600",
                   children: "Happy Customers"
                 })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
                 className: "text-center",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
                   className: "text-3xl font-bold text-blue-600",
                   children: "1000+"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
                   className: "text-gray-600",
                   children: "Products Available"
                 })]
               })]
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
             className: "mission-vision-section rounded-2xl p-8 text-black",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("h4", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h4", {
               className: "text-xl font-bold mb-4",
               children: "Our Mission"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("p", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
               className: "mb-6",
               children: "To provide our community with high-quality groceries, dry goods, and farm supplies while maintaining excellent customer service and competitive prices."
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("h4", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h4", {
               className: "text-xl font-bold mb-4",
               children: "Our Vision"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("p", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
               children: "To be the leading one-stop mart in our community, known for quality products, reliable service, and customer satisfaction."
             })]
           })]
@@ -63307,7 +63347,7 @@ var PromotionalCarousel = function PromotionalCarousel(_ref) {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
         className: "text-center text-black",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h2", {
-          className: "text-4xl font-bold mb-4",
+          className: "text-4xl font-bold mb-4 inline-block px-4 py-2 rounded-xl bg-black bg-opacity-50 text-white",
           children: "Welcome to R&B One Stop Mart"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
           className: "text-xl mb-8",
@@ -63334,7 +63374,7 @@ var PromotionalCarousel = function PromotionalCarousel(_ref) {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
             className: "absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-1000"
           }), slide.logo && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-            className: "absolute top-6 left-1/2 transform -translate-x-1/2 z-20",
+            className: "absolute top-4 sm:top-6 md:top-8 lg:top-10 left-1/2 transform -translate-x-1/2 z-20",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
               src: slide.logo,
               alt: "R&B One Stop Mart Logo",
@@ -63346,16 +63386,16 @@ var PromotionalCarousel = function PromotionalCarousel(_ref) {
               className: "w-full h-full bg-black bg-opacity-30"
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-            className: "relative z-10 h-full flex items-center justify-center",
+            className: "relative z-10 h-full grid place-items-center",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
               className: "w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-                className: "text-center",
+                className: "text-center inline-block bg-black bg-opacity-50 rounded-2xl px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-6 shadow-xl",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
-                  className: "text-5xl md:text-7xl lg:text-8xl font-black text-black mb-6 leading-tight tracking-tight",
+                  className: "text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight tracking-tight",
                   children: slide.title
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-                  className: "text-xl md:text-2xl lg:text-3xl text-black mb-8 max-w-4xl mx-auto leading-relaxed font-light",
+                  className: "mt-2 sm:mt-3 md:mt-4 text-base sm:text-lg md:text-2xl lg:text-3xl text-white max-w-4xl mx-auto leading-relaxed font-light",
                   children: slide.subtitle
                 }), slide.offer && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
                   className: "text-lg md:text-xl text-yellow-300 font-semibold mb-12 tracking-wide",

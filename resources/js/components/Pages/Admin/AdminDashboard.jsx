@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useQuery } from 'react-query';
+import { useQuery, useMutation, useQueryClient } from 'react-query';
 import { Link } from 'react-router-dom';
 import axios from '../../../config/axios';
 import toast from 'react-hot-toast';
@@ -24,6 +24,7 @@ import LoadingSpinner from '../../UI/LoadingSpinner';
 
 const AdminDashboard = () => {
     const [activeTab, setActiveTab] = useState('overview');
+    const queryClient = useQueryClient();
 
     const { data: dashboardData, isLoading } = useQuery(
         'admin-dashboard',
@@ -65,6 +66,33 @@ const AdminDashboard = () => {
         }
     };
 
+    // User management mutations
+    const activateUserMutation = useMutation(
+        (userId) => axios.put(`/api/admin/users/${userId}/activate`),
+        {
+            onSuccess: () => {
+                queryClient.invalidateQueries('admin-dashboard');
+                toast.success('User activated successfully!');
+            },
+            onError: (error) => {
+                toast.error(error.response?.data?.message || 'Failed to activate user');
+            }
+        }
+    );
+
+    const deactivateUserMutation = useMutation(
+        (userId) => axios.put(`/api/admin/users/${userId}/deactivate`),
+        {
+            onSuccess: () => {
+                queryClient.invalidateQueries('admin-dashboard');
+                toast.success('User deactivated successfully!');
+            },
+            onError: (error) => {
+                toast.error(error.response?.data?.message || 'Failed to deactivate user');
+            }
+        }
+    );
+
     // User management handlers
     const handleViewUser = (userId) => {
         console.log('View user:', userId);
@@ -72,13 +100,67 @@ const AdminDashboard = () => {
     };
 
     const handleActivateUser = (userId) => {
-        console.log('Activate user:', userId);
-        toast.success('User activated successfully!');
+        activateUserMutation.mutate(userId);
     };
 
     const handleDeactivateUser = (userId) => {
-        console.log('Deactivate user:', userId);
-        toast.success('User deactivated successfully!');
+        deactivateUserMutation.mutate(userId);
+    };
+
+    // Product management mutations
+    const updateProductStatusMutation = useMutation(
+        ({ productId, isActive }) => axios.put(`/api/admin/products/${productId}`, { is_active: isActive }),
+        {
+            onSuccess: () => {
+                queryClient.invalidateQueries('admin-dashboard');
+                toast.success('Product status updated successfully!');
+            },
+            onError: (error) => {
+                toast.error(error.response?.data?.message || 'Failed to update product');
+            }
+        }
+    );
+
+    // Product management handlers
+    const handleViewProduct = (productId) => {
+        console.log('View product:', productId);
+        toast.success('View product functionality - Coming soon!');
+    };
+
+    const handleActivateProduct = (productId) => {
+        updateProductStatusMutation.mutate({ productId, isActive: true });
+    };
+
+    const handleDeactivateProduct = (productId) => {
+        updateProductStatusMutation.mutate({ productId, isActive: false });
+    };
+
+    // Order management mutations
+    const updateOrderStatusMutation = useMutation(
+        ({ orderId, status }) => axios.put(`/api/admin/orders/${orderId}/status`, { status }),
+        {
+            onSuccess: () => {
+                queryClient.invalidateQueries('admin-dashboard');
+                toast.success('Order status updated successfully!');
+            },
+            onError: (error) => {
+                toast.error(error.response?.data?.message || 'Failed to update order status');
+            }
+        }
+    );
+
+    // Order management handlers
+    const handleViewOrder = (orderId) => {
+        console.log('View order:', orderId);
+        toast.success('View order functionality - Coming soon!');
+    };
+
+    const handleConfirmOrder = (orderId) => {
+        updateOrderStatusMutation.mutate({ orderId, status: 'confirmed' });
+    };
+
+    const handleCancelOrder = (orderId) => {
+        updateOrderStatusMutation.mutate({ orderId, status: 'cancelled' });
     };
 
 
@@ -273,13 +355,25 @@ const AdminDashboard = () => {
                                                 </td>
                                                 <td className="py-3 px-4">
                                                     <div className="flex space-x-2">
-                                                        <button className="text-blue-600 hover:text-blue-800">
+                                                        <button 
+                                                            onClick={() => handleViewProduct(product.id)}
+                                                            className="text-blue-600 hover:text-blue-800"
+                                                            title="View Product Details"
+                                                        >
                                                             <EyeIcon className="w-4 h-4" />
                                                         </button>
-                                                        <button className="text-green-600 hover:text-green-800">
+                                                        <button 
+                                                            onClick={() => handleActivateProduct(product.id)}
+                                                            className="text-green-600 hover:text-green-800"
+                                                            title="Activate Product"
+                                                        >
                                                             <CheckIcon className="w-4 h-4" />
                                                         </button>
-                                                        <button className="text-red-600 hover:text-red-800">
+                                                        <button 
+                                                            onClick={() => handleDeactivateProduct(product.id)}
+                                                            className="text-red-600 hover:text-red-800"
+                                                            title="Deactivate Product"
+                                                        >
                                                             <XMarkIcon className="w-4 h-4" />
                                                         </button>
                                                     </div>
@@ -374,15 +468,31 @@ const AdminDashboard = () => {
                                                 </td>
                                                 <td className="py-3 px-4">
                                                     <div className="flex space-x-2">
-                                                        <button className="text-blue-600 hover:text-blue-800">
+                                                        <button 
+                                                            onClick={() => handleViewOrder(order.id)}
+                                                            className="text-blue-600 hover:text-blue-800"
+                                                            title="View Order Details"
+                                                        >
                                                             <EyeIcon className="w-4 h-4" />
                                                         </button>
-                                                        <button className="text-green-600 hover:text-green-800">
-                                                            <CheckIcon className="w-4 h-4" />
-                                                        </button>
-                                                        <button className="text-red-600 hover:text-red-800">
-                                                            <XMarkIcon className="w-4 h-4" />
-                                                        </button>
+                                                        {order.status === 'pending' && (
+                                                            <button 
+                                                                onClick={() => handleConfirmOrder(order.id)}
+                                                                className="text-green-600 hover:text-green-800"
+                                                                title="Confirm Order"
+                                                            >
+                                                                <CheckIcon className="w-4 h-4" />
+                                                            </button>
+                                                        )}
+                                                        {order.status !== 'cancelled' && order.status !== 'delivered' && (
+                                                            <button 
+                                                                onClick={() => handleCancelOrder(order.id)}
+                                                                className="text-red-600 hover:text-red-800"
+                                                                title="Cancel Order"
+                                                            >
+                                                                <XMarkIcon className="w-4 h-4" />
+                                                            </button>
+                                                        )}
                                                     </div>
                                                 </td>
                                             </tr>

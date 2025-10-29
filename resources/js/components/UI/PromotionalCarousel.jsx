@@ -28,7 +28,7 @@ const PromotionalCarousel = ({ slides = [], autoPlay = true, interval = 5000 }) 
         return (
             <div className="relative h-96 bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center">
                 <div className="text-center text-black">
-                    <h2 className="text-4xl font-bold mb-4">Welcome to R&B One Stop Mart</h2>
+                    <h2 className="text-4xl font-bold mb-4 inline-block px-4 py-2 rounded-xl bg-black bg-opacity-50 text-white">Welcome to R&B One Stop Mart</h2>
                     <p className="text-xl mb-8">Your one-stop destination for all your needs</p>
                     <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                         Shop Now
@@ -60,7 +60,7 @@ const PromotionalCarousel = ({ slides = [], autoPlay = true, interval = 5000 }) 
                         
                         {/* Centered Top Logo */}
                         {slide.logo && (
-                            <div className="absolute top-6 left-1/2 transform -translate-x-1/2 z-20">
+                            <div className="absolute top-4 sm:top-6 md:top-8 lg:top-10 left-1/2 transform -translate-x-1/2 z-20">
                                 <img 
                                     src={slide.logo} 
                                     alt="R&B One Stop Mart Logo" 
@@ -74,17 +74,16 @@ const PromotionalCarousel = ({ slides = [], autoPlay = true, interval = 5000 }) 
                             <div className="w-full h-full bg-black bg-opacity-30"></div>
                         </div>
 
-                        {/* Centered White Text Block */}
-                        <div className="relative z-10 h-full flex items-center justify-center">
+                        {/* Centered Text Block with Unified Highlight */}
+                        <div className="relative z-10 h-full grid place-items-center">
                             <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                                <div className="text-center">
+                                <div className="text-center inline-block bg-black bg-opacity-50 rounded-2xl px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-6 shadow-xl">
                                     {/* Bold Headline */}
-                                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-black mb-6 leading-tight tracking-tight">
+                                    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight tracking-tight">
                                         {slide.title}
                                     </h1>
-                                    
                                     {/* Short Descriptive Paragraph */}
-                                    <p className="text-xl md:text-2xl lg:text-3xl text-black mb-8 max-w-4xl mx-auto leading-relaxed font-light">
+                                    <p className="mt-2 sm:mt-3 md:mt-4 text-base sm:text-lg md:text-2xl lg:text-3xl text-white max-w-4xl mx-auto leading-relaxed font-light">
                                         {slide.subtitle}
                                     </p>
                                     
